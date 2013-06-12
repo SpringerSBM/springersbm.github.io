@@ -12,7 +12,7 @@
   	<meta name="description" content="" />
   	<meta name="keywords" content="" />
 
-	<!--<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />-->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	
 	<!-- Facebook Metadata /-->
   	<meta property="fb:page_id" content="" />
@@ -46,30 +46,36 @@
 					  <a class="toggle" gumby-trigger="#nav1 > #nav1_inner > ul" href="#"><i class="icon-menu"></i></a>
 				<ul> <!--940 px-->
 					<li><a href="/">Home</a></li>
-					<li><a href="#">Else</a></li>
+					<li><a href="/about.html">Our company</a></li>
+					<li><a href="/team.html">Our team</a></li>
+					<li><a href="/join.html">Join us!</a></li>
 				</ul>
+				</div>
+			</div>
+			
+			<div class="row" id="sitebanner">
+				<div class="twelve columns"> <!--940 px-->
+					<a href="/"><h1 class="site_title">The Springer Development Team</h1></a>
 				</div>
 			</div>
 		</div>		
 		
 		<div class="container">			
 			<div class="row">
-				<div class="twelve columns"> <!--940 px-->
-					<a href="/"><h1>The name of my site</h1></a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="container">			
-			<div class="row">
-				<div class="twelve columns"> <!--940 px-->
+				<div class="nine columns"> <!--940 px-->
 				{{ content }}
+				</div>
+				<div class="three columns" id="sidebar">
+					<h2>&nbsp;</h2>
+					<div class="box warning"><a href="/join.html">Join us!</a></div>
+					<div class="box default"><a href="https://twitter.com/SpringerDevs">Follow us on Twitter</a></div>
+					<div class="box default"><a href="https://coderwall.com/team/springer">Follow us on Coderwall</a></div>
 				</div>
 			</div>
 		</div>
 			
 		<div class="container">
-			<footer class="row">
+			<footer class="row" id="footer">
 				<div class="twelve columns">
 				<small>This site constructed using <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://gumbyframework.com/">Gumby</a>.</small>
 				</div>
