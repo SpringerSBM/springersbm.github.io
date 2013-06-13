@@ -1,7 +1,12 @@
 ---
 layout: default
 title: Our Team | The Springer Development Team
+bannerimage: collage1.jpg
+
 ---
+
+
+
 
 ##About our team
 

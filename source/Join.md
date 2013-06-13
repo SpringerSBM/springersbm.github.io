@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Join us | The Springer Development Team
+bannerimage: wideshot.jpg
 ---
 
 ##Join us

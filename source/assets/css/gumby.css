@@ -1839,7 +1839,7 @@ body .video.twitch, body .video.youtube.show_controls { padding-top: 30px; }
 
 div#nav1 { margin-bottom: 0; }
 
-div#sitebanner { background: #3085d6; text-align: center; margin-bottom: 1em; }
+div#sitebanner { background: #3085d6; text-align: center; }
 div#sitebanner h1 { color: #FFF; }
 
 div#sidebar .box { width: 96%; margin-bottom: 1em; padding: 0.5em 1% 0.5em 3%; }
