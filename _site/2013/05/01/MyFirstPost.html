@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/Product"> <!--<![endif]-->
+  <head>
+	<meta charset="utf-8">
+    <title>My first Jekyll post!</title>
+  	<meta name="description" content="" />
+  	<meta name="keywords" content="" />
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	
+	<!-- Facebook Metadata /-->
+  	<meta property="fb:page_id" content="" />
+  	<meta property="og:image" content="" />
+  	<meta property="og:description" content=""/>
+  	<meta property="og:title" content=""/>
+
+  	<!-- Google+ Metadata /-->
+  	<meta itemprop="name" content="">
+  	<meta itemprop="description" content="">
+  	<meta itemprop="image" content="">
+
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  	<!-- We highly recommend you use SASS and write your custom styles in sass/_custom.scss.
+       However, there is a blank style.css in the css directory should you prefer -->
+	<link rel="stylesheet" href="/assets/css/gumby.css">
+  	<!-- <link rel="stylesheet" href="/assets/css/style.css"> -->
+
+	<script src="/assets/js/libs/modernizr-2.6.2.min.js"></script>
+
+
+	</head>
+	<body>
+		
+		<div class="container">			
+			<div class="row navbar metro" id="nav1">
+				<!-- Toggle for mobile navigation, targeting the <ul> -->
+				<div class="twelve columns" id="nav1_inner">
+					<!-- Toggle for mobile navigation, targeting the <ul> -->
+					  <a class="toggle" gumby-trigger="#nav1 > #nav1_inner > ul" href="#"><i class="icon-menu"></i></a>
+				<ul> <!--940 px-->
+					<li><a href="/">Home</a></li>
+					<li><a href="/about.html">Our company</a></li>
+					<li><a href="/team.html">Our team</a></li>
+					<li><a href="/join.html">Join us!</a></li>
+				</ul>
+				</div>
+			</div>
+			
+			<div class="row" id="sitebanner">
+				<div class="twelve columns"> <!--940 px-->
+					<a href="/"><h1 class="site_title">The Springer Development Team</h1></a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns"> 
+					<img src="/assets/images/">
+				</div>
+			</div>
+		</div>		
+		
+		<div class="container">			
+			<div class="row">
+				<div class="nine columns"> <!--940 px-->
+				<h2 id='my_first_post_written_in_markdown'>My first post written in Markdown</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#8221;</p>
+
+<ul>
+<li>Hello</li>
+
+<li>World</li>
+</ul>
+
+<p><strong>Bold</strong> <em>Italic</em></p>
+<div class='highlight'><pre><code class='ruby'><span class='c1'># ruby test snippet</span>
+
+<span class='kp'>include</span> <span class='no'>Enumerable</span>
+
+<span class='k'>def</span> <span class='nf'>initialize</span><span class='p'>(</span><span class='n'>rbconfig</span><span class='p'>)</span>
+  <span class='vi'>@rbconfig</span> <span class='o'>=</span> <span class='n'>rbconfig</span>
+  <span class='vi'>@no_harm</span> <span class='o'>=</span> <span class='kp'>false</span>
+<span class='k'>end</span>
+
+<span class='k'>def</span> <span class='nf'>load_savefile</span>
+  <span class='k'>begin</span> 
+    <span class='no'>File</span><span class='o'>.</span><span class='n'>foreach</span><span class='p'>(</span><span class='n'>savefile</span><span class='p'>())</span> <span class='k'>do</span> <span class='o'>|</span><span class='n'>line</span><span class='o'>|</span>
+    <span class='n'>k</span><span class='p'>,</span><span class='n'>v</span> <span class='o'>=</span> <span class='o'>*.</span><span class='n'>line</span><span class='o'>.</span><span class='n'>split</span><span class='p'>(</span><span class='sr'>/=/</span><span class='p'>,</span><span class='mi'>2</span><span class='p'>)</span>
+    <span class='nb'>self</span><span class='o'>[</span><span class='n'>k</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>v</span><span class='o'>.</span><span class='n'>strip</span>
+    <span class='k'>end</span>
+  <span class='k'>rescue</span>
+    <span class='n'>setup_rb_error</span> <span class='vg'>$!</span><span class='o'>.</span><span class='n'>message</span> <span class='o'>+</span> <span class='s2'>&quot;</span><span class='se'>\n</span><span class='si'>#{</span><span class='no'>File</span><span class='o'>.</span><span class='n'>basename</span><span class='p'>(</span><span class='vg'>$0</span><span class='p'>)</span><span class='si'>}</span><span class='s2'> config first&quot;</span>
+  <span class='k'>end</span>
+<span class='k'>end</span>
+
+<span class='k'>def</span> <span class='nf'>show</span>
+  <span class='vi'>@widget</span> <span class='o'>=</span> <span class='no'>Widget</span><span class='p'>(</span><span class='n'>params</span><span class='o'>[</span><span class='ss'>:id</span><span class='o'>]</span><span class='p'>)</span>
+  <span class='n'>respond_to</span> <span class='k'>do</span> <span class='o'>|</span><span class='nb'>format</span><span class='o'>|</span>
+    <span class='nb'>format</span><span class='o'>.</span><span class='n'>html</span> <span class='c1'># show.html.erb</span>
+    <span class='nb'>format</span><span class='o'>.</span><span class='n'>json</span> <span class='p'>{</span> <span class='n'>render</span> <span class='ss'>json</span><span class='p'>:</span> <span class='vi'>@widget</span> <span class='p'>}</span>
+  <span class='k'>end</span>
+<span class='k'>end</span>
+</code></pre></div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="three columns" id="sidebar">
+					<h2>&nbsp;</h2>
+					<div class="box warning"><a href="/join.html">Join us!</a></div>
+					<div class="box default"><a href="https://twitter.com/SpringerDevs">Follow us on Twitter</a></div>
+					<div class="box default"><a href="https://coderwall.com/team/springer">Follow us on Coderwall</a></div>
+				</div>
+			</div>
+		</div>
+			
+		<div class="container">
+			<footer class="row" id="footer">
+				<div class="twelve columns">
+				<small>This site constructed using <a href="http://jekyllrb.com">Jekyll</a> and <a href="http://gumbyframework.com/">Gumby</a>.</small>
+				</div>
+			</footer>			
+		</div>
+	  
+		<!-- Grab Google CDN's jQuery, fall back to local if offline -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="/assets/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+		<!--Include gumby.js followed by UI modules.
+		Or concatenate and minify into a single file
+		<script src="js/libs/gumby.js"></script>
+		<script src="js/libs/ui/gumby.retina.js"></script>
+		<script src="js/libs/ui/gumby.fixed.js"></script>
+		<script src="js/libs/ui/gumby.skiplink.js"></script>
+		<script src="js/libs/ui/gumby.toggleswitch.js"></script>
+		<script src="js/libs/ui/gumby.checkbox.js"></script>
+		<script src="js/libs/ui/gumby.radiobtn.js"></script>
+		<script src="js/libs/ui/gumby.tabs.js"></script>
+		<script src="js/libs/ui/gumby.navbar.js"></script>
+		<script src="js/libs/ui/jquery.validation.js"></script>
+		<script src="js/libs/gumby.init.js"></script>-->
+
+		<script src="/assets/js/libs/gumby.min.js"></script>
+		<script src="/assets/js/plugins.js"></script>
+		<script src="/assets/js/main.js"></script>		
+		
+	</body>
+
+</html>
