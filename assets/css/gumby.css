@@ -1842,6 +1842,10 @@ div#nav1 { margin-bottom: 0; }
 div#sitebanner { background: #3085d6; text-align: center; }
 div#sitebanner h1 { color: #FFF; }
 
+div#thecontent ul { list-style: disc inside; }
+
+div.subtitle { color: #3085d6; margin-bottom: 0.5em; }
+
 div#sidebar .box { width: 96%; margin-bottom: 1em; padding: 0.5em 1% 0.5em 3%; }
 div#sidebar .warning { background: #f6b83f; }
 div#sidebar .warning a { color: #4a4d50; font-weight: bold; }
