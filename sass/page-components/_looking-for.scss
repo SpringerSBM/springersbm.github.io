@@ -1,0 +1,32 @@
+.looking-for {
+  clear:both;
+  margin:0 16px;
+  overflow:hidden;
+
+  @include respond-to(tablet-portrait) {
+    margin:0 auto;
+    max-width:600px;
+  }
+}
+
+.looking-for__photo {
+
+  img {
+    border-radius:60px;
+    display:block;
+    margin:0 auto;
+    width:100px;
+  }
+
+  p {
+    text-align:center;
+  }
+}
+
+.looking-for__contact-info {
+  //margin-left:121px;
+
+  a {
+    display:block;
+  }
+}

@@ -1,0 +1,142 @@
+.our-products {
+  //display:none;
+  overflow:hidden;
+  width:100%;
+
+  @include respond-to(tablet-portrait) {
+    overflow:visible;
+  }
+
+  @include respond-to(tablet-landscape) {
+    margin:0 auto;
+    max-width:980px;
+  }
+
+  h1 {
+    padding:0 18px;
+
+    @include respond-to(break-point, 'min-width:980px') {
+      padding:0;
+    }
+  }
+}
+
+.our-products__product {
+  position:relative;
+  clear:both;
+
+  @include respond-to(tablet-portrait) {
+    min-height:500px;
+  }
+}
+
+.product__product-image {
+  @include box-sizing(border-box);
+  @include transition(width .25s ease-in-out);
+  padding:0 18px;
+  width:100%;
+
+  @include respond-to(tablet-portrait) {
+    padding:0;
+    position:absolute; top:0;
+    width:700px;
+
+    .product--springerlink & {
+      left:65.4%;
+    }
+
+    .product--smartbooks & {
+      right:65.4%;
+    }
+  }
+
+  @include respond-to(tablet-landscape) {
+    position:relative;
+
+    .product--springerlink & {
+      float:left;
+      margin-left:508px;
+      left:0;
+    }
+
+    .product--smartbooks & {
+      float:right;
+      margin-right:508px;
+      right:0;
+    }
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    .product--springerlink & {
+      margin-left:490px;
+    }
+
+    .product--smartbooks & {
+      margin-right:525px;
+    }
+  }
+
+  img {
+    width:100%;
+  }
+}
+
+.product__product-description {
+  @include box-sizing(border-box);
+  padding:0 1em;
+
+  @include respond-to(tablet-portrait) {
+    .product--springerlink & {
+      margin-right:34.6%;
+      padding-right:4em;
+    }
+
+    .product--smartbooks & {
+      margin-left:34.6%;
+      padding-left:4em;
+    }
+  }
+
+  @include respond-to(tablet-landscape) {
+    position:absolute; top:0;
+    width:508px;
+
+    .product--springerlink & {
+      margin-right:0;
+      left:0;
+    }
+
+    .product--smartbooks & {
+      margin-left:0;
+      right:0;
+    }
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    .product--springerlink & {
+      padding-left:0;
+      width:490px;
+    }
+
+    .product--smartbooks & {
+      padding-right:0;
+      width:525px;
+    }
+  }
+
+  h2 {
+    margin-bottom:0.3em;
+
+    @include respond-to(tablet-landscape) {
+      margin-top:0;
+    }
+  }
+}
+
+.product-description__link {
+  margin-top:0;
+}
+
+.product-description__lead-in {
+  font-size:1.2rem;
+}

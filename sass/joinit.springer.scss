@@ -1,6 +1,19 @@
-/********* Base styles *********/
-@import "base/normalize";
+/********* Mixins *********/
+@import "mixins/box-shadow",
+        "mixins/box-sizing",
+        "mixins/for-high-res",
+        "mixins/img-replacement",
+        "mixins/pseudo-element",
+        "mixins/respond-to",
+        "mixins/transition";
 
 
 /********* Layout styles *********/
-//@import "normalize";
+@import "base/layout",
+        "page-components/main-header",
+        "page-components/storyboards",
+        "page-components/our-products",
+        "page-components/our-people",
+        "page-components/job-vacancies",
+        "page-components/looking-for",
+        "page-components/main-footer";

@@ -1,0 +1,73 @@
+body {
+  margin:0; // Overwrite base.scss
+}
+
+img {
+  vertical-align:bottom;
+}
+
+.wrapper {
+  padding-top:44px;
+
+  @include respond-to(tablet-portrait) {
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding-top:66px;
+  }
+}
+
+.our-location {
+  display:none;
+  width:100%;
+
+  iframe {
+    width:100%;
+  }
+}
+
+%section-wrapper {
+  margin:0;
+
+  @include respond-to(tablet-portrait) {
+    margin:0 auto;
+    max-width:980px;
+  }
+}
+
+%headings {
+  font-weight:100;
+  letter-spacing:-0.04em;
+  line-height:0.95em;
+}
+
+h1,
+%h1 {
+  @extend %headings;
+  font-size:2rem;
+  margin:0.67em 0;
+
+  @include respond-to(tablet-portrait) {
+    font-size:4rem;
+  }
+}
+
+h2,
+%h2 {
+  @extend %headings;
+  font-size:1.6rem;
+  margin:0.83em 0;
+
+  @include respond-to(tablet-portrait) {
+    font-size:3.2rem;
+  }
+}
+
+h3,
+%h3 {
+  @extend %headings;
+  font-size:1.4rem;
+
+  @include respond-to(tablet-portrait) {
+    font-size:2.8rem;
+  }
+}

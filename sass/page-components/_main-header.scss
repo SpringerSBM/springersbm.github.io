@@ -1,0 +1,126 @@
+.main-header {
+  background:#fff;
+  background:rgba(255, 255, 255, 0.95);
+  border-bottom:1px solid #e1e4e6;
+  position:fixed;
+  width:100%;
+  z-index:100;
+}
+
+.main-header__wrapper {
+  @extend %section-wrapper;
+  @include transition(height .25s ease-in-out);
+  height:44px;
+  padding:0 18px;
+  position:relative;
+
+  @include respond-to(tablet-portrait) {
+    height:66px;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    padding:0;
+  }
+}
+
+.main-header__logo {
+  @include img-replacement();
+  @include transition(background .25s ease-in-out, height .25s ease-in-out);
+  background:url(../imgs/springer-logo.png) left -24px no-repeat;
+  height:30px;
+  margin:7px 0 0;
+  width:115px;
+  float:left;
+
+  @include for-high-res() {
+    background-image:url(../imgs/springer-logo@2x.png);
+    background-position:left -24px;
+    background-size:138px;
+  }
+
+  @include respond-to(tablet-portrait) {
+    background-position:left -54px;
+    height:38px;
+    margin-top:11px;
+    width:139px;
+
+    @include for-high-res() {
+      background-image:url(../imgs/springer-logo@2x.png);
+      background-position:left -56px;
+      background-size:143px;
+      width:141px;
+    }
+  }
+}
+
+.main-header__nav {
+  float:right;
+  font-size:1.1em;
+}
+
+.main-header__nav-list {
+  margin:0;
+  padding:0;
+  height:44px;
+  @include respond-to(tablet-portrait) {
+    height:66px;
+  }
+
+  li {
+    @include transition(width .25s ease-in-out);
+    display:inline-block;
+    list-style:none;
+    height:44px;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    width:52px;
+
+    &:first-child {
+      width:58px;
+    }
+
+    &:last-child {
+      width:48px;
+    }
+
+    @include respond-to(tablet-portrait) {
+      height:66px;
+      margin-right:9px;
+
+      &,
+      &:first-child,
+      &:last-child {
+        width:auto;
+      }
+
+      &:last-child {
+        margin-right:0;
+      }
+    }
+
+    a {
+      color:#666;
+      display:block;
+      line-height:44px;
+      height:44px;
+      padding:0 9px;
+      text-decoration:none;
+
+      @include respond-to(tablet-portrait) {
+        line-height:66px;
+        height:66px;
+      }
+
+      &:link,
+      &:visited {}
+
+      &:active,
+      &:focus,
+      &:hover {
+        background:#666;
+        color:#fff;
+      }
+    }
+  }
+}

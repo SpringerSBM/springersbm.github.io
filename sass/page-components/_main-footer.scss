@@ -1,0 +1,16 @@
+.colophon {
+  background:#000;
+  color:#fff;
+  font-size:0.75em;
+  margin:1em 0 0;
+  padding:1em 0;
+  text-align:center;
+
+  &:before {
+    @include pseudo-element('●', block);
+  }
+
+  a {
+    color:#fff;
+  }
+}

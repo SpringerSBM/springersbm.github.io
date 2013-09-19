@@ -1,379 +1,759 @@
-/********* Base styles *********/
-/* normalize.css v2.1.1 | MIT License | git.io/normalize */
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
-/**
- * Correct `block` display not defined in IE 8/9.
- */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section,
-summary {
-  display: block;
-}
-
-/**
- * Correct `inline-block` display not defined in IE 8/9.
- */
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-[hidden] {
-  display: none;
-}
-
-/* ==========================================================================
-   Base
-   ========================================================================== */
-/**
- * 1. Prevent system color scheme's background color being used in Firefox, IE,
- *    and Opera.
- * 2. Prevent system color scheme's text color being used in Firefox, IE, and
- *    Opera.
- * 3. Set default font family to sans-serif.
- * 4. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-html {
-  background: #fff;
-  /* 1 */
-  color: #000;
-  /* 2 */
-  font-family: sans-serif;
-  /* 3 */
-  -ms-text-size-adjust: 100%;
-  /* 4 */
-  -webkit-text-size-adjust: 100%;
-  /* 4 */
-}
-
-/**
- * Remove default margin.
- */
+@charset "UTF-8";
+/********* Mixins *********/
+/********* Layout styles *********/
 body {
   margin: 0;
 }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-a:focus {
-  outline: thin dotted;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
- */
-h1 {
-  font-size: 32px;
-  margin: 7px 0 14px;
-}
-
-/**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
- */
-b,
-strong {
-  font-weight: bold;
-}
-
-/**
- * Address styling not present in Safari 5 and Chrome.
- */
-dfn {
-  font-style: italic;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-pre {
-  white-space: pre-wrap;
-}
-
-/**
- * Set consistent quote types.
- */
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 0.8em;
-}
-
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 0.75em;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-/**
- * Remove border when inside `a` element in IE 8/9.
- */
 img {
-  border: 0;
+  vertical-align: bottom;
 }
 
-/**
- * Correct overflow displayed oddly in IE 9.
- */
-svg:not(:root) {
+.wrapper {
+  padding-top: 44px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .wrapper {
+    /* MQ Tablet portrait */
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 66px;
+  }
+}
+
+.our-location {
+  display: none;
+  width: 100%;
+}
+.our-location iframe {
+  width: 100%;
+}
+
+.main-header__wrapper, .board__content, .our-people, .job-vacancies__heading span {
+  margin: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .main-header__wrapper, .board__content, .our-people, .job-vacancies__heading span {
+    /* MQ Tablet portrait */
+    margin: 0 auto;
+    max-width: 980px;
+  }
+}
+
+h1,
+.welcome__subheading,
+.board__headline, h2, h3 {
+  font-weight: 100;
+  letter-spacing: -0.04em;
+  line-height: 0.95em;
+}
+
+h1,
+.welcome__subheading,
+.board__headline {
+  font-size: 2rem;
+  margin: 0.67em 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  h1,
+  .welcome__subheading,
+  .board__headline {
+    /* MQ Tablet portrait */
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 0.83em 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  h2 {
+    /* MQ Tablet portrait */
+    font-size: 3.2rem;
+  }
+}
+
+h3 {
+  font-size: 1.4rem;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  h3 {
+    /* MQ Tablet portrait */
+    font-size: 2.8rem;
+  }
+}
+
+.main-header {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e1e4e6;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.main-header__wrapper {
+  -webkit-transition: height 0.25s ease-in-out;
+  -moz-transition: height 0.25s ease-in-out;
+  -o-transition: height 0.25s ease-in-out;
+  transition: height 0.25s ease-in-out;
+  height: 44px;
+  padding: 0 18px;
+  position: relative;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .main-header__wrapper {
+    /* MQ Tablet portrait */
+    height: 66px;
+  }
+}
+@media all and (min-width: 1016px) {
+  .main-header__wrapper {
+    /* MQ Break point */
+    padding: 0;
+  }
+}
+
+.main-header__logo {
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
   overflow: hidden;
+  text-align: left;
+  text-indent: -9999em;
+  -webkit-transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
+  -moz-transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
+  -o-transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
+  transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
+  background: url(../imgs/springer-logo.png) left -24px no-repeat;
+  height: 30px;
+  margin: 7px 0 0;
+  width: 115px;
+  float: left;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  .main-header__logo {
+    background-image: url(../imgs/springer-logo@2x.png);
+    background-position: left -24px;
+    background-size: 138px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .main-header__logo {
+    /* MQ Tablet portrait */
+    background-position: left -54px;
+    height: 38px;
+    margin-top: 11px;
+    width: 139px;
+  }
+}
+@media only screen and (min-width: 600px) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 600px) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 600px) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 600px) and (min-device-pixel-ratio: 1.5) {
+  .main-header__logo {
+    background-image: url(../imgs/springer-logo@2x.png);
+    background-position: left -56px;
+    background-size: 143px;
+    width: 141px;
+  }
 }
 
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-figure {
+.main-header__nav {
+  float: right;
+  font-size: 1.1em;
+}
+
+.main-header__nav-list {
   margin: 0;
-}
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  border: 0;
-  /* 1 */
   padding: 0;
-  /* 2 */
+  height: 44px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 2 */
+@media screen and (min-width: 600px) {
+  .main-header__nav-list {
+    /* MQ Tablet portrait */
+    height: 66px;
+  }
+}
+.main-header__nav-list li {
+  -webkit-transition: width 0.25s ease-in-out;
+  -moz-transition: width 0.25s ease-in-out;
+  -o-transition: width 0.25s ease-in-out;
+  transition: width 0.25s ease-in-out;
+  display: inline-block;
+  list-style: none;
+  height: 44px;
   margin: 0;
-  /* 3 */
+  overflow: hidden;
+  padding: 0;
+  width: 52px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+.main-header__nav-list li:first-child {
+  width: 58px;
+}
+.main-header__nav-list li:last-child {
+  width: 48px;
+}
+@media screen and (min-width: 600px) {
+  .main-header__nav-list li {
+    /* MQ Tablet portrait */
+    height: 66px;
+    margin-right: 9px;
+  }
+  .main-header__nav-list li, .main-header__nav-list li:first-child, .main-header__nav-list li:last-child {
+    width: auto;
+  }
+  .main-header__nav-list li:last-child {
+    margin-right: 0;
+  }
+}
+.main-header__nav-list li a {
+  color: #666;
+  display: block;
+  line-height: 44px;
+  height: 44px;
+  padding: 0 9px;
+  text-decoration: none;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .main-header__nav-list li a {
+    /* MQ Tablet portrait */
+    line-height: 66px;
+    height: 66px;
+  }
+}
+.main-header__nav-list li a:active, .main-header__nav-list li a:focus, .main-header__nav-list li a:hover {
+  background: #666;
+  color: #fff;
 }
 
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-button,
-input {
-  line-height: normal;
+.welcome {
+  background: #fbfdfe;
+  border-bottom: 5px solid #e8f4fc;
 }
 
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-button,
-select {
-  text-transform: none;
+.welcome__wrapper {
+  position: relative;
+  background: none;
+  padding: 50px 18px 80px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .welcome__wrapper {
+    /* MQ Tablet portrait */
+    margin: 0 auto;
+    max-width: 980px;
+  }
+}
+@media all and (min-width: 1016px) {
+  .welcome__wrapper {
+    /* MQ Break point */
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
+.welcome__tagline {
+  font-weight: 100;
+  margin-top: 0;
 }
 
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default;
+.welcome__heading {
+  margin: 0;
+  max-width: 100%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1261px) {
+  .welcome__heading {
+    /* MQ Widescreen */
+    max-width: 82%;
+  }
 }
 
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- */
-input[type="checkbox"],
-input[type="radio"] {
+.welcome__subheading {
+  margin-bottom: 0;
+}
+
+.storyboards {
+  background-color: #999;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.storyboards__board {
+  height: 144px;
+  opacity: 0.9;
+  overflow: hidden;
+  position: relative;
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transition: -webkit-filter 1s, opacity 1s;
+  -moz-transition: -moz-filter 1s, opacity 1s;
+  transition: filter 1s, opacity 1s;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  filter: blur(2px);
+}
+.storyboards__board.active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+
+.board__content {
+  height: 100%;
+  position: relative;
+}
+
+.board__headline {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /* 1 */
+  -webkit-transition: all 0.5s ease-out 0.2s;
+  -moz-transition: all 0.5s ease-out 0.2s;
+  -o-transition: all 0.5s ease-out 0.2s;
+  transition: all 0.5s ease-out 0.2s;
+  color: #fff;
+  margin: 0;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  position: absolute;
+  left: 18px;
+  bottom: -10%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .board__headline {
+    /* MQ Break point */
+    left: 0;
+  }
+}
+.active .board__headline {
+  bottom: 0.8em;
+  opacity: 1;
+}
+.board__headline span {
+  display: block;
+}
+
+.board__image {
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.welcome__start-link,
+.board__next-link {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  color: #333;
+  margin-left: -30px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  line-height: 60px;
+}
+
+.welcome__start-link {
+  background: #fefefe;
+}
+
+.our-products {
+  overflow: hidden;
+  width: 100%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .our-products {
+    /* MQ Tablet portrait */
+    overflow: visible;
+  }
+}
+@media screen and (min-width: 769px) {
+  .our-products {
+    /* MQ Tablet landscape */
+    margin: 0 auto;
+    max-width: 980px;
+  }
+}
+.our-products h1 {
+  padding: 0 18px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 980px) {
+  .our-products h1 {
+    /* MQ Break point */
+    padding: 0;
+  }
+}
+
+.our-products__product {
+  position: relative;
+  clear: both;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .our-products__product {
+    /* MQ Tablet portrait */
+    min-height: 500px;
+  }
+}
+
+.product__product-image {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: width 0.25s ease-in-out;
+  -moz-transition: width 0.25s ease-in-out;
+  -o-transition: width 0.25s ease-in-out;
+  transition: width 0.25s ease-in-out;
+  padding: 0 18px;
+  width: 100%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .product__product-image {
+    /* MQ Tablet portrait */
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 700px;
+  }
+  .product--springerlink .product__product-image {
+    left: 65.4%;
+  }
+  .product--smartbooks .product__product-image {
+    right: 65.4%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .product__product-image {
+    /* MQ Tablet landscape */
+    position: relative;
+  }
+  .product--springerlink .product__product-image {
+    float: left;
+    margin-left: 508px;
+    left: 0;
+  }
+  .product--smartbooks .product__product-image {
+    float: right;
+    margin-right: 508px;
+    right: 0;
+  }
+}
+@media all and (min-width: 1016px) {
+  .product__product-image {
+    /* MQ Break point */
+  }
+  .product--springerlink .product__product-image {
+    margin-left: 490px;
+  }
+  .product--smartbooks .product__product-image {
+    margin-right: 525px;
+  }
+}
+.product__product-image img {
+  width: 100%;
+}
+
+.product__product-description {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 1em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .product__product-description {
+    /* MQ Tablet portrait */
+  }
+  .product--springerlink .product__product-description {
+    margin-right: 34.6%;
+    padding-right: 4em;
+  }
+  .product--smartbooks .product__product-description {
+    margin-left: 34.6%;
+    padding-left: 4em;
+  }
+}
+@media screen and (min-width: 769px) {
+  .product__product-description {
+    /* MQ Tablet landscape */
+    position: absolute;
+    top: 0;
+    width: 508px;
+  }
+  .product--springerlink .product__product-description {
+    margin-right: 0;
+    left: 0;
+  }
+  .product--smartbooks .product__product-description {
+    margin-left: 0;
+    right: 0;
+  }
+}
+@media all and (min-width: 1016px) {
+  .product__product-description {
+    /* MQ Break point */
+  }
+  .product--springerlink .product__product-description {
+    padding-left: 0;
+    width: 490px;
+  }
+  .product--smartbooks .product__product-description {
+    padding-right: 0;
+    width: 525px;
+  }
+}
+.product__product-description h2 {
+  margin-bottom: 0.3em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .product__product-description h2 {
+    /* MQ Tablet landscape */
+    margin-top: 0;
+  }
+}
+
+.product-description__link {
+  margin-top: 0;
+}
+
+.product-description__lead-in {
+  font-size: 1.2rem;
+}
+
+.our-people {
+  display: none;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .our-people {
+    /* MQ Tablet portrait */
+    overflow: visible;
+  }
+}
+.our-people h1 {
+  padding: 0 16px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .our-people h1 {
+    /* MQ Tablet portrait */
+    padding: 0;
+  }
+}
+.our-people ul {
+  margin: 0 0 0 -840px;
   padding: 0;
-  /* 2 */
+  position: absolute;
+  top: 5em;
+  left: 50%;
+  width: 1680px;
 }
 
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
+.our-people__person {
+  -webkit-box-sizing: "border-box";
+  -moz-box-sizing: "border-box";
+  box-sizing: "border-box";
+  float: left;
+  list-style: none;
+  width: 140px;
+}
+.our-people__person img {
+  width: 100%;
 }
 
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+.job-vacancies {
+  margin: 0 18px;
 }
 
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
+.job-vacancies__wrapper {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .job-vacancies__wrapper {
+    /* MQ Break point */
+    margin: 0 auto;
+    max-width: 980px;
+    overflow: hidden;
+  }
+}
+
+.job-vacancies__list {
+  border-top: 1px solid black;
+  display: table;
+  margin: 0;
   padding: 0;
+  width: 100%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .job-vacancies__list {
+    /* MQ Break point */
+    max-width: 480px;
+    float: left;
+  }
 }
 
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */
+.job-vacancies__heading {
+  background: #fbfdfe;
+  border-bottom: 1px solid #e8f4fc;
+  border-top: 1px solid #e8f4fc;
+  height: 1.6em;
+  line-height: 1.6;
+  margin-left: -18px;
+  margin-right: -18px;
+}
+.job-vacancies__heading span {
+  padding: 0 18px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .job-vacancies__heading span {
+    /* MQ Tablet portrait */
+    display: block;
+  }
 }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.job-vacancies__subheading {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .job-vacancies__subheading {
+    /* MQ Tablet portrait */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+  }
 }
 
-/********* Layout styles *********/
+.job-vacancies__vacancy {
+  display: table-row;
+  list-style: none;
+}
+.job-vacancies__vacancy:hover {
+  background: #e8f4fc;
+}
+
+.vacancy__role,
+.vacancy__location {
+  border-bottom: 1px solid black;
+  display: table-cell;
+  padding: 7px 0 12px;
+}
+
+.vacancy__role {
+  font-weight: 100;
+  font-size: 1.2rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.vacancy__location {
+  font-size: 0.8rem;
+}
+
+.job-vacancies__content {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .job-vacancies__content {
+    /* MQ Break point */
+    float: right;
+    max-width: 480px;
+  }
+}
+.job-vacancies__content ul {
+  padding-left: 1em;
+}
+
+.job-vacancies__lead-in {
+  font-size: 1.2rem;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .job-vacancies__lead-in {
+    /* MQ Break point */
+    margin-top: 0;
+  }
+}
+
+.looking-for {
+  clear: both;
+  margin: 0 16px;
+  overflow: hidden;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for {
+    /* MQ Tablet portrait */
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+
+.looking-for__photo img {
+  border-radius: 60px;
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+.looking-for__photo p {
+  text-align: center;
+}
+
+.looking-for__contact-info a {
+  display: block;
+}
+
+.colophon {
+  background: #000;
+  color: #fff;
+  font-size: 0.75em;
+  margin: 1em 0 0;
+  padding: 1em 0;
+  text-align: center;
+}
+.colophon:before {
+  content: "●";
+  display: block;
+}
+.colophon a {
+  color: #fff;
+}

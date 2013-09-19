@@ -1,0 +1,147 @@
+$pageWidth:1440px;
+$parallaxPanelRatio:0.1;
+
+.storyboards,
+.welcome {
+  //display:none;
+}
+
+.welcome {
+  background:#fbfdfe;
+  border-bottom:5px solid #e8f4fc;
+}
+
+.welcome__wrapper {
+  position:relative;
+  background:none;
+  padding:50px 18px 80px;
+
+  @include respond-to(tablet-portrait) {
+    margin:0 auto;
+    max-width:980px;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    padding-left:0;
+    padding-right:0;
+  }
+}
+
+.welcome__tagline {
+  font-weight:100;
+  margin-top:0;
+}
+
+.welcome__heading {
+  margin:0;
+  max-width:100%;
+
+  @include respond-to(widescreen) {
+    max-width:82%;
+  }
+}
+
+.welcome__subheading {
+  @extend %h1;
+  margin-bottom:0;
+}
+
+.storyboards {
+  background-color:#999;
+  max-width:1440px;
+  margin:0 auto;
+}
+
+.storyboards__board {
+  height:$pageWidth*$parallaxPanelRatio;
+  opacity:0.9;
+  overflow:hidden;
+  position:relative;
+
+  -webkit-perspective:1300px;
+  -moz-perspective:1300px;
+  perspective:1300px;
+
+  -webkit-transition:-webkit-filter 1s, opacity 1s;
+  -moz-transition:-moz-filter 1s, opacity 1s;
+  transition:filter 1s, opacity 1s;
+
+  -webkit-filter:blur(2px);
+  -moz-filter:blur(2px);
+  filter:blur(2px);
+
+  &.active {
+    opacity:1;
+    z-index:2;
+
+    -webkit-filter:none;
+    -moz-filter:none;
+    filter:none;
+  }
+}
+
+.board__content {
+  @extend %section-wrapper;
+  height:100%;
+  position:relative;
+}
+
+.board__headline {
+  @extend %h1;
+  @include box-sizing(border-box);
+  @include transition(all 0.5s ease-out 0.2s);
+  color:#fff;
+  margin:0;
+  text-shadow:0px 1px 5px rgba(0,0,0,0.5);
+  opacity:0;
+  position:absolute; left:18px; bottom:-10%;
+
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+
+  -webkit-backface-visibility:hidden;
+
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  -ms-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    left:0;
+  }
+
+  .active & {
+    bottom:0.8em;
+    opacity:1;
+  }
+
+  span {
+    display:block;
+  }
+
+}
+
+.board__image {
+  display:block;
+  position:absolute;
+  width:100%;
+}
+
+.welcome__start-link,
+.board__next-link {
+  background:#fff;
+  background:rgba(255, 255, 255, 0.75);
+  color:#333;
+  margin-left:-30px;
+  position:absolute; bottom:5px; left:50%;
+  text-align:center;
+  width:60px;
+  height:60px;
+  border-radius:60px;
+  line-height:60px;
+}
+
+.welcome__start-link {
+  background:#fefefe;
+}

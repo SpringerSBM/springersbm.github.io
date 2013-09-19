@@ -1,0 +1,97 @@
+.job-vacancies {
+  margin:0 18px;
+}
+
+.job-vacancies__wrapper {
+  @include respond-to(break-point, 'min-width:1016px') {
+    margin:0 auto;
+    max-width:980px;
+    overflow:hidden;
+  }
+}
+
+.job-vacancies__list {
+  border-top:1px solid black;
+  display:table;
+  margin:0;
+  padding:0;
+  width:100%;
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    max-width:480px;
+    float:left;
+  }
+}
+
+.job-vacancies__heading {
+  background:#fbfdfe;
+  border-bottom:1px solid #e8f4fc;
+  border-top:1px solid #e8f4fc;
+  height:1.6em;
+  line-height:1.6;
+  margin-left:-18px;
+  margin-right:-18px;
+
+  span {
+    @extend %section-wrapper;
+    padding:0 18px;
+
+    @include respond-to(tablet-portrait) {
+      display:block;
+    }
+  }
+}
+
+.job-vacancies__subheading {
+  @include respond-to(tablet-portrait) {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:980px;
+  }
+}
+
+.job-vacancies__vacancy {
+  display:table-row;
+  list-style:none;
+
+  &:hover {
+    background:#e8f4fc;
+  }
+}
+
+.vacancy__role,
+.vacancy__location {
+  border-bottom:1px solid black;
+  display:table-cell;
+  padding:7px 0 12px;
+}
+
+.vacancy__role {
+  font-weight:100;
+  font-size:1.2rem;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+.vacancy__location {
+  font-size:0.8rem;
+}
+
+.job-vacancies__content {
+  @include respond-to(break-point, 'min-width:1016px') {
+    float:right;
+    max-width:480px;
+  }
+
+  ul {
+    padding-left:1em;
+  }
+}
+
+.job-vacancies__lead-in {
+  font-size:1.2rem;
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    margin-top:0;
+  }
+}

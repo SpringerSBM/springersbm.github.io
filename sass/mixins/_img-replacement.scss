@@ -1,0 +1,9 @@
+// @todo(todd): Refactor for modern browsers only
+@mixin img-replacement {
+	background-repeat:no-repeat;
+	direction:ltr;
+	display:block;
+	overflow:hidden;
+	text-align:left;
+	text-indent:-9999em;
+}
