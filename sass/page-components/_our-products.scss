@@ -26,7 +26,7 @@
   clear:both;
 
   @include respond-to(tablet-portrait) {
-    min-height:500px;
+    min-height:460px;
   }
 }
 
@@ -139,4 +139,19 @@
 
 .product-description__lead-in {
   font-size:1.2rem;
+}
+
+.product-description__tags {
+  font-size:0.9rem;
+
+  span {
+    background:#e8f4fc;
+    display:inline-block;
+    margin-right:5px;
+    padding:2px 5px;
+
+    &:last-child {
+      margin:0;
+    }
+  }
 }

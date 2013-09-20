@@ -1,12 +1,18 @@
 .job-vacancies {
   margin:0 18px;
+  position:relative;
+
+  .anchor {
+    top:-66px;
+  }
 }
 
 .job-vacancies__wrapper {
+  margin:0 auto;
+  max-width:490px;
+
   @include respond-to(break-point, 'min-width:1016px') {
-    margin:0 auto;
     max-width:980px;
-    overflow:hidden;
   }
 }
 
@@ -16,9 +22,9 @@
   margin:0;
   padding:0;
   width:100%;
+  max-width:490px;
 
   @include respond-to(break-point, 'min-width:1016px') {
-    max-width:480px;
     float:left;
   }
 }
@@ -47,6 +53,11 @@
     margin-left:auto;
     margin-right:auto;
     max-width:980px;
+    text-align:center;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    text-align:left;
   }
 }
 
@@ -55,7 +66,7 @@
   list-style:none;
 
   &:hover {
-    background:#e8f4fc;
+    background:#fbfdfe;
   }
 }
 
@@ -78,9 +89,13 @@
 }
 
 .job-vacancies__content {
+  max-width:490px;
+
   @include respond-to(break-point, 'min-width:1016px') {
+    @include box-sizing(border-box);
     float:right;
-    max-width:480px;
+    margin-top:-0.5em;
+    padding-left:4em;
   }
 
   ul {

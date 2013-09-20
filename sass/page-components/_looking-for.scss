@@ -1,15 +1,54 @@
 .looking-for {
   clear:both;
-  margin:0 16px;
-  overflow:hidden;
+  margin:0 auto;
+  max-width:490px;
+  padding:0 18px;
+  position:relative;
 
   @include respond-to(tablet-portrait) {
-    margin:0 auto;
-    max-width:600px;
+    padding:0;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    max-width:980px;
+  }
+}
+
+.looking-for__wrapper {
+  position:relative;
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    height:150px;
+  }
+}
+
+.looking-for__contact-info {
+  font-size:1.2rem;
+  max-width:335px;
+
+  @include respond-to(tablet-portrait) {
+    float:right;
+    margin-right:65px;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    float:none;
+    margin:0 0 0 150px;
   }
 }
 
 .looking-for__photo {
+
+  @include respond-to(tablet-portrait) {
+    float:left;
+    margin-left:-60px;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    float:none;
+    margin-left:0;
+    position:absolute; top:0; left:0;
+  }
 
   img {
     border-radius:60px;
@@ -20,13 +59,6 @@
 
   p {
     text-align:center;
-  }
-}
-
-.looking-for__contact-info {
-  //margin-left:121px;
-
-  a {
-    display:block;
+    font-size:0.8rem;
   }
 }

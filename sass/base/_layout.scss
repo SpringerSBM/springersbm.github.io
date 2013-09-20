@@ -16,13 +16,9 @@ img {
   }
 }
 
-.our-location {
-  display:none;
-  width:100%;
-
-  iframe {
-    width:100%;
-  }
+.anchor {
+  position:absolute; left:0;
+  visibility:hidden;
 }
 
 %section-wrapper {
@@ -40,6 +36,7 @@ img {
   line-height:0.95em;
 }
 
+// @todo: Refactor %h1 et al. to resize based on html font-size...
 h1,
 %h1 {
   @extend %headings;
@@ -47,7 +44,7 @@ h1,
   margin:0.67em 0;
 
   @include respond-to(tablet-portrait) {
-    font-size:4rem;
+    font-size:3.8rem;
   }
 }
 

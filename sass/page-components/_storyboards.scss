@@ -112,7 +112,7 @@ $parallaxPanelRatio:0.1;
   }
 
   .active & {
-    bottom:0.8em;
+    bottom:1.2em;
     opacity:1;
   }
 
@@ -134,12 +134,20 @@ $parallaxPanelRatio:0.1;
   background:rgba(255, 255, 255, 0.75);
   color:#333;
   margin-left:-30px;
-  position:absolute; bottom:5px; left:50%;
+  position:absolute; bottom:10px; left:50%;
   text-align:center;
   width:60px;
   height:60px;
   border-radius:60px;
   line-height:60px;
+}
+
+.board__next-link {
+  display:none;
+
+  @include respond-to(tablet-landscape) {
+    display:block;
+  }
 }
 
 .welcome__start-link {
