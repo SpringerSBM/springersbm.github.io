@@ -1,0 +1,24 @@
+.btn {
+	background: #e5e5e5 url(../images/grdnt_grey_f8f8f8_e5e5e5.gif) repeat-x;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#e5e5e5));
+	background-image: -webkit-linear-gradient(top,#f8f8f8,#e5e5e5);
+	background-image: -moz-linear-gradient(top,#f8f8f8,#e5e5e5);
+	background-image: -ms-linear-gradient(top,#f8f8f8,#e5e5e5);
+	background-image: -o-linear-gradient(top,#f8f8f8,#e5e5e5);
+	background-image: linear-gradient(top,#f8f8f8,#e5e5e5);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: inset 0 1px 0 white;
+	-moz-box-shadow: inset 0 1px 0 white;
+	box-shadow: inset 0 1px 0 white;
+	border: 1px solid #bcbcbc;
+	color: #666;
+	font-size: 15px;
+	font-size: 0.8rem;
+	display: inline-block;
+	height: 21px;
+	line-height: 1.7;
+	padding: 1px 10px 0;
+	white-space: nowrap;
+}

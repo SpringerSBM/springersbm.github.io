@@ -86,6 +86,41 @@ h3 {
   }
 }
 
+.btn {
+  background: #0176c3 url(../images/grdnt_blue_38a0e5_0277c4.gif) repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#38a0e5), to(#0176c3));
+  background-image: -webkit-linear-gradient(top, #38a0e5, #0176c3);
+  background-image: -moz-linear-gradient(top, #38a0e5, #0176c3);
+  background-image: -ms-linear-gradient(top, #38a0e5, #0176c3);
+  background-image: -o-linear-gradient(top, #38a0e5, #0176c3);
+  background-image: linear-gradient(top, #38a0e5, #0176c3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border: 1px solid #0176c3;
+  color: white;
+  font-size: 18px;
+  font-size: 1.2rem;
+  display: inline-block;
+  height: 40px;
+  line-height: 1.7;
+  padding: 1px 10px 0;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 95%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .btn {
+    /* MQ Tablet landscape */
+    width: 100%;
+  }
+}
+
 .main-header {
   background: #fff;
   background: rgba(255, 255, 255, 0.95);
@@ -161,10 +196,22 @@ h3 {
     width: 141px;
   }
 }
+.roles .main-header__logo {
+  float: right;
+}
 
 .main-header__nav {
   float: right;
   font-size: 1.1em;
+}
+.roles .main-header__nav {
+  float: left;
+}
+.roles .main-header__nav span {
+  font-weight: 100;
+  font-family: arial;
+  font-size: 15px;
+  vertical-align: 2px;
 }
 
 .main-header__nav-list {
@@ -843,6 +890,132 @@ h3 {
     /* MQ Tablet portrait */
     max-width: 142px;
   }
+}
+
+.roles .main-header__nav-list li {
+  width: 100%;
+}
+
+.job-wrapper {
+  margin: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  position: relative;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .job-wrapper {
+    /* MQ Tablet landscape */
+    margin: 0 2em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .job-wrapper {
+    /* MQ Laptop */
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .job-wrapper {
+    /* MQ Tablet landscape */
+    max-width: 980px;
+  }
+}
+.job-wrapper .welcome {
+  background: none;
+  border-bottom: none;
+}
+.job-wrapper .welcome .welcome__wrapper {
+  padding-left: 1.5em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  padding-bottom: 0;
+}
+@media screen and (min-width: 769px) {
+  .job-wrapper .welcome .welcome__wrapper {
+    /* MQ Tablet landscape */
+    padding-left: 0;
+  }
+}
+.job-wrapper .welcome__subheading {
+  display: block;
+  font-size: 1rem;
+  margin: 24px 0 -19px 0;
+}
+.job-wrapper .welcome__subheading:last-child {
+  margin-bottom: 0;
+}
+.job-wrapper .sidebar {
+  clear: both;
+  margin: 2em 0;
+  padding: 0 1.5em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .job-wrapper .sidebar {
+    /* MQ Tablet landscape */
+    border-left: 5px solid #e8f4fc;
+    max-width: 10em;
+    padding: 0 3em;
+    position: absolute;
+    right: 0;
+    top: 5.8em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .job-wrapper .sidebar {
+    /* MQ Laptop */
+    max-width: 14em;
+  }
+}
+.job-wrapper .sidebar .linkedin {
+  margin: 3.3em 0;
+  font-size: 0.8rem;
+}
+.job-wrapper .sidebar .linkedin a {
+  background-repeat: no-repeat;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -9999em;
+  background: url(../imgs/linkedin.png) 0 0 no-repeat;
+  cursor: pointer;
+  height: 40px;
+}
+.job-wrapper .sidebar h3 {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.job-wrapper .sidebar p {
+  font-size: 0.8rem;
+}
+
+.job-vacancy {
+  margin: 1.5em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .job-vacancy {
+    /* MQ Tablet landscape */
+    max-width: 57%;
+    margin: 2em 0;
+  }
+}
+.job-vacancy h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.job-vacancy h2 span {
+  font-size: 1rem;
+}
+.job-vacancy li {
+  line-height: 1.6;
+  margin: 7px 0;
+}
+
+.job-vacancies__lead-in {
+  margin: 2em 0 .5em 0;
 }
 
 .colophon {

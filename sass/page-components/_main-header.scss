@@ -51,11 +51,31 @@
       width:141px;
     }
   }
+
+  .roles & {
+    float:right;
+  }
+
 }
 
 .main-header__nav {
   float:right;
   font-size:1.1em;
+
+  .roles & {
+    float:left;
+
+    span {
+      font-weight: 100;
+      font-family: arial;
+      font-size: 15px;
+      vertical-align: 2px;
+    }
+
+  }
+
+
+
 }
 
 .main-header__nav-list {
