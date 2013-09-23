@@ -1,1 +1,1 @@
-exclude: ['sass', 'config.rb', 'archive']
+exclude: ['sass', 'config.rb']
