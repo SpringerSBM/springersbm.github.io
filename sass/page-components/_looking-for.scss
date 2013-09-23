@@ -60,5 +60,9 @@
   p {
     text-align:center;
     font-size:0.8rem;
+
+    @include respond-to(tablet-portrait) {
+      max-width:142px;
+    }
   }
 }

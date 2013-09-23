@@ -836,6 +836,13 @@ h3 {
 .looking-for__photo p {
   text-align: center;
   font-size: 0.8rem;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__photo p {
+    /* MQ Tablet portrait */
+    max-width: 142px;
+  }
 }
 
 .colophon {
