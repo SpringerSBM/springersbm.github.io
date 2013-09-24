@@ -42,24 +42,21 @@ img {
 }
 
 h1,
-.welcome__subheading,
-.board__headline, h2, h3 {
+.welcome__subheading, h2, h3 {
   font-weight: 100;
   letter-spacing: -0.04em;
   line-height: 0.95em;
 }
 
 h1,
-.welcome__subheading,
-.board__headline {
+.welcome__subheading {
   font-size: 2rem;
   margin: 0.67em 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   h1,
-  .welcome__subheading,
-  .board__headline {
+  .welcome__subheading {
     /* MQ Tablet portrait */
     font-size: 3.8rem;
   }
@@ -383,13 +380,6 @@ h3 {
 .welcome__heading {
   margin: 0;
   max-width: 100%;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 1261px) {
-  .welcome__heading {
-    /* MQ Widescreen */
-    max-width: 82%;
-  }
 }
 
 .welcome__subheading {
@@ -413,9 +403,15 @@ h3 {
   -webkit-transition: -webkit-filter 1s, opacity 1s;
   -moz-transition: -moz-filter 1s, opacity 1s;
   transition: filter 1s, opacity 1s;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  filter: blur(2px);
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1025px) {
+  .storyboards__board {
+    /* MQ Laptop */
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    filter: blur(2px);
+  }
 }
 .storyboards__board.active {
   opacity: 1;
@@ -431,6 +427,7 @@ h3 {
 }
 
 .board__headline {
+  font-size: 4.5em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -455,6 +452,10 @@ h3 {
   transform: translate3d(0, 0, 0);
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
+.mobile .board__headline {
+  bottom: 1.6em;
+  opacity: 1;
+}
 @media all and (min-width: 1016px) {
   .board__headline {
     /* MQ Break point */
@@ -462,7 +463,7 @@ h3 {
   }
 }
 .active .board__headline {
-  bottom: 1.2em;
+  bottom: 1.6em;
   opacity: 1;
 }
 .board__headline span {

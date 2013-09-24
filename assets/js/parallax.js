@@ -2,7 +2,15 @@
 
 	var cacheObj={},
 		pageWidth=1440,
-		imageRatio=0.4;
+		settings={
+			mobileBreakPoint:1024,
+			isMobile:function(){
+				return cacheObj.$w.innerWidth()<=settings.mobileBreakPoint;
+			},
+			imageRatio:function(){
+				return this.isMobile()?0.5:0.4;
+			}
+		};
 
 
 	//on page ready....
@@ -18,12 +26,26 @@
 			parFx:parFx,
 			panels:panels,
 			$w:$w,
-			panelHeight:panelHeight
+			panelHeight:panelHeight,
+			fitTexts:$(".fitText")
 		}
 			
 		// setting the events handler
-		$w.on("resize",setImageRatio);
-		$w.on("scroll resize", function(){
+		$w.on("resize",function(){
+
+			$(document.body).toggleClass("mobile",settings.isMobile());
+
+			setImageRatio();
+			setActivePanel();
+			setBGposition();
+
+			//tweaking the header font-size
+			cacheObj.fitTexts.fitText(
+				1.45,
+				{minFontSize:36}
+			);
+		});
+		$w.on("scroll", function(){
 			setActivePanel();
 			setBGposition();
 		})
@@ -41,13 +63,19 @@
 
 		//running the functions on page ready
 		setResponsiveImages();
-		setImageRatio();
-		setActivePanel();
-		setBGposition();
+		
+		//triggering the resize event handler
+		$w.resize();
 		
 	})
 
 	function setActivePanel(){
+
+		// enabling the text animation only on desktops
+		if(settings.isMobile()){
+			return false;
+		}
+
 		var WscrollTop=cacheObj.$w.scrollTop(),
 			windowHeight=cacheObj.$w.innerHeight(),
 			//getting the index of the panel currently showing it self in the center of the screen (-ish)
@@ -60,6 +88,13 @@
 	}
 
 	function setBGposition(){
+
+		//enabling the parallax effect only on desktops
+		if(settings.isMobile()){
+			//repositioning the images 
+			cacheObj.panels.find("img").css({top:"0px"});
+			return false;
+		}
 		var windowHeight=cacheObj.$w.innerHeight(),
 			WscrollTop=cacheObj.$w.scrollTop(),
 			pageHeight=$("html").innerHeight();
@@ -85,9 +120,9 @@
 
 
 	function setImageRatio(){
-		//making sure the images don't lose their ration when resizing
+		//making sure the images don't lose their ratio when resizing
 		var bodyWidth=cacheObj.parFx.innerWidth();
-		cacheObj.panelHeight=bodyWidth*imageRatio;
+		cacheObj.panelHeight=bodyWidth*settings.imageRatio();
 
 		cacheObj.panels.each(function(){
 			$(this)
