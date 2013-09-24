@@ -61,7 +61,7 @@
 			$("html,body").animate({scrollTop:scrollTop},600)
 		})
 
-		//running the functions on page ready
+		//setting the responsive images
 		setResponsiveImages();
 		
 		//triggering the resize event handler
@@ -135,49 +135,22 @@
 	}
 	
     function setResponsiveImages() {
-    		//looking for the noscript tag
-        var responsiveImages = $(".responsive"),
-        	//checking the retina display
-			isRetina = (
-				window.devicePixelRatio > 1 ||
-				(window.matchMedia && window.matchMedia("(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)").matches)
-			),  	
-			//setting the break-points
-        	mqBreakPoints = {
+
+		// storyboard images
+		responsiveImages(
+			$(".storyboards").find(".responsive"),
+			{
         		"_smartphone":600,
         		"_tablet":1024, 
         		"_widescreen":99999
         	},
-        	imgFormat="";
+        	setBGposition
+		);
 
-
-        //test for available width in current browser window
-        for (var bp in mqBreakPoints){
-	        if(cacheObj.$w.innerWidth() < mqBreakPoints[bp]){ 
-	          imgFormat = bp;
-	          break;
-	        }
-        }
-
-        imgFormat=isRetina?imgFormat+"@2x":imgFormat;
-        
-        //creating the IMG element and adding it to the DOM
-        responsiveImages.each(function(){
-
-			var noScriptElem=$(this),
-				imgUrl=noScriptElem.data("baseimg"),
-				img = window.document.createElement("img"),
-				$img=$(img).addClass('board__image');
-
-			//setting the image as soon as it gets loaded
-			$img.on("load",function(){
-				setBGposition();
-			});
-
-			img.src=imgUrl + imgFormat + ".jpg";
-			$img.insertAfter(noScriptElem);
-
-        })
+		// products images
+		responsiveImages(
+			$(".our-products__product").find(".responsive")
+		);
 
     }
 
