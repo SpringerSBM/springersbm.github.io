@@ -149,7 +149,7 @@
 
 		// products images
 		responsiveImages(
-			$(".our-products__product").find(".responsive")
+			$(".our-products__product, .looking-for__photo").find(".responsive")
 		);
 
 		// home-section__grid
