@@ -23,16 +23,18 @@ img {
 
 .anchor {
   position: absolute;
+  top: -66px;
   left: 0;
   visibility: hidden;
 }
 
-.main-header__wrapper, .board__content, .our-people, .job-vacancies__heading span {
+/* Silent classes (Shhh...) */
+.main-header__wrapper, .home-section__heading span, .board__content {
   margin: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
-  .main-header__wrapper, .board__content, .our-people, .job-vacancies__heading span {
+  .main-header__wrapper, .home-section__heading span, .board__content {
     /* MQ Tablet portrait */
     margin: 0 auto;
     max-width: 980px;
@@ -280,6 +282,62 @@ h3 {
   color: #fff;
 }
 
+.home-section__heading {
+  background: #fbfdfe;
+  border-bottom: 1px solid #e8f4fc;
+  border-top: 1px solid #e8f4fc;
+  height: 1.6em;
+  line-height: 1.6;
+  margin-left: -18px;
+  margin-right: -18px;
+}
+.home-section__heading span {
+  padding: 0 18px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .home-section__heading span {
+    /* MQ Tablet portrait */
+    display: block;
+  }
+}
+
+.home-section__wrapper {
+  margin: 0 auto;
+  overflow: hidden;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .home-section__wrapper {
+    /* MQ Break point */
+    max-width: 980px;
+  }
+}
+
+.home-section__grid {
+  position: relative;
+}
+
+.home-section__grid-wrapper {
+  margin: 0 0 0 -720px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1440px;
+}
+
+.home-section__grid-item {
+  -webkit-box-sizing: "border-box";
+  -moz-box-sizing: "border-box";
+  box-sizing: "border-box";
+  float: left;
+  list-style: none;
+}
+.home-section__grid-item img {
+  width: 100%;
+}
+
 .welcome {
   background: #fbfdfe;
   border-bottom: 5px solid #e8f4fc;
@@ -438,34 +496,43 @@ h3 {
   background: #fefefe;
 }
 
-.our-products {
+.home-section--our-products {
   overflow: hidden;
   width: 100%;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
+  position: relative;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
-  .our-products {
+  .home-section--our-products {
     /* MQ Tablet portrait */
     overflow: visible;
   }
 }
-@media screen and (min-width: 769px) {
-  .our-products {
-    /* MQ Tablet landscape */
-    margin: 0 auto;
+.home-section--our-products .home-section__heading {
+  margin-left: 0;
+  margin-right: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .home-section--our-products .home-section__heading {
+    /* MQ Break point */
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+}
+.home-section--our-products .home-section__wrapper {
+  overflow: visible;
+  max-width: 100%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .home-section--our-products .home-section__wrapper {
+    /* MQ Break point */
     max-width: 980px;
   }
 }
-.our-products h1 {
-  padding: 0 18px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media all and (min-width: 980px) {
-  .our-products h1 {
-    /* MQ Break point */
-    padding: 0;
-  }
+.home-section--our-products .anchor {
+  top: -66px;
 }
 
 .our-products__product {
@@ -521,7 +588,7 @@ h3 {
   }
   .product--smartbooks .product__product-image {
     float: right;
-    margin-right: 508px;
+    margin-right: 525px;
     right: 0;
   }
 }
@@ -531,9 +598,6 @@ h3 {
   }
   .product--springerlink .product__product-image {
     margin-left: 490px;
-  }
-  .product--smartbooks .product__product-image {
-    margin-right: 525px;
   }
 }
 .product__product-image img {
@@ -567,15 +631,16 @@ h3 {
     /* MQ Tablet landscape */
     position: absolute;
     top: 0;
-    width: 508px;
   }
   .product--springerlink .product__product-description {
     margin-right: 0;
     left: 0;
+    width: 508px;
   }
   .product--smartbooks .product__product-description {
     margin-left: 0;
     right: 0;
+    width: 525px;
   }
 }
 @media all and (min-width: 1016px) {
@@ -588,7 +653,6 @@ h3 {
   }
   .product--smartbooks .product__product-description {
     padding-right: 0;
-    width: 525px;
   }
 }
 .product__product-description h2 {
@@ -623,67 +687,102 @@ h3 {
   margin: 0;
 }
 
-.our-people {
-  display: none;
-  height: 500px;
-  overflow: hidden;
+.home-section--our-people {
   position: relative;
+}
+.home-section--our-people .home-section__heading {
+  margin-left: 0;
+  margin-right: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-@media screen and (min-width: 600px) {
-  .our-people {
-    /* MQ Tablet portrait */
-    overflow: visible;
+@media all and (min-width: 1016px) {
+  .home-section--our-people .home-section__heading {
+    /* MQ Break point */
+    margin-left: -18px;
+    margin-right: -18px;
   }
 }
-.our-people h1 {
-  padding: 0 16px;
+.home-section--our-people .home-section__wrapper {
+  padding: 0 18px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-@media screen and (min-width: 600px) {
-  .our-people h1 {
-    /* MQ Tablet portrait */
+@media all and (min-width: 1016px) {
+  .home-section--our-people .home-section__wrapper {
+    /* MQ Break point */
     padding: 0;
   }
 }
-.our-people ul {
-  margin: 0 0 0 -840px;
-  padding: 0;
-  position: absolute;
-  top: 5em;
-  left: 50%;
-  width: 1680px;
+.home-section--our-people .home-section__grid {
+  height: 666px;
+}
+.home-section--our-people .home-section__grid-item {
+  width: 160px;
+  height: 222px;
 }
 
-.our-people__person {
-  -webkit-box-sizing: "border-box";
-  -moz-box-sizing: "border-box";
-  box-sizing: "border-box";
-  float: left;
-  list-style: none;
-  width: 140px;
+.our-culture {
+  margin: 0 18px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.our-people__person img {
-  width: 100%;
+@media all and (min-width: 1016px) {
+  .our-culture {
+    /* MQ Break point */
+    margin: 0 auto;
+    max-width: 980px;
+  }
+}
+.our-culture .home-section__heading {
+  margin-left: 0;
+  margin-right: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .our-culture .home-section__heading {
+    /* MQ Break point */
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+}
+.our-culture .home-section__grid {
+  height: 666px;
+}
+.our-culture .home-section__grid-item {
+  width: 480px;
+  height: 222px;
 }
 
-.job-vacancies {
+.home-section--job-vacancies {
   margin: 0 18px;
   position: relative;
 }
-.job-vacancies .anchor {
-  top: -66px;
-}
-
-.job-vacancies__wrapper {
+.home-section--job-vacancies .home-section__wrapper {
   margin: 0 auto;
   max-width: 490px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
-  .job-vacancies__wrapper {
+  .home-section--job-vacancies .home-section__wrapper {
     /* MQ Break point */
     max-width: 980px;
+  }
+}
+.home-section--job-vacancies .home-section__subheading {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .home-section--job-vacancies .home-section__subheading {
+    /* MQ Tablet portrait */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
+    text-align: center;
+  }
+}
+@media all and (min-width: 1016px) {
+  .home-section--job-vacancies .home-section__subheading {
+    /* MQ Break point */
+    text-align: left;
   }
 }
 
@@ -700,46 +799,6 @@ h3 {
   .job-vacancies__list {
     /* MQ Break point */
     float: left;
-  }
-}
-
-.job-vacancies__heading {
-  background: #fbfdfe;
-  border-bottom: 1px solid #e8f4fc;
-  border-top: 1px solid #e8f4fc;
-  height: 1.6em;
-  line-height: 1.6;
-  margin-left: -18px;
-  margin-right: -18px;
-}
-.job-vacancies__heading span {
-  padding: 0 18px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 600px) {
-  .job-vacancies__heading span {
-    /* MQ Tablet portrait */
-    display: block;
-  }
-}
-
-.job-vacancies__subheading {
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 600px) {
-  .job-vacancies__subheading {
-    /* MQ Tablet portrait */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 980px;
-    text-align: center;
-  }
-}
-@media all and (min-width: 1016px) {
-  .job-vacancies__subheading {
-    /* MQ Break point */
-    text-align: left;
   }
 }
 

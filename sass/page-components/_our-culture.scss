@@ -1,6 +1,10 @@
-.home-section--our-people {
-  //display:none;
-  position:relative;
+.our-culture {
+  margin:0 18px;
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    margin:0 auto;
+    max-width:980px;
+  }
 
   .home-section__heading {
     margin-left:0;
@@ -12,20 +16,12 @@
     }
   }
 
-  .home-section__wrapper {
-    padding:0 18px;
-
-    @include respond-to(break-point, 'min-width:1016px') {
-      padding:0;
-    }
-  }
-
   .home-section__grid {
     height:666px;
   }
 
   .home-section__grid-item {
-    width:160px;
+    width:480px;
     height:222px;
   }
 }

@@ -1,23 +1,34 @@
-.our-products {
+.home-section--our-products {
   //display:none;
   overflow:hidden;
   width:100%;
+  position:relative;
 
   @include respond-to(tablet-portrait) {
     overflow:visible;
   }
 
-  @include respond-to(tablet-landscape) {
-    margin:0 auto;
-    max-width:980px;
+  .home-section__heading {
+    margin-left:0;
+    margin-right:0;
+
+    @include respond-to(break-point, 'min-width:1016px') {
+      margin-left:-18px;
+      margin-right:-18px;
+    }
   }
 
-  h1 {
-    padding:0 18px;
+  .home-section__wrapper {
+    overflow:visible;
+    max-width:100%;
 
-    @include respond-to(break-point, 'min-width:980px') {
-      padding:0;
+    @include respond-to(break-point, 'min-width:1016px') {
+      max-width:980px;
     }
+  }
+
+  .anchor {
+    top:-66px;
   }
 }
 
@@ -61,7 +72,7 @@
 
     .product--smartbooks & {
       float:right;
-      margin-right:508px;
+      margin-right:525px;
       right:0;
     }
   }
@@ -71,9 +82,9 @@
       margin-left:490px;
     }
 
-    .product--smartbooks & {
-      margin-right:525px;
-    }
+    //.product--smartbooks & {
+    //  margin-right:525px;
+    //}
   }
 
   img {
@@ -99,16 +110,17 @@
 
   @include respond-to(tablet-landscape) {
     position:absolute; top:0;
-    width:508px;
 
     .product--springerlink & {
       margin-right:0;
       left:0;
+      width:508px;
     }
 
     .product--smartbooks & {
       margin-left:0;
       right:0;
+      width:525px;
     }
   }
 
@@ -120,7 +132,6 @@
 
     .product--smartbooks & {
       padding-right:0;
-      width:525px;
     }
   }
 

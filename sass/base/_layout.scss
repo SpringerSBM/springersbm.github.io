@@ -17,10 +17,11 @@ img {
 }
 
 .anchor {
-  position:absolute; left:0;
+  position:absolute; top:-66px; left:0;
   visibility:hidden;
 }
 
+/* Silent classes (Shhh...) */
 %section-wrapper {
   margin:0;
 
