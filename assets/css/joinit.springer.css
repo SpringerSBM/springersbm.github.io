@@ -42,21 +42,24 @@ img {
 }
 
 h1,
-.welcome__subheading, h2, h3 {
+.welcome__subheading,
+.board__headline, h2, h3 {
   font-weight: 100;
   letter-spacing: -0.04em;
   line-height: 0.95em;
 }
 
 h1,
-.welcome__subheading {
+.welcome__subheading,
+.board__headline {
   font-size: 2rem;
   margin: 0.67em 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   h1,
-  .welcome__subheading {
+  .welcome__subheading,
+  .board__headline {
     /* MQ Tablet portrait */
     font-size: 3.8rem;
   }
@@ -70,7 +73,9 @@ h2 {
 @media screen and (min-width: 600px) {
   h2 {
     /* MQ Tablet portrait */
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    font-weight: 100;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -81,7 +86,7 @@ h3 {
 @media screen and (min-width: 600px) {
   h3 {
     /* MQ Tablet portrait */
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -110,7 +115,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  width: 95%;
+  width: 94%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 769px) {
@@ -216,10 +221,13 @@ h3 {
 .roles .main-header__nav {
   float: left;
 }
+.roles .main-header__nav ul {
+  margin-left: -14px;
+}
 .roles .main-header__nav span {
   font-weight: 100;
   font-family: arial;
-  font-size: 15px;
+  font-size: 12px;
   vertical-align: 2px;
 }
 
@@ -325,7 +333,7 @@ h3 {
   position: relative;
 }
 
-.home-section__grid-wrapper, .home-section--our-people .team-panorama, .map img {
+.home-section__grid-wrapper {
   margin: 0 0 0 -720px;
   padding: 0;
   position: absolute;
@@ -380,6 +388,13 @@ h3 {
 .welcome__heading {
   margin: 0;
   max-width: 100%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1261px) {
+  .welcome__heading {
+    /* MQ Widescreen */
+    max-width: 82%;
+  }
 }
 
 .welcome__subheading {
@@ -403,15 +418,9 @@ h3 {
   -webkit-transition: -webkit-filter 1s, opacity 1s;
   -moz-transition: -moz-filter 1s, opacity 1s;
   transition: filter 1s, opacity 1s;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 1025px) {
-  .storyboards__board {
-    /* MQ Laptop */
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    filter: blur(2px);
-  }
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  filter: blur(2px);
 }
 .storyboards__board.active {
   opacity: 1;
@@ -427,7 +436,6 @@ h3 {
 }
 
 .board__headline {
-  font-size: 4.5em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -452,10 +460,6 @@ h3 {
   transform: translate3d(0, 0, 0);
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.mobile .board__headline {
-  bottom: 1.6em;
-  opacity: 1;
-}
 @media all and (min-width: 1016px) {
   .board__headline {
     /* MQ Break point */
@@ -463,7 +467,7 @@ h3 {
   }
 }
 .active .board__headline {
-  bottom: 1.6em;
+  bottom: 1.2em;
   opacity: 1;
 }
 .board__headline span {
@@ -724,103 +728,42 @@ h3 {
   }
 }
 .home-section--our-people .home-section__grid {
-  height: 888px;
+  height: 666px;
 }
 .home-section--our-people .home-section__grid-item {
-  height: 222px;
-  position: relative;
   width: 160px;
-}
-.home-section--our-people .home-section__grid-item div {
-  transition: all 0.5s;
-  -webkit-perspective: 1300px;
-  -moz-perspective: 1300px;
-  -ms-perspective: 1300px;
-  perspective: 1300px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-.home-section--our-people .home-section__grid-item:hover div {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.home-section--our-people .home-section__grid-item img {
-  display: block;
-  max-width: 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  background-color: #fff;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.home-section--our-people .home-section__grid-item img.personal {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.home-section--our-people .team-panorama {
-  top: auto;
-  bottom: 0;
+  height: 222px;
 }
 
-.our-culture,
-.our-workplace {
-  display: none;
+.our-culture {
   margin: 0 18px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
-  .our-culture,
-  .our-workplace {
+  .our-culture {
     /* MQ Break point */
     margin: 0 auto;
     max-width: 980px;
   }
 }
-.our-culture .home-section__heading,
-.our-workplace .home-section__heading {
+.our-culture .home-section__heading {
   margin-left: 0;
   margin-right: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
-  .our-culture .home-section__heading,
-  .our-workplace .home-section__heading {
+  .our-culture .home-section__heading {
     /* MQ Break point */
     margin-left: -18px;
     margin-right: -18px;
   }
 }
-.our-culture .home-section__grid,
-.our-workplace .home-section__grid {
+.our-culture .home-section__grid {
   height: 666px;
 }
-.our-culture .home-section__grid-item,
-.our-workplace .home-section__grid-item {
+.our-culture .home-section__grid-item {
   width: 480px;
   height: 222px;
-}
-
-.our-workplace .home-section__grid {
-  height: 1112px;
-  top: 446px;
-}
-
-.map {
-  position: relative;
 }
 
 .home-section--job-vacancies {
@@ -830,7 +773,6 @@ h3 {
 .home-section--job-vacancies .home-section__wrapper {
   margin: 0 auto;
   max-width: 490px;
-  overflow: visible;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
@@ -838,12 +780,6 @@ h3 {
     /* MQ Break point */
     max-width: 980px;
   }
-}
-.home-section--job-vacancies .home-section__wrapper:after {
-  content: "";
-  display: inline-block;
-  clear: both;
-  display: table;
 }
 .home-section--job-vacancies .home-section__subheading {
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -889,23 +825,22 @@ h3 {
   background: #fbfdfe;
 }
 
-.vacancy__role {
-  border-bottom: 1px solid #555;
+.vacancy__role,
+.vacancy__location {
+  border-bottom: 1px solid black;
   display: table-cell;
+  padding: 7px 0 12px;
+}
+
+.vacancy__role {
   font-weight: 100;
   font-size: 1.2rem;
-  padding: 12px 5px;
-}
-.vacancy__role a {
-  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .vacancy__location {
-  color: #555;
-  float: right;
   font-size: 0.8rem;
-  text-decoration: none;
-  line-height: 1.6rem;
 }
 
 .job-vacancies__content {
@@ -927,11 +862,12 @@ h3 {
   padding-left: 1em;
 }
 
-.home .job-vacancies__lead-in {
+.job-vacancies__lead-in {
+  font-size: 1.2rem;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
-  .home .job-vacancies__lead-in {
+  .job-vacancies__lead-in {
     /* MQ Break point */
     margin-top: 0;
   }
@@ -962,96 +898,75 @@ h3 {
   margin: 25px 0 50px 0;
 }
 
-.looking-for__headline {
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 600px) {
-  .looking-for__headline {
-    /* MQ Tablet portrait */
-    max-width: 400px;
-  }
-}
-
-.looking-for__lead-in {
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 769px) {
-  .looking-for__lead-in {
-    /* MQ Tablet landscape */
-    max-width: 490px;
-  }
-}
-
 .looking-for__wrapper {
   position: relative;
-}
-
-.looking-for__role-list {
-  overflow: auto;
-  padding: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
-  .looking-for__role-list {
+  .looking-for__wrapper {
     /* MQ Break point */
-    margin-bottom: 2.5em;
-  }
-}
-.looking-for__role-list li {
-  float: left;
-  margin-left: 20px;
-  width: 90%;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media all and (min-width: 480px) {
-  .looking-for__role-list li {
-    /* MQ Break point */
-    width: 45%;
-  }
-}
-@media all and (min-width: 1016px) {
-  .looking-for__role-list li {
-    /* MQ Break point */
-    width: 20%;
+    height: 150px;
   }
 }
 
 .looking-for__contact-info {
   font-size: 1.2rem;
-  margin: 2em 0;
+  max-width: 335px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__contact-info {
+    /* MQ Tablet portrait */
+    float: right;
+    margin-right: 65px;
+  }
 }
 @media all and (min-width: 1016px) {
   .looking-for__contact-info {
     /* MQ Break point */
-    float: right;
-    margin: 2.5em 0;
-    max-width: 460px;
+    float: none;
+    margin: 0 0 0 150px;
   }
 }
 
 .looking-for__photo {
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__photo {
+    /* MQ Tablet portrait */
+    float: left;
+    margin-left: -60px;
+  }
 }
 @media all and (min-width: 1016px) {
   .looking-for__photo {
     /* MQ Break point */
-    float: left;
-    max-width: 490px;
+    float: none;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 .looking-for__photo img {
-  border: 5px solid #e8f4fc;
-  border-radius: 150px;
-  margin-left: -30px;
-  width: 33.3%;
-}
-.looking-for__photo img:first-child {
-  margin-left: 0;
+  border-radius: 60px;
+  display: block;
+  margin: 0 auto;
+  width: 100px;
 }
 .looking-for__photo p {
   text-align: center;
+  font-size: 0.8rem;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__photo p {
+    /* MQ Tablet portrait */
+    max-width: 142px;
+  }
 }
 
 .roles .main-header__nav-list li {
@@ -1059,17 +974,10 @@ h3 {
 }
 
 .job-wrapper {
-  margin: 0;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
+  margin: 0 1.5em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   position: relative;
   /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 769px) {
-  .job-wrapper {
-    /* MQ Tablet landscape */
-    margin: 0 2em;
-  }
 }
 @media screen and (min-width: 1025px) {
   .job-wrapper {
@@ -1081,21 +989,6 @@ h3 {
   .job-wrapper {
     /* MQ Tablet landscape */
     max-width: 980px;
-  }
-}
-.job-wrapper .welcome {
-  background: none;
-  border-bottom: none;
-}
-.job-wrapper .welcome .welcome__wrapper {
-  padding-left: 1.5em;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-  padding-bottom: 0;
-}
-@media screen and (min-width: 769px) {
-  .job-wrapper .welcome .welcome__wrapper {
-    /* MQ Tablet landscape */
-    padding-left: 0;
   }
 }
 .job-wrapper .welcome__subheading {
@@ -1148,66 +1041,55 @@ h3 {
 .job-wrapper .sidebar h3 {
   font-size: 0.9rem;
   font-weight: 400;
+  margin: 25px 0 0 0;
 }
 .job-wrapper .sidebar p {
   font-size: 0.8rem;
 }
 
 .job-vacancy {
-  margin: 1.5em;
+  margin: 0 0 3em 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 769px) {
   .job-vacancy {
     /* MQ Tablet landscape */
     max-width: 57%;
-    margin: 2em 0;
   }
 }
 .job-vacancy h2 {
-  font-size: 1.4rem;
-  font-weight: 400;
+  margin: .8em 0 .2em 0;
 }
 .job-vacancy h2 span {
   font-size: 1rem;
 }
+.job-vacancy ul {
+  padding-left: 8px;
+}
 .job-vacancy li {
-  margin: 7px 0;
+  margin: 0 0 14px 0;
+}
+.job-vacancy li span {
+  display: block;
+  margin-left: -8px;
 }
 
-.roles .job-vacancies__lead-in {
-  font-size: 1.2rem;
-  margin: 2em 0 .5em 0;
+.role-section {
+  padding: 0 1.5em;
+}
+.role-section h1 {
+  margin: 0 0 0.4em 0;
 }
 
-.footer {
+.colophon {
   background: #000;
   clear: both;
   color: #fff;
   font-size: 0.75em;
   margin: 1em 0 0;
-  overflow: auto;
   padding: 0.5em 0;
+  text-align: center;
 }
-.footer a {
+.colophon a {
   color: #fff;
-}
-
-.footer__wrapper {
-  margin: 0 auto;
-  max-width: 980px;
-}
-
-.footer__site-name {
-  float: left;
-  margin-bottom: 0;
-}
-
-.footer__copyright-legal {
-  clear: left;
-  float: left;
-}
-
-.footer__colophon {
-  float: right;
 }

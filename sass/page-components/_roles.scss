@@ -5,10 +5,8 @@
 }
 
 .job-wrapper{
-	margin: 0;
-	@include respond-to(tablet-landscape) {
-		margin: 0 2em;
-	}
+  margin: 0 1.5em;
+
 	@include respond-to(laptop) {
 		margin: 0 auto;
 	}
@@ -18,17 +16,6 @@
 		max-width: 980px;
 	}
 
-	.welcome {
-		background: none;
-		border-bottom: none;
-		.welcome__wrapper {
-			padding-left: 1.5em;
-			@include respond-to(tablet-landscape) {
-				padding-left: 0;
-			}
-			padding-bottom: 0;
-		}
-	}
 	.welcome__subheading {
 		display: block;
 		font-size:1rem;
@@ -66,6 +53,7 @@
 		h3 {
 			font-size:0.9rem;
 			font-weight: 400;
+      margin: 25px 0 0 0;
 		}
 		p {
 			font-size:0.8rem;
@@ -75,24 +63,33 @@
 
 
 .job-vacancy {
-	margin: 1.5em;
+  margin:0 0 3em 0;
 	@include respond-to(tablet-landscape) {
 		max-width: 57%;
-		margin: 2em 0;
 	}
 	h2 {
-		font-size: 1.4rem;
-		font-weight: 400;
+    margin: .8em 0 .2em 0;
 		span {
 			font-size:1rem;
 		}
 	}
+  ul {
+    padding-left: 8px;
+  }
 	li {
-		margin:7px 0;
+		margin:0 0 14px 0;
+    span{
+      display:block;
+      margin-left:-8px;
+    }
 	}
+
 }
 
-.roles .job-vacancies__lead-in {
-  font-size:1.2rem;
-  margin:2em 0 .5em 0;
+
+.role-section {
+  padding: 0 1.5em;
+  h1 {
+    margin:0 0 0.4em 0;
+  }
 }
