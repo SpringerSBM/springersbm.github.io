@@ -12,6 +12,12 @@
   @include respond-to(break-point, 'min-width:1016px') {
     max-width:980px;
   }
+
+
+  .home-section__wrapper {
+    margin:25px 0 50px 0;
+  }
+
 }
 
 .looking-for__wrapper {
@@ -20,6 +26,7 @@
   @include respond-to(break-point, 'min-width:1016px') {
     height:150px;
   }
+
 }
 
 .looking-for__contact-info {

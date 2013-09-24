@@ -27,4 +27,16 @@
 	@include respond-to(tablet-landscape) {
 		width: 100%;
 	}
+
+	&:hover {
+		background-color: #0266a8;
+		background-image: -webkit-gradient(linear,left top,left bottom,from(#38a0e5),to(#0266a8));
+		background-image: -webkit-linear-gradient(top,#38a0e5,#0266a8);
+		background-image: -moz-linear-gradient(top,#38a0e5,#0266a8);
+		background-image: -ms-linear-gradient(top,#38a0e5,#0266a8);
+		background-image: -o-linear-gradient(top,#38a0e5,#0266a8);
+		background-image: linear-gradient(top,#38a0e5,#0266a8);
+		border-color: #0266a8;
+	}
+
 }
