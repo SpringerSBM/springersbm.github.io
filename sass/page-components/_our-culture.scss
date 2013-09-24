@@ -1,4 +1,5 @@
-.our-culture {
+.our-culture,
+.our-workplace {
   margin:0 18px;
 
   @include respond-to(break-point, 'min-width:1016px') {
@@ -23,5 +24,18 @@
   .home-section__grid-item {
     width:480px;
     height:222px;
+  }
+}
+
+.our-workplace .home-section__grid {
+  height:1112px;
+  top:446px;
+}
+
+.map {
+  position:relative;
+
+  img {
+    @extend .home-section__grid-wrapper;
   }
 }
