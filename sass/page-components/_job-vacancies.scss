@@ -5,9 +5,16 @@
   .home-section__wrapper {
     margin:0 auto;
     max-width:490px;
+    overflow:visible;
 
     @include respond-to(break-point, 'min-width:1016px') {
       max-width:980px;
+    }
+
+    &:after {
+      @include pseudo-element('');
+      clear:both;
+      display:table;
     }
   }
 
@@ -47,22 +54,24 @@
   }
 }
 
-.vacancy__role,
-.vacancy__location {
-  border-bottom:1px solid black;
-  display:table-cell;
-  padding:7px 0 12px;
-}
-
 .vacancy__role {
+  border-bottom:1px solid #555;
+  display:table-cell;
   font-weight:100;
   font-size:1.2rem;
-  padding-left:5px;
-  padding-right:5px;
+  padding:12px 5px;
+
+  a {
+    display:block;
+  }
 }
 
 .vacancy__location {
+  color:#555;
+  float:right;
   font-size:0.8rem;
+  text-decoration:none;
+  line-height:1.6rem;
 }
 
 .job-vacancies__content {
@@ -80,9 +89,7 @@
   }
 }
 
-.job-vacancies__lead-in {
-  font-size:1.2rem;
-
+.home .job-vacancies__lead-in {
   @include respond-to(break-point, 'min-width:1016px') {
     margin-top:0;
   }

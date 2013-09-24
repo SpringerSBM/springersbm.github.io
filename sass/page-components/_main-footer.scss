@@ -1,17 +1,32 @@
-.colophon {
+.footer {
   background:#000;
   clear:both;
   color:#fff;
   font-size:0.75em;
   margin:1em 0 0;
+  overflow:auto;
   padding:0.5em 0;
-  text-align:center;
-
-  //&:before {
-  //  @include pseudo-element('●', block);
-  //}
 
   a {
     color:#fff;
   }
+}
+
+.footer__wrapper {
+  margin:0 auto;
+  max-width:980px;
+}
+
+.footer__site-name {
+  float:left;
+  margin-bottom:0;
+}
+
+.footer__copyright-legal {
+  clear:left;
+  float:left;
+}
+
+.footer__colophon {
+  float:right;
 }
