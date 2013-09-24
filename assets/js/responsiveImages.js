@@ -35,6 +35,7 @@ function responsiveImages($images,mqBreakPoints,onLoadFn) {
 
 		var noScriptElem=$(this),
 			imgClass=noScriptElem.data("imgclass"),
+			altText=noScriptElem.attr("alt"),
 			baseImgArr=noScriptElem.data("baseimg").split("."),
 			imgUrl=baseImgArr[0],
 			imgExt=baseImgArr[1],
@@ -46,8 +47,11 @@ function responsiveImages($images,mqBreakPoints,onLoadFn) {
 		}
 
 		img.src=imgUrl + imgFormat + "." + imgExt;
-		$img.addClass(imgClass);
-		$img.insertAfter(noScriptElem);
+		
+		$img
+			.addClass(imgClass)
+			.attr("alt",altText)
+			.insertAfter(noScriptElem);
 
     })
 

@@ -3,6 +3,11 @@
   display:none;
   margin:0 18px;
 
+  img {
+    // @extend .home-section__grid-wrapper;
+    @extend .centeredNoScroll;
+  } 
+
   @include respond-to(break-point, 'min-width:1016px') {
     margin:0 auto;
     max-width:980px;
@@ -18,25 +23,45 @@
     }
   }
 
+
+  // .home-section__grid-item {
+  //   width:480px;
+  //   height:222px;
+  // }
+}
+
+.our-culture{
+  
   .home-section__grid {
-    height:666px;
+    height:466px;
   }
 
-  .home-section__grid-item {
-    width:480px;
-    height:222px;
+  @include respond-to(break-point, 'min-width:1024px') {
+    height: 849px;
   }
 }
 
 .our-workplace .home-section__grid {
-  height:1112px;
-  top:446px;
+  height:802px;
+  top:317px;
+  position:relative;
+
+  @include respond-to(break-point, 'min-width:1024px') {
+    top:446px;
+    height: 1112px;
+  }
+
+  img {
+    // @extend .home-section__grid-wrapper;
+    @extend .centeredNoScroll;
+  } 
 }
 
 .map {
   position:relative;
 
   img {
-    @extend .home-section__grid-wrapper;
+    // @extend .home-section__grid-wrapper;
+    @extend .centeredNoScroll;
   }
 }

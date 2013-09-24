@@ -152,6 +152,16 @@
 			$(".our-products__product").find(".responsive")
 		);
 
+		// home-section__grid
+		responsiveImages(
+			$(".our-workplace, .our-culture").find(".responsive"),
+			{
+        		"_tablet":1024, 
+        		"_widescreen":99999
+        	}
+		);
+
+
     }
 
 })();

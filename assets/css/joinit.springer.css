@@ -1,4 +1,23 @@
 /********* Mixins *********/
+.centeredNoScroll, .our-culture img,
+.our-workplace img, .our-workplace .home-section__grid img, .map img {
+  width: 1024px;
+  margin: 0 0 0 -512px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1024px) {
+  .centeredNoScroll, .our-culture img,
+  .our-workplace img, .our-workplace .home-section__grid img, .map img {
+    /* MQ Break point */
+    margin: 0 0 0 -720px;
+    width: 1440px;
+  }
+}
+
 /********* Layout styles *********/
 body {
   margin: 0;
@@ -330,7 +349,7 @@ h3 {
   position: relative;
 }
 
-.home-section__grid-wrapper, .home-section--our-people .team-panorama, .map img {
+.home-section__grid-wrapper, .home-section--our-people .team-panorama {
   margin: 0 0 0 -720px;
   padding: 0;
   position: absolute;
@@ -809,19 +828,32 @@ h3 {
     margin-right: -18px;
   }
 }
-.our-culture .home-section__grid,
-.our-workplace .home-section__grid {
-  height: 666px;
+
+.our-culture {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.our-culture .home-section__grid-item,
-.our-workplace .home-section__grid-item {
-  width: 480px;
-  height: 222px;
+.our-culture .home-section__grid {
+  height: 466px;
+}
+@media all and (min-width: 1024px) {
+  .our-culture {
+    /* MQ Break point */
+    height: 849px;
+  }
 }
 
 .our-workplace .home-section__grid {
-  height: 1112px;
-  top: 446px;
+  height: 802px;
+  top: 317px;
+  position: relative;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1024px) {
+  .our-workplace .home-section__grid {
+    /* MQ Break point */
+    top: 446px;
+    height: 1112px;
+  }
 }
 
 .map {
