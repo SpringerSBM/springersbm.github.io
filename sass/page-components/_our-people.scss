@@ -12,6 +12,13 @@
     }
   }
 
+  .home-section__wrapper {
+    padding:0 1.5em;
+
+    @include respond-to(break-point, 'min-width:1016px') {
+      padding:0;
+    }
+  }
 
   .home-section__grid {
     height:874px;
