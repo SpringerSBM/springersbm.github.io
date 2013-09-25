@@ -94,7 +94,7 @@
 
 .product__product-description {
   @include box-sizing(border-box);
-  padding:0 1em;
+  padding:0 1.5em;
 
   @include respond-to(tablet-portrait) {
     .product--springerlink & {

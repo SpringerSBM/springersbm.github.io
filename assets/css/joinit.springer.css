@@ -83,6 +83,7 @@ h1,
 
 h2 {
   font-size: 1.6rem;
+  letter-spacing: -0.04em;
   margin: 0.83em 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -91,7 +92,7 @@ h2 {
     /* MQ Tablet portrait */
     font-size: 2.4rem;
     font-weight: 100;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.05em;
     line-height: 1;
   }
 }
@@ -132,7 +133,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  width: 94%;
+  width: 96%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 769px) {
@@ -240,6 +241,13 @@ h3 {
 }
 .roles .main-header__nav ul {
   margin-left: -14px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1025px) {
+  .roles .main-header__nav ul {
+    /* MQ Laptop */
+    margin-left: -20px;
+  }
 }
 .roles .main-header__nav span {
   font-weight: 100;
@@ -324,14 +332,18 @@ h3 {
   margin-right: -18px;
 }
 .home-section__heading span {
-  padding: 0 18px;
+  padding: 0 .7em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   .home-section__heading span {
     /* MQ Tablet portrait */
     display: block;
+    padding: 0 .3em;
   }
+}
+.roles .home-section__heading span {
+  padding: 0;
 }
 
 .home-section__wrapper {
@@ -378,7 +390,7 @@ h3 {
 .welcome__wrapper {
   position: relative;
   background: none;
-  padding: 50px 18px 80px;
+  padding: 50px 1.5em 80px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -644,7 +656,7 @@ h3 {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 1em;
+  padding: 0 1.5em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -734,12 +746,12 @@ h3 {
 @media all and (min-width: 1016px) {
   .home-section--our-people .home-section__heading {
     /* MQ Break point */
-    margin-left: -18px;
-    margin-right: -18px;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
   }
 }
 .home-section--our-people .home-section__wrapper {
-  padding: 0 18px;
+  padding: 0 1.5em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
@@ -1159,7 +1171,7 @@ h3 {
 .job-wrapper .sidebar {
   clear: both;
   margin: 2em 0;
-  padding: 0 1.5em;
+  padding: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -1168,7 +1180,7 @@ h3 {
     /* MQ Tablet landscape */
     border-left: 5px solid #e8f4fc;
     max-width: 10em;
-    padding: 0 3em;
+    padding: 0 1.5em;
     position: absolute;
     right: 0;
     top: 5.8em;
@@ -1178,6 +1190,7 @@ h3 {
   .job-wrapper .sidebar {
     /* MQ Laptop */
     max-width: 14em;
+    padding: 0 3em;
   }
 }
 .job-wrapper .sidebar .linkedin {
@@ -1205,7 +1218,7 @@ h3 {
 }
 
 .job-vacancy {
-  margin: 0 0 3em 0;
+  margin: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 769px) {
@@ -1218,17 +1231,33 @@ h3 {
   margin: .8em 0 .2em 0;
 }
 .job-vacancy h2 span {
-  font-size: 1rem;
+  font-size: 1.8rem;
+  margin-left: -1px;
+  letter-spacing: 0.06em;
 }
 .job-vacancy ul {
   padding-left: 8px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .job-vacancy ul {
+    /* MQ Tablet landscape */
+    padding-left: 4px;
+  }
 }
 .job-vacancy li {
-  margin: 0 0 14px 0;
+  margin: 0 0 10px 0;
 }
 .job-vacancy li span {
   display: block;
   margin-left: -8px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 769px) {
+  .job-vacancy li span {
+    /* MQ Tablet landscape */
+    margin-left: -4px;
+  }
 }
 
 .role-section {
@@ -1243,7 +1272,7 @@ h3 {
   clear: both;
   color: #fff;
   font-size: 0.75em;
-  margin: 1em 0 0;
+  margin: 4em 0 0 0;
   overflow: auto;
   padding: 0.5em 0;
 }

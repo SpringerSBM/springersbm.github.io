@@ -53,12 +53,13 @@ h2,
 %h2 {
   @extend %headings;
   font-size:1.6rem;
+  letter-spacing:-0.04em;
   margin:0.83em 0;
 
   @include respond-to(tablet-portrait) {
     font-size:2.4rem;
     font-weight:100;
-    letter-spacing:0.02em;
+    letter-spacing:-0.05em;
     line-height:1;
   }
 }

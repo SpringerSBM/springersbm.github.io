@@ -67,6 +67,9 @@
 
     ul {
       margin-left: -14px;
+      @include respond-to(laptop) {
+        margin-left:-20px;
+      }
     }
 
     span {

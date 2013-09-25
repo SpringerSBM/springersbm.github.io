@@ -9,11 +9,17 @@
 
   span {
     @extend %section-wrapper;
-    padding:0 18px;
+    padding:0 .7em;
 
     @include respond-to(tablet-portrait) {
       display:block;
+      padding:0 .3em;
     }
+
+    .roles & {
+      padding:0;
+    }
+
   }
 }
 

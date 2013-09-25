@@ -14,7 +14,7 @@ $parallaxPanelRatio:0.1;
 .welcome__wrapper {
   position:relative;
   background:none;
-  padding:50px 18px 80px;
+  padding:50px 1.5em 80px;
 
   @include respond-to(tablet-portrait) {
     margin:0 auto;
