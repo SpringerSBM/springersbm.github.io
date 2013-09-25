@@ -1239,6 +1239,7 @@ h3 {
 .imageFlipper li {
   position: relative;
   float: left;
+  outline: none;
 }
 .imageFlipper li div {
   transition: all 0.5s;
@@ -1256,7 +1257,7 @@ h3 {
   width: 100%;
   height: 100%;
 }
-.imageFlipper li:hover div {
+.imageFlipper li:hover div, .imageFlipper li:focus div, .imageFlipper li.over div {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);

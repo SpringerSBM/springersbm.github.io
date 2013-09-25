@@ -31,7 +31,7 @@
 	    var $this = $(this),
 
 	    	imgPrefix=responsiveImages.getImagePrefix({
-        		"_tablet":1024, 
+        		"_tablet":1023, 
         		"_widescreen":99999
         	}),
 	    	frontImgUrl=responsiveImages.buildImagePath($this.data("frontimage"),imgPrefix),
@@ -60,7 +60,14 @@
 	    					width:tileWidth,
 	    					height:tileHeight
 	    				})
+	    				.attr("tabIndex",0)
+	    				.on("click",function(){
+	    					var $this=$(this);
+
+	    					$this.addClass("over").siblings().removeClass("over")
+	    				})
 	    				.appendTo(ul),
+
 	    			div=$("<div/>").appendTo(li),
 	    			fSpan=$("<span class='front'/>")
 	    					.css({

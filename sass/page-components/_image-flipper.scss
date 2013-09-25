@@ -7,9 +7,6 @@
     width:1024px;
   }
 
-  // @include respond-to(break-point, 'min-width:1016px') {
-  //   padding:0;
-  // }
 
   @extend .centeredNoScroll;
 
@@ -18,6 +15,7 @@
     position:relative;
     // width:160px;
     float: left;
+    outline: none;
 
     div {
       transition: all 0.5s;
@@ -39,7 +37,9 @@
       height: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &.over {
 
       div {
         -webkit-transform: rotateY(180deg);
