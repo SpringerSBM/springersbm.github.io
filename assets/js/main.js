@@ -29,6 +29,20 @@
 			panelHeight:panelHeight,
 			fitTexts:$(".fitText")
 		}
+
+
+		//tweaking the header font-size
+		cacheObj.fitTexts.each(function(){
+			var $this=$(this);
+
+			$this.fitText(
+				parseFloat($this.data("fittextcompressor")||1),
+				{
+					minFontSize:parseFloat($this.data("fittextminsize")||14)
+				}
+			);
+			
+		})
 			
 		// setting the events handler
 		$w.on("resize",function(){
@@ -39,11 +53,7 @@
 			setActivePanel();
 			setBGposition();
 
-			//tweaking the header font-size
-			cacheObj.fitTexts.fitText(
-				1.45,
-				{minFontSize:36}
-			);
+
 		});
 		$w.on("scroll", function(){
 			setActivePanel();

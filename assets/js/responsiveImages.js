@@ -13,7 +13,7 @@
 (function(){
 
 	//setting the class name on page load only	
-	$(document.body).toggleClass("mobile",$(window).innerWidth()<=1024);
+	$(document.body).toggleClass("mobile",$(window).innerWidth()<1024);
 
 	window.responsiveImages={
 		noscriptHack:function ($noScriptTags,mqBreakPoints,onLoadFn) {

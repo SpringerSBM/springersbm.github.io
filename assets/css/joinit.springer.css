@@ -77,7 +77,7 @@ h1,
   h1,
   .welcome__subheading {
     /* MQ Tablet portrait */
-    font-size: 3.8rem;
+    font-size: 75.4px;
   }
 }
 
@@ -410,6 +410,7 @@ h3 {
 }
 
 .welcome__tagline {
+  font-size: 1.2em;
   font-weight: 100;
   margin-top: 0;
 }
