@@ -30,14 +30,17 @@
 		clear: both;
 		margin: 2em 0;
 		padding: 0;
+
 		@include respond-to(tablet-landscape) {
 			border-left:5px solid #e8f4fc;
-			max-width: 10em;
+      max-width: 12em;
 			padding: 0 0.7em 0 1.5em;
 			position: absolute;right: 0;top: 5.8em;
 		}
+    @include respond-to(break-point, 'min-width:900px') {
+      max-width: 14em;
+    }
 		@include respond-to(laptop) {
-			max-width: 14em;
       padding: 0 1.3em 0 3em;
 		}
 
@@ -73,8 +76,7 @@
     margin: .8em 0 .2em 0;
 		span {
 			font-size:1.8rem;
-      margin-left:-1px;
-      letter-spacing:0.06em;
+      letter-spacing:0.03em;
 		}
 	}
   ul {

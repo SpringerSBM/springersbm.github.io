@@ -11,7 +11,7 @@
   @extend %section-wrapper;
   @include transition(height .25s ease-in-out);
   height:44px;
-  padding:0 18px;
+  padding:0 1.5em;
   position:relative;
 
   @include respond-to(tablet-portrait) {
