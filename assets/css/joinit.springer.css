@@ -92,6 +92,7 @@ h2 {
     font-size: 2.4rem;
     font-weight: 100;
     letter-spacing: 0.02em;
+    line-height: 1;
   }
 }
 
@@ -102,7 +103,7 @@ h3 {
 @media screen and (min-width: 600px) {
   h3 {
     /* MQ Tablet portrait */
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -715,7 +716,7 @@ h3 {
 .product-description__tags span {
   background: #e8f4fc;
   display: inline-block;
-  margin-right: 5px;
+  margin: 0 5px 10px 0;
   padding: 2px 5px;
 }
 .product-description__tags span:last-child {
@@ -1001,11 +1002,23 @@ h3 {
 
 .looking-for__headline {
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   .looking-for__headline {
     /* MQ Tablet portrait */
+    margin-left: auto;
+    margin-right: auto;
     max-width: 400px;
+    text-align: center;
+  }
+}
+@media all and (min-width: 1016px) {
+  .looking-for__headline {
+    /* MQ Break point */
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
   }
 }
 
@@ -1031,14 +1044,15 @@ h3 {
 @media all and (min-width: 1016px) {
   .looking-for__role-list {
     /* MQ Break point */
+    float: left;
     margin-bottom: 2.5em;
+    max-width: 490px;
   }
 }
 .looking-for__role-list li {
   float: left;
   margin-left: 20px;
   width: 90%;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 480px) {
@@ -1047,16 +1061,10 @@ h3 {
     width: 45%;
   }
 }
-@media all and (min-width: 1016px) {
-  .looking-for__role-list li {
-    /* MQ Break point */
-    width: 20%;
-  }
-}
 
 .looking-for__contact-info {
   font-size: 1.2rem;
-  margin: 2em 0;
+  margin-top: 2em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
@@ -1068,27 +1076,54 @@ h3 {
   }
 }
 
+.looking-for__photo-wrapper {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .looking-for__photo-wrapper {
+    /* MQ Break point */
+    clear: both;
+    margin: 0 auto;
+    max-width: 620px;
+  }
+}
+
 .looking-for__photo {
+  float: left;
+  margin: 40px 2% 20px 0;
+  width: 32%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
   .looking-for__photo {
     /* MQ Break point */
-    float: left;
-    max-width: 490px;
+    width: 196px;
   }
 }
-.looking-for__photo img {
-  border: 5px solid #e8f4fc;
-  border-radius: 150px;
-  margin-left: -30px;
-  width: 33.3%;
+.looking-for__photo:last-of-type {
+  margin-right: 0;
 }
-.looking-for__photo img:first-child {
-  margin-left: 0;
+.looking-for__photo img {
+  width: 100%;
 }
 .looking-for__photo p {
   text-align: center;
+}
+
+.looking-for__tagline {
+  border-bottom: 1px solid #555;
+  clear: both;
+  margin: 0 0 60px;
+  position: relative;
+  text-align: center;
+}
+.looking-for__tagline span {
+  background: #fff;
+  margin-left: -82px;
+  padding: 0 5px;
+  position: absolute;
+  top: -13px;
+  left: 50%;
 }
 
 .roles .main-header__nav-list li {
