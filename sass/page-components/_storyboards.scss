@@ -90,7 +90,7 @@ $parallaxPanelRatio:0.1;
 
 .board__headline {
 
-  .mobile &{
+  .noParallax &{
     bottom:1.6em;
     opacity:1;
   }

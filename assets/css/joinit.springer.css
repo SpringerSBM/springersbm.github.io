@@ -1,6 +1,6 @@
 /********* Mixins *********/
-.centeredNoScroll, .our-culture img,
-.our-workplace img, .our-workplace .home-section__grid img, .map img {
+.centeredNoScroll, .home-section--our-people .team-panorama, .our-culture img,
+.our-workplace img, .our-workplace .home-section__grid img, .map img, .imageFlipper {
   width: 1024px;
   margin: 0 0 0 -512px;
   padding: 0;
@@ -10,8 +10,8 @@
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1024px) {
-  .centeredNoScroll, .our-culture img,
-  .our-workplace img, .our-workplace .home-section__grid img, .map img {
+  .centeredNoScroll, .home-section--our-people .team-panorama, .our-culture img,
+  .our-workplace img, .our-workplace .home-section__grid img, .map img, .imageFlipper {
     /* MQ Break point */
     margin: 0 0 0 -720px;
     width: 1440px;
@@ -350,7 +350,7 @@ h3 {
   position: relative;
 }
 
-.home-section__grid-wrapper, .home-section--our-people .team-panorama {
+.home-section__grid-wrapper {
   margin: 0 0 0 -720px;
   padding: 0;
   position: absolute;
@@ -477,7 +477,7 @@ h3 {
   transform: translate3d(0, 0, 0);
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.mobile .board__headline {
+.noParallax .board__headline {
   bottom: 1.6em;
   opacity: 1;
 }
@@ -738,63 +738,11 @@ h3 {
     margin-right: -18px;
   }
 }
-.home-section--our-people .home-section__wrapper {
-  padding: 0 18px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media all and (min-width: 1016px) {
-  .home-section--our-people .home-section__wrapper {
-    /* MQ Break point */
-    padding: 0;
-  }
-}
 .home-section--our-people .home-section__grid {
-  height: 888px;
+  height: 874px;
 }
-.home-section--our-people .home-section__grid-item {
-  height: 222px;
-  position: relative;
-  width: 160px;
-}
-.home-section--our-people .home-section__grid-item div {
-  transition: all 0.5s;
-  -webkit-perspective: 1300px;
-  -moz-perspective: 1300px;
-  -ms-perspective: 1300px;
-  perspective: 1300px;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-.home-section--our-people .home-section__grid-item:hover div {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-.home-section--our-people .home-section__grid-item img {
-  display: block;
-  max-width: 100%;
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  background-color: #fff;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.home-section--our-people .home-section__grid-item img.personal {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+.mobile .home-section--our-people .home-section__grid {
+  height: 622px;
 }
 .home-section--our-people .team-panorama {
   top: auto;
@@ -803,7 +751,6 @@ h3 {
 
 .our-culture,
 .our-workplace {
-  display: none;
   margin: 0 18px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -830,16 +777,14 @@ h3 {
   }
 }
 
-.our-culture {
+.our-culture > .home-section__grid {
+  height: 466px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.our-culture .home-section__grid {
-  height: 466px;
-}
 @media all and (min-width: 1024px) {
-  .our-culture {
+  .our-culture > .home-section__grid {
     /* MQ Break point */
-    height: 849px;
+    height: 652px;
   }
 }
 
@@ -1236,6 +1181,59 @@ h3 {
 }
 .role-section h1 {
   margin: 0 0 0.4em 0;
+}
+
+.imageFlipper {
+  list-style-type: none;
+  width: 1440px;
+  padding: 0px;
+}
+.mobile .imageFlipper {
+  width: 1024px;
+}
+.imageFlipper li {
+  position: relative;
+  float: left;
+}
+.imageFlipper li div {
+  transition: all 0.5s;
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  -ms-perspective: 1300px;
+  perspective: 1300px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.imageFlipper li:hover div {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.imageFlipper li span {
+  display: block;
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #fff;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.imageFlipper li span.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .footer {

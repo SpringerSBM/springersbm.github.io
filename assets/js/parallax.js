@@ -33,7 +33,7 @@
 		// setting the events handler
 		$w.on("resize",function(){
 
-			$(document.body).toggleClass("mobile",settings.isMobile());
+			$(document.body).toggleClass("noParallax",settings.isMobile());
 
 			setImageRatio();
 			setActivePanel();
@@ -63,6 +63,9 @@
 
 		//setting the responsive images
 		setResponsiveImages();
+
+		// setting the imageFlipper widget
+		$(".imageFlipper").imageFlipper();
 		
 		//triggering the resize event handler
 		$w.resize();
@@ -137,7 +140,7 @@
     function setResponsiveImages() {
 
 		// storyboard images
-		responsiveImages(
+		responsiveImages.noscriptHack(
 			$(".storyboards").find(".responsive"),
 			{
         		"_smartphone":600,
@@ -148,13 +151,13 @@
 		);
 
 		// products images
-		responsiveImages(
+		responsiveImages.noscriptHack(
 			$(".our-products__product, .looking-for__photo").find(".responsive")
 		);
 
-		// home-section__grid
-		responsiveImages(
-			$(".our-workplace, .our-culture").find(".responsive"),
+		// our-workplace, our-cultire, our-people
+		responsiveImages.noscriptHack(
+			$(".our-workplace, .our-culture, .home-section--our-people").find(".responsive"),
 			{
         		"_tablet":1024, 
         		"_widescreen":99999

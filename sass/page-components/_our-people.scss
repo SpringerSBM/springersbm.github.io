@@ -12,78 +12,21 @@
     }
   }
 
-  .home-section__wrapper {
-    padding:0 18px;
-
-    @include respond-to(break-point, 'min-width:1016px') {
-      padding:0;
-    }
-  }
 
   .home-section__grid {
-    height:888px;
+    height:874px;
+
+    .mobile & {
+      height:622px;
+    }
+    // @include respond-to(break-point, 'min-width:1024px') {
+    //   height: 888px;
+    // }    
   }
 
-  .home-section__grid-item {
-    height:222px;
-    position:relative;
-    width:160px;
-
-    div {
-      transition: all 0.5s;
-
-      -webkit-perspective: 1300px;
-      -moz-perspective: 1300px;
-      -ms-perspective: 1300px;
-      perspective: 1300px;
-
-      -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-
-      position:absolute;
-      top:0px;
-      left:0px;
-      width: 100%;
-      height: 100%;
-    }
-
-    &:hover {
-
-      div {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-      }
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      position:absolute;
-      left:0px;
-      top: 0px;
-      background-color:#fff;
-
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      backface-visibility: hidden;
-
-
-      &.personal {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        -ms-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-      }
-    }
-  }
 
   .team-panorama {
-    @extend .home-section__grid-wrapper;
+    @extend .centeredNoScroll;
     top:auto;
     bottom:0;
   }
