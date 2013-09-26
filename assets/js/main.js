@@ -174,12 +174,7 @@
         	ignoreRetina
 		);
 
-		// products images
-		responsiveImages.noscriptHack(
-			$(".our-products__product").find(".responsive")
-		);
-
-		// our-workplace, our-cultire, our-people
+		// our-workplace, our-culture, our-people
 		responsiveImages.noscriptHack(
 			$(".our-workplace .home-section__grid, .our-culture, .home-section--our-people, .looking-for__photo").find(".responsive"),
 			{
@@ -190,9 +185,9 @@
         	ignoreRetina
 		);
 
-		// our-workplace, our-cultire, our-people
+		// our-workplace, product images
 		responsiveImages.noscriptHack(
-			$(".our-workplace .map").find(".responsive"),
+			$(".our-workplace .map, .our-products__product").find(".responsive"),
 			{
         		"_tablet":1024, 
         		"_widescreen":99999
