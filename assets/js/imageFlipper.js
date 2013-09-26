@@ -16,13 +16,41 @@
 	    		columns	: 9,
 	        }, options);
 
+    var people = [];
+    people.push("Jim, software engineer.");
+    people.push("Aditya, ux designer.");
+    people.push("Pat, technical principal.");
+    people.push("Rob, front-end developer.");
+    people.push("Chris, software engineer.");
+    people.push("Shalini, quality analyst.");
+    people.push("Uthman, quality analyst.");
+    people.push("Dan, software engineer.");
+    people.push("Ben, agile coach.");
+    people.push("Cris, software engineer.");
+    people.push("Rizwan, software engineer.");
+    people.push("Stephen, business analyst.");
+    people.push("Reshma, all round great person.");
+    people.push("Brian, product owner.");
+    people.push("Ai, software engineer.");
+    people.push("Ross, technical architect.");
+    people.push("Hector, platform engineer.");
+    people.push("Paulo, ux designer.");
+    people.push("John, software engineer.");
+    people.push("Mike, technical architect.");
+    people.push("Kristen, business analyst.");
+    people.push("Charles, quality analyst.");
+    people.push("Todd, front-end developer.");
+    people.push("Anjalie, business analyst.");
+    people.push("Andrew, ui designer.");
+    people.push("Simon, platform engineer.");
+    people.push("Rob, software engineer.");
 
     return this.each(function(){
 	    // Store the object
 	    var $this = $(this),
 
 	    	imgPrefix=responsiveImages.getImagePrefix({
-        		"_tablet":1023, 
+        		"_tablet":1023,
         		"_widescreen":99999
         	}),
 	    	frontImgUrl=responsiveImages.buildImagePath($this.data("frontimage"),imgPrefix),
@@ -59,7 +87,7 @@
 	    				})
 	    				.appendTo(ul),
 
-	    			div=$("<div/>").appendTo(li),
+	    			div=$("<div title='"+people[x]+"'/>").appendTo(li),
 	    			fSpan=$("<span class='front'/>")
 	    					.css({
 	    						backgroundImage:"url(" + cssPrefix + frontImgUrl + ")",
