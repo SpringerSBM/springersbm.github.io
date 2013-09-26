@@ -4,3 +4,7 @@ _site/
 .sass-cache
 .idea
 node_modules
+
+jobSite.sublime-project
+
+jobSite.sublime-workspace

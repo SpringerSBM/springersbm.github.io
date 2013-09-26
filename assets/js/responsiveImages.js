@@ -16,8 +16,8 @@
 	$(document.body).toggleClass("mobile",$(window).innerWidth()<1024);
 
 	window.responsiveImages={
-		noscriptHack:function ($noScriptTags,mqBreakPoints,onLoadFn) {
-		    var imgFormat=responsiveImages.getImagePrefix(mqBreakPoints);
+		noscriptHack:function ($noScriptTags,mqBreakPoints,onLoadFn,ignoreRetina) {
+		    var imgFormat=responsiveImages.getImagePrefix(mqBreakPoints, ignoreRetina);
 		    
 		    //creating the IMG element and adding it to the DOM
 		    $noScriptTags.each(function(){
@@ -43,9 +43,9 @@
 		    })
 		},
 
-		getImagePrefix:function (mqBreakPoints){
+		getImagePrefix:function (mqBreakPoints, ignoreRetina){
 			//checking the retina display
-			var isRetina = responsiveImages.isRetina,  	
+			var isRetina = ignoreRetina==true?false:responsiveImages.isRetina,  	
 			windowWidth=$(window).innerWidth()
 			imgFormat="";
 
@@ -71,7 +71,7 @@
 			return imgUrl + imgPrefix + "." + imgExt;
 
 		},
-
+		// isRetina:false
 		isRetina : (
 			window.devicePixelRatio > 1 ||
 			(window.matchMedia && window.matchMedia("(-webkit-min-device-pixel-ratio: 1.5),(-moz-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5)").matches)

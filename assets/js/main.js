@@ -8,13 +8,21 @@
 				return cacheObj.$w.innerWidth()<=settings.mobileBreakPoint;
 			},
 			imageRatio:function(){
-				return this.isMobile()?0.5:0.4;
+				return this.noParallax()?0.5:0.4;
+			},
+			isTouch:(('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)),
+			noParallax:function(){
+				return settings.isMobile()||settings.isTouch;
 			}
 		};
 
 
 	//on page ready....
 	$().ready(function(){
+		
+		//JS check!
+		$("html").removeClass("no-js");
+
 		var parFx=$(".storyboards__wrapper"),
 			parFxPos=parFx.position(),
 			panels=parFx.children(".storyboards__board"),
@@ -148,6 +156,8 @@
 	}
 	
     function setResponsiveImages() {
+    	// ignoring retina on smaller devices (including iPad3!)
+    	var ignoreRetina=settings.isMobile();
 
 		// storyboard images
 		responsiveImages.noscriptHack(
@@ -157,7 +167,8 @@
         		"_tablet":1024, 
         		"_widescreen":99999
         	},
-        	setBGposition
+        	setBGposition,
+        	ignoreRetina
 		);
 
 		// products images
@@ -167,13 +178,23 @@
 
 		// our-workplace, our-cultire, our-people
 		responsiveImages.noscriptHack(
-			$(".our-workplace, .our-culture, .home-section--our-people, .looking-for__photo").find(".responsive"),
+			$(".our-workplace .home-section__grid, .our-culture, .home-section--our-people, .looking-for__photo").find(".responsive"),
+			{
+        		"_tablet":1024, 
+        		"_widescreen":99999
+        	},
+        	null,
+        	ignoreRetina
+		);
+
+		// our-workplace, our-cultire, our-people
+		responsiveImages.noscriptHack(
+			$(".our-workplace .map").find(".responsive"),
 			{
         		"_tablet":1024, 
         		"_widescreen":99999
         	}
 		);
-
 
     }
 

@@ -1,5 +1,4 @@
 $pageWidth:1440px;
-$parallaxPanelRatio:0.1;
 
 .storyboards,
 .welcome {
@@ -50,7 +49,10 @@ $parallaxPanelRatio:0.1;
 }
 
 .storyboards__board {
-  height:$pageWidth*$parallaxPanelRatio;
+
+  .no-js &{
+    padding-bottom: 50%;
+  }
   margin:0 -10px;
   opacity:0.9;
   overflow:hidden;
@@ -74,7 +76,10 @@ $parallaxPanelRatio:0.1;
     margin:auto;
   }
 
-  &.active {
+
+  &.active,
+  .no-js &,
+  .noParallax & {
     opacity:1;
     z-index:2;
 

@@ -1,12 +1,3 @@
-    // <ul class="home-section__grid-wrapper imageFlipper">
-    //   <li class="home-section__grid-item">
-    //     <div>
-    //       <img src="/assets/imgs/headshots/Photo_Jim_headshot@2x.jpg" class="headshot" alt="Jim">
-    //       <img src="/assets/imgs/headshots/Photo_Jim_personal@2x.jpg" class="personal" alt="Jim">
-    //     </div>
-    //   </li>
-    // </ul>
-
 /*
 * imageFlipper
 *

@@ -12,6 +12,12 @@
     margin-left: -512px;
   }
 
+  @include respond-to(break-point, 'min-width:1024px') {
+    top:208px;
+  }  
+
+
+
   li {
     // height:222px;
     position:relative;
