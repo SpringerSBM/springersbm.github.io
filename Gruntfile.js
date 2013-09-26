@@ -38,11 +38,8 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "clean" task.
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.loadNpmTasks('grunt-contrib-compress');
-
-
   // Default task(s).
-  grunt.registerTask('default', ['clean','uglify','cssmin','compress']);
+  grunt.registerTask('default', ['clean','uglify','cssmin']);
 
 
 };
