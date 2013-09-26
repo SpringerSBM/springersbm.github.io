@@ -2,7 +2,7 @@
 .centeredNoScroll, .home-section--our-people .team-panorama, .our-culture img,
 .our-workplace img, .imageFlipper {
   width: 1024px;
-  margin: 0 0 0 -512px;
+  margin: 0 0 0 -522px;
   padding: 0;
   position: absolute;
   top: 0;
@@ -82,7 +82,7 @@ h1,
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   letter-spacing: -0.04em;
   margin: 0.83em 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -276,14 +276,15 @@ h3 {
   margin: 0;
   overflow: hidden;
   padding: 0;
-  width: 52px;
+  text-align: center;
+  width: 48px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.main-header__nav-list li:first-child {
-  width: 58px;
+.main-header__nav-list li:nth-child(2) a {
+  padding-left: 5px;
 }
 .main-header__nav-list li:last-child {
-  width: 48px;
+  margin-right: -11px;
 }
 @media screen and (min-width: 600px) {
   .main-header__nav-list li {
@@ -294,6 +295,9 @@ h3 {
   .main-header__nav-list li, .main-header__nav-list li:first-child, .main-header__nav-list li:last-child {
     width: auto;
   }
+  .main-header__nav-list li:nth-child(2) a {
+    padding-left: 9px;
+  }
   .main-header__nav-list li:last-child {
     margin-right: 0;
   }
@@ -303,7 +307,6 @@ h3 {
   display: block;
   line-height: 44px;
   height: 44px;
-  padding: 0 9px;
   text-decoration: none;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -312,6 +315,7 @@ h3 {
     /* MQ Tablet portrait */
     line-height: 66px;
     height: 66px;
+    padding: 0 9px;
   }
 }
 .main-header__nav-list li a:active, .main-header__nav-list li a:focus, .main-header__nav-list li a:hover {
@@ -387,9 +391,19 @@ h3 {
 .welcome__wrapper {
   position: relative;
   background: none;
-  padding: 50px 1.5em 80px;
+  padding: 1.5em 1.5em 50px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+.welcome__wrapper h1 {
+  margin-bottom: 24px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .welcome__wrapper h1 {
+    /* MQ Tablet portrait */
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 600px) {
   .welcome__wrapper {
@@ -407,9 +421,32 @@ h3 {
 }
 
 .welcome__tagline {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 100;
   margin-top: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  width: 90%;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .welcome__tagline {
+    /* MQ Tablet portrait */
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 600px) {
+  .welcome__tagline {
+    /* MQ Tablet portrait */
+    width: 100%;
+  }
+}
+.welcome__tagline:after {
+  content: " ";
+  background: #666;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-top: 24px;
 }
 
 .welcome__heading {
@@ -473,7 +510,9 @@ h3 {
 }
 
 .board__headline {
-  font-size: 4.5em;
+  font-size: 6.25em;
+  line-height: 0.9;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -499,8 +538,15 @@ h3 {
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 .noParallax .board__headline {
-  bottom: 1.6em;
+  bottom: 0.75em;
   opacity: 1;
+}
+@media screen and (min-width: 600px) {
+  .board__headline {
+    /* MQ Tablet portrait */
+    font-size: 4.5em;
+    line-height: 1;
+  }
 }
 @media all and (min-width: 1016px) {
   .board__headline {
@@ -614,8 +660,8 @@ h3 {
   -moz-transition: width 0.25s ease-in-out;
   -o-transition: width 0.25s ease-in-out;
   transition: width 0.25s ease-in-out;
-  padding: 0 18px;
-  width: 100%;
+  padding: 0 27px;
+  width: 104%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -726,7 +772,26 @@ h3 {
 }
 
 .product-description__link {
-  margin-top: 0;
+  font-size: 1.2em;
+  margin-top: -5px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .product-description__link {
+    /* MQ Tablet portrait */
+    margin-top: -10px;
+  }
+}
+.product-description__link:hover {
+  text-decoration: none;
+}
+.product-description__link:after {
+  content: " ";
+  background: #666;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-top: 24px;
 }
 
 .product-description__lead-in {
@@ -739,7 +804,7 @@ h3 {
 .product-description__tags span {
   background: #e8f4fc;
   display: inline-block;
-  margin: 0 5px 10px 0;
+  margin: 0 2px 6px 0;
   padding: 2px 5px;
 }
 .product-description__tags span:last-child {
@@ -783,8 +848,38 @@ h3 {
   top: 0;
 }
 .mobile .home-section--our-people .team-panorama {
-  margin-left: -512px;
+  margin-left: -522px;
   width: 1024px;
+}
+.home-section--our-people .our-people__heading {
+  padding-left: 24px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1025px) {
+  .home-section--our-people .our-people__heading {
+    /* MQ Laptop */
+    max-width: 980px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+}
+.home-section--our-people .our-people__heading:after {
+  content: " ";
+  background: #666;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-top: 24px;
+}
+.home-section--our-people p {
+  margin-top: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1025px) {
+  .home-section--our-people p {
+    /* MQ Laptop */
+    margin-top: 18px;
+  }
 }
 
 .our-culture,
@@ -819,6 +914,9 @@ h3 {
   }
 }
 
+.our-culture {
+  margin-top: 2em;
+}
 .our-culture > .home-section__grid {
   height: 466px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -829,7 +927,18 @@ h3 {
     height: 652px;
   }
 }
+.our-culture .our-culture__heading:after {
+  content: " ";
+  background: #666;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-top: 24px;
+}
 
+.our-workplace {
+  margin-top: 2em;
+}
 .our-workplace .home-section__grid {
   height: 802px;
   top: 266px;
@@ -845,6 +954,14 @@ h3 {
 }
 .our-workplace .home-section__grid img {
   border-top: 0 none;
+}
+.our-workplace .our-workplace__heading:after {
+  content: " ";
+  background: #666;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-top: 24px;
 }
 
 .map {
@@ -993,6 +1110,7 @@ h3 {
 .looking-for__headline {
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   .looking-for__headline {
@@ -1009,6 +1127,23 @@ h3 {
     margin-left: 0;
     margin-right: 0;
     text-align: left;
+  }
+}
+.looking-for__headline:after {
+  content: " ";
+  background: #666;
+  width: 80px;
+  height: 1px;
+  display: block;
+  margin-top: 24px;
+}
+@media screen and (min-width: 600px) {
+  .looking-for__headline {
+    /* MQ Tablet portrait */
+  }
+  .looking-for__headline:after {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -1256,6 +1391,7 @@ h3 {
 }
 
 .imageFlipper {
+  background: #222;
   border: 10px solid #fbfdfe;
   border-top: 0 none;
   list-style-type: none;
@@ -1266,7 +1402,7 @@ h3 {
 }
 .mobile .imageFlipper {
   width: 1024px;
-  margin-left: -512px;
+  margin-left: -522px;
   top: 158px;
 }
 @media all and (min-width: 1024px) {

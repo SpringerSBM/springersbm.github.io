@@ -35,8 +35,33 @@
     top:0;
 
     .mobile & {
-      margin-left: -512px;
+      margin-left: -522px;
       width: 1024px;
+    }
+  }
+  .our-people__heading{
+    padding-left:24px;
+    @include respond-to(laptop){
+      max-width:980px;
+      margin:0 auto;
+      padding-left:0;
+    }
+
+    &:after {
+      content: " ";
+      background: #666;
+      width: 80px;
+      height: 1px;
+      display: block;
+      margin-top: 24px;
+    }
+
+  }
+
+  p {
+    margin-top:0;
+    @include respond-to(laptop) {
+      margin-top:18px;
     }
   }
 }

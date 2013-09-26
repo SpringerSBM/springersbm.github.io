@@ -8,7 +8,14 @@ $pageWidth:1440px;
 .welcome__wrapper {
   position:relative;
   background:none;
-  padding:50px 1.5em 80px;
+  padding:1.5em 1.5em 50px;
+
+  h1 {
+    margin-bottom:24px;
+    @include respond-to(tablet-portrait) {
+      margin-bottom:0;
+    }
+  }
 
   @include respond-to(tablet-portrait) {
     margin:0 auto;
@@ -22,9 +29,26 @@ $pageWidth:1440px;
 }
 
 .welcome__tagline {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight:100;
   margin-top:0;
+  @include respond-to(tablet-portrait) {
+    font-size: 1.2em;
+  }
+  width:90%;
+  @include respond-to(tablet-portrait) {
+    width:100%;
+  }
+
+  &:after {
+    content: " ";
+    background: #666;
+    width: 80px;
+    height: 1px;
+    display: block;
+    margin-top: 24px;
+  }
+
 }
 
 .welcome__heading {
@@ -94,11 +118,16 @@ $pageWidth:1440px;
 .board__headline {
 
   .noParallax &{
-    bottom:1.6em;
+    bottom:0.75em;
     opacity:1;
   }
   // @extend %h1;
-  font-size: 4.5em;
+  font-size: 6.25em;
+  line-height:0.9;
+  @include respond-to(tablet-portrait) {
+    font-size:4.5em;
+    line-height:1;
+  }
   @include box-sizing(border-box);
   @include transition(all 0.5s ease-out 0.2s);
   color:#fff;

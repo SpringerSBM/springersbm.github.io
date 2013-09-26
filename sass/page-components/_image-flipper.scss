@@ -1,4 +1,5 @@
 .imageFlipper{
+  background:#222;
   @extend .centeredNoScroll;
   border:10px solid #fbfdfe;
   border-top:0 none;
@@ -9,7 +10,7 @@
 
   .mobile &{
     width:1024px;
-    margin-left: -512px;
+    margin-left: -522px;
     top:158px;
   }
 

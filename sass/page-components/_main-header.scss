@@ -103,14 +103,15 @@
     margin:0;
     overflow:hidden;
     padding:0;
-    width:52px;
+    text-align:center;
+    width:48px;
 
-    &:first-child {
-      width:58px;
+    &:nth-child(2) a {
+      padding-left:5px;
     }
 
     &:last-child {
-      width:48px;
+      margin-right:-11px;
     }
 
     @include respond-to(tablet-portrait) {
@@ -123,6 +124,10 @@
         width:auto;
       }
 
+      &:nth-child(2) a {
+        padding-left:9px;
+      }
+
       &:last-child {
         margin-right:0;
       }
@@ -133,12 +138,12 @@
       display:block;
       line-height:44px;
       height:44px;
-      padding:0 9px;
       text-decoration:none;
 
       @include respond-to(tablet-portrait) {
         line-height:66px;
         height:66px;
+        padding:0 9px;
       }
 
       &:link,

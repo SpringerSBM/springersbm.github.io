@@ -24,17 +24,27 @@
 }
 
 .our-culture{
-  
+  margin-top:2em;
   > .home-section__grid {
     height:466px;
     @include respond-to(break-point, 'min-width:1024px') {
       height: 652px;
     }
   }
-
+  .our-culture__heading{
+    &:after {
+      content: " ";
+      background: #666;
+      width: 80px;
+      height: 1px;
+      display: block;
+      margin-top: 24px;
+    }
+  }
 }
 
 .our-workplace {
+  margin-top:2em;
   .home-section__grid {
     height:802px;
     top:266px;
@@ -47,6 +57,16 @@
 
     img {
       border-top:0 none;
+    }
+  }
+  .our-workplace__heading{
+    &:after {
+      content: " ";
+      background: #666;
+      width: 80px;
+      height: 1px;
+      display: block;
+      margin-top: 24px;
     }
   }
 }

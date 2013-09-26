@@ -33,6 +33,24 @@
     margin-right:0;
     text-align:left;
   }
+
+
+  &:after {
+    content: " ";
+    background: #666;
+    width: 80px;
+    height: 1px;
+    display: block;
+    margin-top: 24px;
+  }
+
+  @include respond-to(tablet-portrait) {
+    &:after {
+      margin-right:auto;
+      margin-left:auto;
+    }
+  }
+
 }
 
 .looking-for__lead-in {
