@@ -66,10 +66,7 @@
     float:left;
 
     ul {
-      margin-left: -24px;
-      @include respond-to(tablet-portrait) {
-        margin-left:-20px;
-      }
+      margin-left: -23px;
     }
 
     span {

@@ -240,14 +240,7 @@ h3 {
   float: left;
 }
 .roles .main-header__nav ul {
-  margin-left: -24px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 600px) {
-  .roles .main-header__nav ul {
-    /* MQ Tablet portrait */
-    margin-left: -20px;
-  }
+  margin-left: -23px;
 }
 .roles .main-header__nav span {
   font-weight: 100;
