@@ -132,7 +132,10 @@
 
 				var top=imageDeltaH/(windowHeight/(WscrollTop-thisPos.top));
 				imgObj.css({
-					top:top
+					"-webkit-transform":"translateY(" + top + "px)",
+					"-moz-transform":"translateY(" + top + "px)",
+					"-ms-transform":"translateY(" + top + "px)",
+					"transform":"translateY(" + top + "px)"
 				})
 				
 			}
