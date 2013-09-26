@@ -4,6 +4,7 @@
 
   img {
     @extend .centeredNoScroll;
+    border:10px solid #fbfdfe;
   } 
 
   @include respond-to(break-point, 'min-width:1016px') {
@@ -33,25 +34,27 @@
 
 }
 
-.our-workplace .home-section__grid {
-  height:802px;
-  top:266px;
-  position:relative;
+.our-workplace {
+  .home-section__grid {
+    height:802px;
+    top:266px;
+    position:relative;
 
-  @include respond-to(break-point, 'min-width:1024px') {
-    top:374px;
-    height:1112px;
+    @include respond-to(break-point, 'min-width:1024px') {
+      top:374px;
+      height:1112px;
+    }
+
+    img {
+      border-top:0 none;
+    }
   }
-
-  img {
-    @extend .centeredNoScroll;
-  } 
 }
 
 .map {
   position:relative;
 
   img {
-    @extend .centeredNoScroll;
+    border-bottom:0 none;
   }
 }

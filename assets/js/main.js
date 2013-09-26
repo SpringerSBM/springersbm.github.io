@@ -162,12 +162,12 @@
 
 		// products images
 		responsiveImages.noscriptHack(
-			$(".our-products__product, .looking-for__photo").find(".responsive")
+			$(".our-products__product").find(".responsive")
 		);
 
 		// our-workplace, our-cultire, our-people
 		responsiveImages.noscriptHack(
-			$(".our-workplace, .our-culture, .home-section--our-people").find(".responsive"),
+			$(".our-workplace, .our-culture, .home-section--our-people, .looking-for__photo").find(".responsive"),
 			{
         		"_tablet":1024, 
         		"_widescreen":99999

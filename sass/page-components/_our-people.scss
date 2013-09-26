@@ -30,11 +30,13 @@
 
   .team-panorama {
     @extend .centeredNoScroll;
+    border:10px solid #fbfdfe;
+    border-bottom:0 none;
     top:0;
 
     .mobile & {
-      width: 1024px;
       margin-left: -512px;
+      width: 1024px;
     }
   }
 }

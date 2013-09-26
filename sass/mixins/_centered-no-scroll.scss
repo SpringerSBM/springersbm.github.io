@@ -6,7 +6,7 @@
 	position:absolute; top:0; left:50%;
 
 	@include respond-to(break-point, 'min-width:1024px') {
-		margin:0 0 0 -720px;
+		margin:0 0 0 -730px;
 		width:1440px;
 	}
 

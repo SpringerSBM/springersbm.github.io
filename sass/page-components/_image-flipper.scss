@@ -1,16 +1,16 @@
 .imageFlipper{
+  @extend .centeredNoScroll;
+  border:10px solid #fbfdfe;
+  border-top:0 none;
   list-style-type: none;
-  width:1440px;
   padding:0px;
-  top:208px;
+  top:218px;
+  width:1440px;
 
   .mobile &{
     width:1024px;
     margin-left: -512px;
   }
-
-
-  @extend .centeredNoScroll;
 
   li {
     // height:222px;
