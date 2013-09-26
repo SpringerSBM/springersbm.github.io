@@ -1,19 +1,30 @@
 .footer {
-  background:#000;
+  background:#333;
   clear:both;
-  color:#fff;
+  color:#888;
   font-size:0.75em;
   margin:4em 0 0 0;
   overflow:auto;
-  padding:0.5em 0;
+  padding:22px 27px;
 
-  a {
-    color:#fff;
-  }
   @include respond-to(laptop) {
     margin:8em 0 0 0;
   }
 
+  a {
+    color:#888;
+    white-space:nowrap;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color:#bbb;
+    }
+  }
+
+  p {
+    margin:0;
+  }
 }
 
 .footer__wrapper {
@@ -21,9 +32,8 @@
   max-width:980px;
 }
 
-.footer__site-name {
+.footer__name-of-site {
   float:left;
-  margin-bottom:0;
 }
 
 .footer__copyright-legal {
@@ -33,4 +43,5 @@
 
 .footer__colophon {
   float:right;
+  display:none;
 }

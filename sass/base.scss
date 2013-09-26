@@ -13,4 +13,10 @@ body {
 
 a {
   color:#0176c3;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration:none;
+  }
 }
