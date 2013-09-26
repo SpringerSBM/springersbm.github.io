@@ -4,16 +4,17 @@
   border-top:0 none;
   list-style-type: none;
   padding:0px;
-  top:218px;
+  top:158px;
   width:1440px;
 
   .mobile &{
     width:1024px;
     margin-left: -512px;
+    top:158px;
   }
 
   @include respond-to(break-point, 'min-width:1024px') {
-    top:208px;
+    top:218px;
   }  
 
 

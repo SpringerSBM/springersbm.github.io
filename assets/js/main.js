@@ -93,7 +93,7 @@
 	function setActivePanel(){
 
 		// enabling the text animation only on desktops
-		if(settings.isMobile()){
+		if(settings.noParallax()){
 			return false;
 		}
 

@@ -1,6 +1,6 @@
 /********* Mixins *********/
 .centeredNoScroll, .home-section--our-people .team-panorama, .our-culture img,
-.our-workplace img, .our-workplace .home-section__grid img, .map img, .imageFlipper {
+.our-workplace img, .imageFlipper {
   width: 1024px;
   margin: 0 0 0 -512px;
   padding: 0;
@@ -11,9 +11,9 @@
 }
 @media all and (min-width: 1024px) {
   .centeredNoScroll, .home-section--our-people .team-panorama, .our-culture img,
-  .our-workplace img, .our-workplace .home-section__grid img, .map img, .imageFlipper {
+  .our-workplace img, .imageFlipper {
     /* MQ Break point */
-    margin: 0 0 0 -720px;
+    margin: 0 0 0 -730px;
     width: 1440px;
   }
 }
@@ -774,17 +774,23 @@ h3 {
   height: 622px;
 }
 .home-section--our-people .team-panorama {
+  border: 10px solid #fbfdfe;
+  border-bottom: 0 none;
   top: 0;
 }
 .mobile .home-section--our-people .team-panorama {
-  width: 1024px;
   margin-left: -512px;
+  width: 1024px;
 }
 
 .our-culture,
 .our-workplace {
   margin: 0 18px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+.our-culture img,
+.our-workplace img {
+  border: 10px solid #fbfdfe;
 }
 @media all and (min-width: 1016px) {
   .our-culture,
@@ -833,9 +839,15 @@ h3 {
     height: 1112px;
   }
 }
+.our-workplace .home-section__grid img {
+  border-top: 0 none;
+}
 
 .map {
   position: relative;
+}
+.map img {
+  border-bottom: 0 none;
 }
 
 .home-section--job-vacancies {
@@ -1243,20 +1255,23 @@ h3 {
 }
 
 .imageFlipper {
+  border: 10px solid #fbfdfe;
+  border-top: 0 none;
   list-style-type: none;
-  width: 1440px;
   padding: 0px;
-  top: 148px;
+  top: 158px;
+  width: 1440px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 .mobile .imageFlipper {
   width: 1024px;
   margin-left: -512px;
+  top: 158px;
 }
 @media all and (min-width: 1024px) {
   .imageFlipper {
     /* MQ Break point */
-    top: 208px;
+    top: 218px;
   }
 }
 .imageFlipper li {
