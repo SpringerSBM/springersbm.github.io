@@ -29,6 +29,7 @@
 			$w=$(window),
 			panelHeight=panels.eq(0).innerHeight();
 
+
 		//caching non-changing values...
 		cacheObj={
 			parFx:parFx,
@@ -37,7 +38,6 @@
 			panelHeight:panelHeight,
 			fitTexts:$(".fitText")
 		}
-
 
 		//tweaking the header font-size
 		cacheObj.fitTexts.each(function(){
@@ -55,7 +55,7 @@
 		// setting the events handler
 		$w.on("resize",function(){
 
-			$(document.body).toggleClass("noParallax",settings.isMobile());
+			$(document.body).toggleClass("noParallax",settings.noParallax());
 
 			setImageRatio();
 			setActivePanel();
@@ -111,7 +111,7 @@
 	function setBGposition(){
 
 		//enabling the parallax effect only on desktops
-		if(settings.isMobile()){
+		if(settings.noParallax()){
 			//repositioning the images 
 			cacheObj.panels.find("img").css({top:"0px"});
 			return false;
