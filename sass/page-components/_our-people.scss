@@ -34,6 +34,11 @@
 
   .team-panorama {
     @extend .centeredNoScroll;
+
+    .mobile & {
+      width: 1024px;
+      margin-left: -512px;      
+    }
     top:auto;
     bottom:0;
   }

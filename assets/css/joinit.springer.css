@@ -771,6 +771,10 @@ h3 {
   top: auto;
   bottom: 0;
 }
+.mobile .home-section--our-people .team-panorama {
+  width: 1024px;
+  margin-left: -512px;
+}
 
 .our-culture,
 .our-workplace {
@@ -1235,6 +1239,7 @@ h3 {
 }
 .mobile .imageFlipper {
   width: 1024px;
+  margin-left: -512px;
 }
 .imageFlipper li {
   position: relative;
