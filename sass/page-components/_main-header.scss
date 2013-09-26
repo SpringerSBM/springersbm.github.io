@@ -66,8 +66,8 @@
     float:left;
 
     ul {
-      margin-left: -14px;
-      @include respond-to(laptop) {
+      margin-left: -24px;
+      @include respond-to(tablet-portrait) {
         margin-left:-20px;
       }
     }

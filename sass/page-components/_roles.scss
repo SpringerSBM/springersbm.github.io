@@ -100,8 +100,11 @@
 
 
 .role-section {
-  padding: 0 1.5em;
   h1 {
     margin:0 0 0.4em 0;
+    padding: 0 0.7em;
+    @include respond-to(tablet-portrait) {
+      padding: 0 0.3em;
+    }
   }
 }

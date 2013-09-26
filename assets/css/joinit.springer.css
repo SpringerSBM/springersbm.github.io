@@ -133,7 +133,7 @@ h3 {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  width: 96%;
+  width: 94%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 769px) {
@@ -240,12 +240,12 @@ h3 {
   float: left;
 }
 .roles .main-header__nav ul {
-  margin-left: -14px;
+  margin-left: -24px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 600px) {
   .roles .main-header__nav ul {
-    /* MQ Laptop */
+    /* MQ Tablet portrait */
     margin-left: -20px;
   }
 }
@@ -1235,11 +1235,16 @@ h3 {
   }
 }
 
-.role-section {
-  padding: 0 1.5em;
-}
 .role-section h1 {
   margin: 0 0 0.4em 0;
+  padding: 0 0.7em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .role-section h1 {
+    /* MQ Tablet portrait */
+    padding: 0 0.3em;
+  }
 }
 
 .imageFlipper {
