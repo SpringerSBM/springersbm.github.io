@@ -49,7 +49,7 @@
 			font-size: 0.8rem;
 			a {
 				@include img-replacement();
-				background: url(../imgs/linkedin.png) 0 0 no-repeat;
+				background: url(/assets/imgs/linkedin.png) 0 0 no-repeat;
 				cursor: pointer;
 				height: 40px;
 			}

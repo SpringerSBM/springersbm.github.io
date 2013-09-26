@@ -197,7 +197,7 @@ h3 {
   -moz-transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
   -o-transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
   transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
-  background: url(../imgs/springer-logo.png) left -24px no-repeat;
+  background: url(/assets/imgs/springer-logo.png) left -24px no-repeat;
   height: 30px;
   margin: 7px 0 0;
   width: 115px;
@@ -206,7 +206,7 @@ h3 {
 }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
   .main-header__logo {
-    background-image: url(../imgs/springer-logo@2x.png);
+    background-image: url(/assets/imgs/springer-logo@2x.png);
     background-position: left -24px;
     background-size: 138px;
   }
@@ -222,7 +222,7 @@ h3 {
 }
 @media only screen and (min-width: 600px) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 600px) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 600px) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 600px) and (min-device-pixel-ratio: 1.5) {
   .main-header__logo {
-    background-image: url(../imgs/springer-logo@2x.png);
+    background-image: url(/assets/imgs/springer-logo@2x.png);
     background-position: left -56px;
     background-size: 143px;
     width: 141px;
@@ -1185,7 +1185,7 @@ h3 {
   overflow: hidden;
   text-align: left;
   text-indent: -9999em;
-  background: url(../imgs/linkedin.png) 0 0 no-repeat;
+  background: url(/assets/imgs/linkedin.png) 0 0 no-repeat;
   cursor: pointer;
   height: 40px;
 }

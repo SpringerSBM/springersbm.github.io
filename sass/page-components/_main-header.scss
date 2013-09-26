@@ -26,14 +26,14 @@
 .main-header__logo {
   @include img-replacement();
   @include transition(background .25s ease-in-out, height .25s ease-in-out);
-  background:url(../imgs/springer-logo.png) left -24px no-repeat;
+  background:url(/assets/imgs/springer-logo.png) left -24px no-repeat;
   height:30px;
   margin:7px 0 0;
   width:115px;
   float:left;
 
   @include for-high-res() {
-    background-image:url(../imgs/springer-logo@2x.png);
+    background-image:url(/assets/imgs/springer-logo@2x.png);
     background-position:left -24px;
     background-size:138px;
   }
@@ -45,7 +45,7 @@
     width:139px;
 
     @include for-high-res() {
-      background-image:url(../imgs/springer-logo@2x.png);
+      background-image:url(/assets/imgs/springer-logo@2x.png);
       background-position:left -56px;
       background-size:143px;
       width:141px;
