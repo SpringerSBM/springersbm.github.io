@@ -29,13 +29,13 @@ img {
 
 .wrapper {
   padding-top: 44px;
+  overflow-x: hidden;
+  overflow-y: auto;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   .wrapper {
     /* MQ Tablet portrait */
-    overflow-x: hidden;
-    overflow-y: auto;
     padding-top: 66px;
   }
 }

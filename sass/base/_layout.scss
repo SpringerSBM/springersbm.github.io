@@ -9,9 +9,10 @@ img {
 .wrapper {
   padding-top:44px;
 
+  overflow-x:hidden;
+  overflow-y:auto;
+  
   @include respond-to(tablet-portrait) {
-    overflow-x:hidden;
-    overflow-y:auto;
     padding-top:66px;
   }
 }
