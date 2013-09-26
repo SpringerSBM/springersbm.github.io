@@ -24,38 +24,43 @@
 }
 
 .main-header__logo {
-  @include img-replacement();
-  @include transition(background .25s ease-in-out, height .25s ease-in-out);
-  background:url(/assets/imgs/springer-logo.png) left -24px no-repeat;
-  height:30px;
-  margin:7px 0 0;
-  width:115px;
-  float:left;
+  margin:0;
 
-  @include for-high-res() {
-    background-image:url(/assets/imgs/springer-logo@2x.png);
-    background-position:left -24px;
-    background-size:138px;
-  }
-
-  @include respond-to(tablet-portrait) {
-    background-position:left -54px;
-    height:38px;
-    margin-top:11px;
-    width:139px;
+  a {
+    @include img-replacement();
+    @include transition(background .25s ease-in-out, height .25s ease-in-out);
+    background:url(/assets/imgs/springer-logo.png) left -24px no-repeat;
+    display:block;
+    height:30px;
+    margin:7px 0 0;
+    width:115px;
+    float:left;
 
     @include for-high-res() {
       background-image:url(/assets/imgs/springer-logo@2x.png);
-      background-position:left -56px;
-      background-size:143px;
-      width:141px;
+      background-position:left -24px;
+      background-size:138px;
     }
-  }
 
-  .roles & {
-    float:right;
-  }
+    @include respond-to(tablet-portrait) {
+      background-position:left -54px;
+      height:38px;
+      margin-top:11px;
+      width:139px;
 
+      @include for-high-res() {
+        background-image:url(/assets/imgs/springer-logo@2x.png);
+        background-position:left -56px;
+        background-size:143px;
+        width:141px;
+      }
+    }
+
+    .roles & {
+      float:right;
+    }
+
+  }
 }
 
 .main-header__nav {

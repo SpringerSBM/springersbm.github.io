@@ -187,6 +187,9 @@ h3 {
 }
 
 .main-header__logo {
+  margin: 0;
+}
+.main-header__logo a {
   background-repeat: no-repeat;
   direction: ltr;
   display: block;
@@ -198,6 +201,7 @@ h3 {
   -o-transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
   transition: background 0.25s ease-in-out, height 0.25s ease-in-out;
   background: url(/assets/imgs/springer-logo.png) left -24px no-repeat;
+  display: block;
   height: 30px;
   margin: 7px 0 0;
   width: 115px;
@@ -205,14 +209,14 @@ h3 {
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  .main-header__logo {
+  .main-header__logo a {
     background-image: url(/assets/imgs/springer-logo@2x.png);
     background-position: left -24px;
     background-size: 138px;
   }
 }
 @media screen and (min-width: 600px) {
-  .main-header__logo {
+  .main-header__logo a {
     /* MQ Tablet portrait */
     background-position: left -54px;
     height: 38px;
@@ -221,14 +225,14 @@ h3 {
   }
 }
 @media only screen and (min-width: 600px) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 600px) and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-width: 600px) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-width: 600px) and (min-device-pixel-ratio: 1.5) {
-  .main-header__logo {
+  .main-header__logo a {
     background-image: url(/assets/imgs/springer-logo@2x.png);
     background-position: left -56px;
     background-size: 143px;
     width: 141px;
   }
 }
-.roles .main-header__logo {
+.roles .main-header__logo a {
   float: right;
 }
 
@@ -894,7 +898,6 @@ h3 {
 
 .job-vacancies__list {
   border-top: 1px solid black;
-  display: table;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -909,7 +912,6 @@ h3 {
 }
 
 .job-vacancies__vacancy {
-  display: table-row;
   list-style: none;
 }
 .job-vacancies__vacancy:hover {
@@ -918,13 +920,12 @@ h3 {
 
 .vacancy__role {
   border-bottom: 1px solid #555;
-  display: table-cell;
-  font-weight: 100;
+  display: block;
   font-size: 1.2rem;
   padding: 12px 5px;
 }
-.vacancy__role a {
-  display: block;
+.vacancy__role strong {
+  font-weight: 100;
 }
 
 .vacancy__location {

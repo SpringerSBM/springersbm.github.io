@@ -34,7 +34,6 @@
 
 .job-vacancies__list {
   border-top:1px solid black;
-  display:table;
   margin:0;
   padding:0;
   width:100%;
@@ -46,7 +45,6 @@
 }
 
 .job-vacancies__vacancy {
-  display:table-row;
   list-style:none;
 
   &:hover {
@@ -56,13 +54,12 @@
 
 .vacancy__role {
   border-bottom:1px solid #555;
-  display:table-cell;
-  font-weight:100;
+  display:block;
   font-size:1.2rem;
   padding:12px 5px;
 
-  a {
-    display:block;
+  strong {
+    font-weight:100;
   }
 }
 
