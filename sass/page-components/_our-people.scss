@@ -1,5 +1,4 @@
 .home-section--our-people {
-  //display:none;
   position:relative;
 
   .home-section__heading {
@@ -26,20 +25,16 @@
     .mobile & {
       height:622px;
     }
-    // @include respond-to(break-point, 'min-width:1024px') {
-    //   height: 888px;
-    // }    
   }
 
 
   .team-panorama {
     @extend .centeredNoScroll;
+    top:0;
 
     .mobile & {
       width: 1024px;
-      margin-left: -512px;      
+      margin-left: -512px;
     }
-    top:auto;
-    bottom:0;
   }
 }

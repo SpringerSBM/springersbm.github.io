@@ -779,8 +779,7 @@ h3 {
   height: 622px;
 }
 .home-section--our-people .team-panorama {
-  top: auto;
-  bottom: 0;
+  top: 0;
 }
 .mobile .home-section--our-people .team-panorama {
   width: 1024px;
@@ -1247,6 +1246,7 @@ h3 {
   list-style-type: none;
   width: 1440px;
   padding: 0px;
+  top: 208px;
 }
 .mobile .imageFlipper {
   width: 1024px;
