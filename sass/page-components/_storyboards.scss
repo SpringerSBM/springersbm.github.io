@@ -3,12 +3,7 @@ $parallaxPanelRatio:0.1;
 
 .storyboards,
 .welcome {
-  //display:none;
-}
-
-.welcome {
   background:#fbfdfe;
-  border-bottom:5px solid #e8f4fc;
 }
 
 .welcome__wrapper {
@@ -47,14 +42,16 @@ $parallaxPanelRatio:0.1;
   margin-bottom:0;
 }
 
-.storyboards {
+.storyboards__wrapper {
   background-color:#999;
-  max-width:1440px;
+  border:10px solid #e8f4fc;
   margin:0 auto;
+  max-width:1440px;
 }
 
 .storyboards__board {
   height:$pageWidth*$parallaxPanelRatio;
+  margin:0 -10px;
   opacity:0.9;
   overflow:hidden;
   position:relative;
@@ -71,6 +68,10 @@ $parallaxPanelRatio:0.1;
     -webkit-filter:blur(2px);
     -moz-filter:blur(2px);
     filter:blur(2px);
+  }
+
+  @include respond-to(break-point, 'min-width:1440px') {
+    margin:auto;
   }
 
   &.active {

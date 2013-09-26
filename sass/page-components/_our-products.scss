@@ -1,5 +1,4 @@
 .home-section--our-products {
-  //display:none;
   overflow:hidden;
   width:100%;
   position:relative;
@@ -9,8 +8,10 @@
   }
 
   .home-section__heading {
+    border-top:0 none;
     margin-left:0;
     margin-right:0;
+    margin-top:0;
 
     @include respond-to(break-point, 'min-width:1016px') {
       margin-left:-18px;

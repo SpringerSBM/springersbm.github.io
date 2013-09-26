@@ -15,7 +15,7 @@
 
 	//on page ready....
 	$().ready(function(){
-		var parFx=$(".storyboards"),
+		var parFx=$(".storyboards__wrapper"),
 			parFxPos=parFx.position(),
 			panels=parFx.children(".storyboards__board"),
 			$w=$(window),
