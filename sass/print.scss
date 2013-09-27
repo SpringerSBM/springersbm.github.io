@@ -1,0 +1,183 @@
+/* Markup */
+	@page {
+	  margin:1cm 0cm 1cm 0.5cm;
+	}
+
+	html,body{
+		background:white;
+		color:#444;	
+		font-size: 100%;
+		line-height: 1em;
+	}
+
+	body{
+		font-family: "times new roman" , georgia;
+		font-size: 10pt;
+		line-height: 1em;
+	}
+
+	a:link,
+	a:visited {
+	  color:black;
+	  font-style:italic;
+	  text-decoration: none;
+	}
+
+	a strong{
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+	  color:#ccc;
+	  content:" (" attr(href) ") ";
+	  display:inline;
+	  text-decoration: none;
+	}
+
+	a[href^="#"],
+	a[href^="javascript"],
+	a.noLink {
+	  text-decoration:none;
+
+	  &:after {
+	    content: "";
+	  }
+	}
+
+
+	h1,h2,h3,h4{
+		font-family: sans-serif, arial;
+		// color:#aaa!important;
+	}
+
+	.wrapper,
+	.welcome__wrapper{
+		padding-top: 0px;
+	}
+
+	// hide
+	.main-header,
+	.imageFlipper,
+	.home-section--our-people,
+	.our-culture,
+	.our-workplace .home-section__grid,
+	.looking-for__photo-wrapper,
+	.footer__colophon,
+	.footer__name-of-site{
+		display: none;
+	}
+
+	li{
+		margin-bottom: 5px;
+	}
+
+	.welcome__wrapper{
+		padding-bottom: 10px;
+		h1{
+			font-size: 30pt!important;
+			line-height: 1em;
+		}
+		h2{
+			font-size: 24pt!important;
+		}
+	
+		.logoPrint{
+			margin-top: 30px;
+			display: block;
+			height: 20pt;
+		}			
+	}
+
+
+	.storyboards__wrapper{
+		padding-bottom: 30px;
+		.storyboards__board{
+			height: auto!important;
+		}
+		.board__headline{
+			color:#ccc!important;
+		}
+
+		img,
+		a{
+			display: none;
+		}
+	}
+
+
+	.home-section--our-products{		
+		page-break-after: always;
+
+
+		.home-section__heading{
+			display: none;
+		}
+
+		h2{
+			margin-top: 0px;
+		}
+
+		.our-products__product{
+			margin-bottom: 40px;
+		}
+
+		.product__product-image{
+			float: left;
+			width:40%;
+			margin-right: 30px;
+		}
+
+		.product__product-description{
+			overflow: hidden;
+			line-height: 1.2em;
+		}
+
+		.product-description__tags{
+			line-height: 16pt;
+			span{
+				border-bottom: 2px solid #ccc;
+			}
+		}
+		
+	}
+
+	.our-workplace{
+		font-size: 10pt;
+		.map{
+			width:400px;
+			margin: auto;
+			overflow: hidden;
+
+			img{
+				margin-left:-150px;
+				width:700px;
+				display: block;
+			}
+		}
+	}
+
+	.looking-for__contact-info{
+		margin: 0px 20% 7px;
+		padding:20px 0px 7px 0px;
+		text-align: center;
+		border-bottom:1px solid #ccc;
+	}
+
+	.home-section--job-vacancies{
+		.home-section__heading{
+			display: none;
+		}
+	}
+
+	.footer__wrapper{
+		font-size: 10pt;
+		text-align: center;
+
+		p{
+			margin:0px;
+		}
+
+		.footer__copyright-legal a{
+			display: none;
+		}
+	}
