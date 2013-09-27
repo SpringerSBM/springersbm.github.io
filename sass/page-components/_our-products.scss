@@ -61,11 +61,12 @@
     width:700px;
 
     .product--springerlink & {
-      left:65.4%;
+      left:60%;
+      width:700px;
     }
 
     .product--smartbooks & {
-      right:65.4%;
+      right:60%;
     }
   }
 
@@ -89,10 +90,6 @@
     .product--springerlink & {
       margin-left:490px;
     }
-
-    //.product--smartbooks & {
-    //  margin-right:525px;
-    //}
   }
 
   img {
@@ -106,13 +103,13 @@
 
   @include respond-to(tablet-portrait) {
     .product--springerlink & {
-      margin-right:34.6%;
-      padding-right:4em;
+      margin-right:40%;
+      padding-right:2em;
     }
 
     .product--smartbooks & {
-      margin-left:34.6%;
-      padding-left:4em;
+      margin-left:40%;
+      padding-left:2em;
     }
   }
 

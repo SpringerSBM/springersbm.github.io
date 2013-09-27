@@ -1,11 +1,14 @@
 .home-section--job-vacancies {
-  margin:0 18px;
+  margin:0 27px;
   position:relative;
 
   .home-section__wrapper {
     margin:0 auto;
-    max-width:490px;
     overflow:visible;
+
+    @include respond-to(tablet-portrait) {
+      max-width:490px;
+    }
 
     @include respond-to(break-point, 'min-width:1016px') {
       max-width:980px;
@@ -18,16 +21,28 @@
     }
   }
 
-  .home-section__subheading {
+  .home-section__heading {
+    margin-top:0;
+
     @include respond-to(tablet-portrait) {
-      margin-left:auto;
-      margin-right:auto;
-      max-width:980px;
       text-align:center;
     }
 
     @include respond-to(break-point, 'min-width:1016px') {
       text-align:left;
+    }
+  }
+
+  .home-section__subheading {
+    @include respond-to(tablet-portrait) {
+      text-align:center;
+    }
+
+    @include respond-to(break-point, 'min-width:1016px') {
+      text-align:left;
+      margin-left:auto;
+      margin-right:auto;
+      max-width:980px;
     }
   }
 }
@@ -36,11 +51,10 @@
   border-top:1px solid #d4d4d4;
   margin:0;
   padding:0;
-  width:100%;
-  max-width:490px;
 
   @include respond-to(break-point, 'min-width:1016px') {
     float:left;
+    width:490px;
   }
 }
 
@@ -72,13 +86,13 @@
 }
 
 .job-vacancies__content {
-  max-width:490px;
+  max-width:480px;
 
   @include respond-to(break-point, 'min-width:1016px') {
     @include box-sizing(border-box);
     float:right;
-    margin-top:-0.5em;
-    padding-left:4em;
+    margin-top:-0.4em;
+    padding-left:3em;
   }
 
   ul {

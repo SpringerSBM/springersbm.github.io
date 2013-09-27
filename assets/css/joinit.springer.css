@@ -21,6 +21,13 @@
 /********* Layout styles *********/
 body {
   margin: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 1261px) {
+  body {
+    /* MQ Widescreen */
+    text-rendering: optimizeLegibility;
+  }
 }
 
 img {
@@ -71,6 +78,7 @@ h1,
 .welcome__subheading {
   font-size: 2rem;
   margin: 0.67em 0;
+  line-height: 1.4;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
@@ -85,6 +93,7 @@ h2 {
   font-size: 1.75rem;
   letter-spacing: -0.04em;
   margin: 0.83em 0;
+  line-height: 1.05em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
@@ -93,7 +102,6 @@ h2 {
     font-size: 2.4rem;
     font-weight: 100;
     letter-spacing: -0.05em;
-    line-height: 1;
   }
 }
 
@@ -339,9 +347,8 @@ h3 {
 .home-section__heading {
   background: #fbfdfe;
   height: 1.6em;
-  line-height: 1.6;
-  margin-left: -18px;
-  margin-right: -18px;
+  margin-left: -27px;
+  margin-right: -27px;
 }
 .home-section__heading span {
   padding: 0 .7em;
@@ -402,7 +409,7 @@ h3 {
 .welcome__wrapper {
   position: relative;
   background: none;
-  padding: 1.5em 1.5em 50px;
+  padding: 1.5em 1.5em 40px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -426,7 +433,6 @@ h3 {
   font-weight: 100;
   margin-top: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
-  width: 90%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
@@ -519,9 +525,6 @@ h3 {
 }
 
 .board__headline {
-  font-size: 7.25em;
-  line-height: 0.9;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -529,12 +532,14 @@ h3 {
   -moz-transition: all 0.5s ease-out 0.2s;
   -o-transition: all 0.5s ease-out 0.2s;
   transition: all 0.5s ease-out 0.2s;
+  font-size: 8em;
+  line-height: 0.9;
   color: #fff;
   margin: 0;
-  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.85);
   opacity: 0;
   position: absolute;
-  left: 18px;
+  left: 27px;
   bottom: -10%;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -545,16 +550,12 @@ h3 {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-.noParallax .board__headline {
-  bottom: 0.75em;
-  opacity: 1;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   .board__headline {
     /* MQ Tablet portrait */
     font-size: 4.5em;
-    line-height: 1;
   }
 }
 @media all and (min-width: 1016px) {
@@ -562,6 +563,10 @@ h3 {
     /* MQ Break point */
     left: 0;
   }
+}
+.noParallax .board__headline {
+  bottom: 0.75em;
+  opacity: 1;
 }
 .active .board__headline {
   bottom: 1.6em;
@@ -658,10 +663,11 @@ h3 {
     width: 700px;
   }
   .product--springerlink .product__product-image {
-    left: 65.4%;
+    left: 60%;
+    width: 700px;
   }
   .product--smartbooks .product__product-image {
-    right: 65.4%;
+    right: 60%;
   }
 }
 @media screen and (min-width: 769px) {
@@ -706,12 +712,12 @@ h3 {
     /* MQ Tablet portrait */
   }
   .product--springerlink .product__product-description {
-    margin-right: 34.6%;
-    padding-right: 4em;
+    margin-right: 40%;
+    padding-right: 2em;
   }
   .product--smartbooks .product__product-description {
-    margin-left: 34.6%;
-    padding-left: 4em;
+    margin-left: 40%;
+    padding-left: 2em;
   }
 }
 @media screen and (min-width: 769px) {
@@ -798,6 +804,7 @@ h3 {
   position: relative;
 }
 .home-section--our-people .home-section__heading {
+  border-top: 10px solid #e8f4fc;
   margin-left: 0;
   margin-right: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -820,10 +827,17 @@ h3 {
   }
 }
 .home-section--our-people .home-section__grid {
-  height: 874px;
+  height: 834px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (min-width: 1016px) {
+  .home-section--our-people .home-section__grid {
+    /* MQ Break point */
+    height: 893px;
+  }
 }
 .mobile .home-section--our-people .home-section__grid {
-  height: 622px;
+  height: 642px;
 }
 .home-section--our-people .team-panorama {
   border: 10px solid #e8f4fc;
@@ -867,7 +881,7 @@ h3 {
 
 .our-culture,
 .our-workplace {
-  margin: 0 18px;
+  margin: 0 27px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 .our-culture img,
@@ -897,17 +911,14 @@ h3 {
   }
 }
 
-.our-culture {
-  margin-top: 2em;
-}
 .our-culture > .home-section__grid {
-  height: 466px;
+  height: 494px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1024px) {
   .our-culture > .home-section__grid {
     /* MQ Break point */
-    height: 652px;
+    height: 686px;
   }
 }
 .our-culture .our-culture__heading:after {
@@ -955,14 +966,20 @@ h3 {
 }
 
 .home-section--job-vacancies {
-  margin: 0 18px;
+  margin: 0 27px;
   position: relative;
 }
 .home-section--job-vacancies .home-section__wrapper {
   margin: 0 auto;
-  max-width: 490px;
   overflow: visible;
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .home-section--job-vacancies .home-section__wrapper {
+    /* MQ Tablet portrait */
+    max-width: 490px;
+  }
 }
 @media all and (min-width: 1016px) {
   .home-section--job-vacancies .home-section__wrapper {
@@ -976,6 +993,23 @@ h3 {
   clear: both;
   display: table;
 }
+.home-section--job-vacancies .home-section__heading {
+  margin-top: 0;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .home-section--job-vacancies .home-section__heading {
+    /* MQ Tablet portrait */
+    text-align: center;
+  }
+}
+@media all and (min-width: 1016px) {
+  .home-section--job-vacancies .home-section__heading {
+    /* MQ Break point */
+    text-align: left;
+  }
+}
 .home-section--job-vacancies .home-section__subheading {
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -983,9 +1017,6 @@ h3 {
 @media screen and (min-width: 600px) {
   .home-section--job-vacancies .home-section__subheading {
     /* MQ Tablet portrait */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 980px;
     text-align: center;
   }
 }
@@ -993,6 +1024,9 @@ h3 {
   .home-section--job-vacancies .home-section__subheading {
     /* MQ Break point */
     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 980px;
   }
 }
 
@@ -1000,14 +1034,13 @@ h3 {
   border-top: 1px solid #d4d4d4;
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 490px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
   .job-vacancies__list {
     /* MQ Break point */
     float: left;
+    width: 490px;
   }
 }
 
@@ -1037,7 +1070,7 @@ h3 {
 }
 
 .job-vacancies__content {
-  max-width: 490px;
+  max-width: 480px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
@@ -1047,8 +1080,8 @@ h3 {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    margin-top: -0.5em;
-    padding-left: 4em;
+    margin-top: -0.4em;
+    padding-left: 3em;
   }
 }
 .job-vacancies__content ul {
@@ -1068,8 +1101,7 @@ h3 {
 .looking-for {
   clear: both;
   margin: 0 auto;
-  max-width: 490px;
-  padding: 0 18px;
+  padding: 0 27px;
   position: relative;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -1077,7 +1109,7 @@ h3 {
 @media screen and (min-width: 600px) {
   .looking-for {
     /* MQ Tablet portrait */
-    padding: 0;
+    max-width: 490px;
   }
 }
 @media all and (min-width: 1016px) {
@@ -1091,7 +1123,6 @@ h3 {
 }
 
 .looking-for__headline {
-  max-width: 70%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -1136,16 +1167,6 @@ h3 {
   }
 }
 
-.looking-for__lead-in {
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 769px) {
-  .looking-for__lead-in {
-    /* MQ Tablet landscape */
-    max-width: 490px;
-  }
-}
-
 .looking-for__wrapper {
   position: relative;
 }
@@ -1155,12 +1176,21 @@ h3 {
   padding: 0;
   margin-bottom: 1.4em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__role-list {
+    /* MQ Tablet portrait */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+  }
 }
 @media all and (min-width: 1016px) {
   .looking-for__role-list {
     /* MQ Break point */
     float: left;
-    margin-bottom: 2.5em;
+    margin-bottom: 4.5em;
     max-width: 490px;
   }
 }
@@ -1177,34 +1207,90 @@ h3 {
   }
 }
 
+.looking-for__lead-in {
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__lead-in {
+    /* MQ Tablet portrait */
+    text-align: center;
+  }
+}
+@media all and (min-width: 1016px) {
+  .looking-for__lead-in {
+    /* MQ Break point */
+    float: right;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 418px;
+  }
+}
+
 .looking-for__contact-info {
   font-size: 1.6rem;
   margin: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__contact-info {
+    /* MQ Tablet portrait */
+    text-align: center;
+  }
 }
 @media all and (min-width: 1016px) {
   .looking-for__contact-info {
     /* MQ Break point */
+    clear: right;
     float: right;
-    max-width: 460px;
+    line-height: 1;
+    text-align: left;
+    width: 418px;
   }
 }
 
 .looking-for__photo-wrapper {
+  overflow: auto;
   /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .looking-for__photo-wrapper {
+    /* MQ Tablet portrait */
+    margin-top: 2em;
+  }
 }
 @media all and (min-width: 1016px) {
   .looking-for__photo-wrapper {
     /* MQ Break point */
     clear: both;
-    margin: 0 auto;
+    margin: 4em auto 0;
     max-width: 620px;
   }
 }
 
+.looking-for__tagline {
+  border-bottom: 1px solid #d4d4d4;
+  clear: both;
+  color: #777;
+  font-size: 0.9em;
+  margin: 40px 0 0;
+  position: relative;
+  text-align: center;
+}
+.looking-for__tagline span {
+  background: #fff;
+  margin-left: -63px;
+  padding: 0 5px;
+  position: absolute;
+  top: -13px;
+  left: 50%;
+}
+
 .looking-for__photo {
   float: left;
-  margin: 40px 2% 20px 0;
+  margin: 20px 2% 20px 0;
   width: 32%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
@@ -1221,25 +1307,8 @@ h3 {
   width: 100%;
 }
 .looking-for__photo p {
+  margin-top: 0.5em;
   text-align: center;
-}
-
-.looking-for__tagline {
-  border-bottom: 1px solid #d4d4d4;
-  clear: both;
-  color: #777;
-  font-size: 0.9em;
-  margin: 0 0 60px;
-  position: relative;
-  text-align: center;
-}
-.looking-for__tagline span {
-  background: #fff;
-  margin-left: -63px;
-  padding: 0 5px;
-  position: absolute;
-  top: -13px;
-  left: 50%;
 }
 
 .job-wrapper {
@@ -1379,7 +1448,7 @@ h3 {
 
 .imageFlipper {
   background: #222;
-  border: 10px solid #fbfdfe;
+  border: 10px solid #e8f4fc;
   border-top: 0 none;
   list-style-type: none;
   padding: 0px;
@@ -1449,16 +1518,9 @@ h3 {
   clear: both;
   color: #888;
   font-size: 0.75em;
-  margin: 4em 0 0 0;
+  margin-top: 2em;
   overflow: auto;
   padding: 22px 27px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 1025px) {
-  .footer {
-    /* MQ Laptop */
-    margin: 8em 0 0 0;
-  }
 }
 .footer a {
   color: #888;

@@ -1,12 +1,11 @@
 .looking-for {
   clear:both;
   margin:0 auto;
-  max-width:490px;
-  padding:0 18px;
+  padding:0 27px;
   position:relative;
 
   @include respond-to(tablet-portrait) {
-    padding:0;
+    max-width:490px;
   }
 
   @include respond-to(break-point, 'min-width:1016px') {
@@ -21,8 +20,6 @@
 }
 
 .looking-for__headline {
-  max-width:70%;
-
   @include respond-to(tablet-portrait) {
     margin-left:auto;
     margin-right:auto;
@@ -58,12 +55,6 @@
 
 }
 
-.looking-for__lead-in {
-  @include respond-to(tablet-landscape) {
-    max-width:490px;
-  }
-}
-
 .looking-for__wrapper {
   position:relative;
 }
@@ -73,9 +64,15 @@
   padding:0;
   margin-bottom:1.4em;
 
+  @include respond-to(tablet-portrait) {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:400px;
+  }
+
   @include respond-to(break-point, 'min-width:1016px') {
     float:left;
-    margin-bottom:2.5em;
+    margin-bottom:4.5em;
     max-width:490px;
   }
 
@@ -87,10 +84,19 @@
     @include respond-to(break-point, 'min-width:480px') {
       width:45%;
     }
+  }
+}
 
-    //@include respond-to(break-point, 'min-width:1016px') {
-    //  width:20%;
-    //}
+.looking-for__lead-in {
+  @include respond-to(tablet-portrait) {
+    text-align:center;
+  }
+
+  @include respond-to(break-point, 'min-width:1016px') {
+    float:right;
+    margin-bottom:8px;
+    text-align:left;
+    width:418px;
   }
 }
 
@@ -98,23 +104,53 @@
   font-size:1.6rem;
   margin:0;
 
+  @include respond-to(tablet-portrait) {
+    text-align:center;
+  }
+
   @include respond-to(break-point, 'min-width:1016px') {
+    clear:right;
     float:right;
-    max-width:460px;
+    line-height:1;
+    text-align:left;
+    width:418px;
   }
 }
 
 .looking-for__photo-wrapper {
+  overflow:auto;
+
+  @include respond-to(tablet-portrait) {
+    margin-top:2em;
+  }
+
   @include respond-to(break-point, 'min-width:1016px') {
     clear:both;
-    margin:0 auto;
+    margin:4em auto 0;
     max-width:620px;
+  }
+}
+
+.looking-for__tagline {
+  border-bottom:1px solid #d4d4d4;
+  clear:both;
+  color:#777;
+  font-size:0.9em;
+  margin:40px 0 0;
+  position:relative;
+  text-align:center;
+
+  span {
+    background:#fff;
+    margin-left:-63px;
+    padding:0 5px;
+    position:absolute; top:-13px; left:50%;
   }
 }
 
 .looking-for__photo {
   float:left;
-  margin:40px 2% 20px 0;
+  margin:20px 2% 20px 0;
   width:32%;
 
   @include respond-to(break-point, 'min-width:1016px') {
@@ -130,23 +166,7 @@
   }
 
   p {
+    margin-top:0.5em;
     text-align:center;
-  }
-}
-
-.looking-for__tagline {
-  border-bottom:1px solid #d4d4d4;
-  clear:both;
-  color:#777;
-  font-size:0.9em;
-  margin:0 0 60px;
-  position:relative;
-  text-align:center;
-
-  span {
-    background:#fff;
-    margin-left:-63px;
-    padding:0 5px;
-    position:absolute; top:-13px; left:50%;
   }
 }

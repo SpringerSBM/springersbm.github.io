@@ -2,6 +2,7 @@
   position:relative;
 
   .home-section__heading {
+    border-top:10px solid #e8f4fc;
     margin-left:0;
     margin-right:0;
 
@@ -20,10 +21,14 @@
   }
 
   .home-section__grid {
-    height:874px;
+    height:834px;
+
+    @include respond-to(break-point, 'min-width:1016px') {
+      height:893px; // 874
+    }
 
     .mobile & {
-      height:622px;
+      height:642px; // 622
     }
   }
 

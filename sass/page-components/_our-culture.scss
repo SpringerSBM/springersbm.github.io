@@ -1,6 +1,6 @@
 .our-culture,
 .our-workplace {
-  margin:0 18px;
+  margin:0 27px;
 
   img {
     @extend .centeredNoScroll;
@@ -24,11 +24,13 @@
 }
 
 .our-culture{
-  margin-top:2em;
+  //margin-top:2em;
+
   > .home-section__grid {
-    height:466px;
+    height:494px; // 476px;
+
     @include respond-to(break-point, 'min-width:1024px') {
-      height: 652px;
+      height:686px;
     }
   }
 
