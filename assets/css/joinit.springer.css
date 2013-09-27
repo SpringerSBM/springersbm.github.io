@@ -912,7 +912,7 @@ h3 {
   margin-top: 2em;
 }
 .our-workplace .home-section__grid {
-  height: 802px;
+  height: 750px;
   top: 266px;
   position: relative;
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -921,7 +921,7 @@ h3 {
   .our-workplace .home-section__grid {
     /* MQ Break point */
     top: 374px;
-    height: 1112px;
+    height: 1050px;
   }
 }
 .our-workplace .home-section__grid img {
@@ -986,7 +986,7 @@ h3 {
 }
 
 .job-vacancies__list {
-  border-top: 1px solid black;
+  border-top: 1px solid #d4d4d4;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -1001,17 +1001,17 @@ h3 {
 }
 
 .job-vacancies__vacancy {
+  border-bottom: 1px solid #d4d4d4;
   list-style: none;
 }
 .job-vacancies__vacancy:hover {
-  background: #fbfdfe;
+  background: #e8f4fc;
 }
 
 .vacancy__role {
-  border-bottom: 1px solid #555;
   display: block;
   font-size: 1.2rem;
-  padding: 12px 5px;
+  padding: 12px 2px;
 }
 .vacancy__role strong {
   font-weight: 100;
@@ -1080,6 +1080,7 @@ h3 {
 }
 
 .looking-for__headline {
+  max-width: 70%;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
@@ -1136,6 +1137,7 @@ h3 {
 .looking-for__role-list {
   overflow: auto;
   padding: 0;
+  margin-bottom: 1.4em;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
@@ -1160,15 +1162,14 @@ h3 {
 }
 
 .looking-for__contact-info {
-  font-size: 1.2rem;
-  margin-top: 2em;
+  font-size: 1.6rem;
+  margin: 0;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
   .looking-for__contact-info {
     /* MQ Break point */
     float: right;
-    margin: 2.5em 0;
     max-width: 460px;
   }
 }
@@ -1208,15 +1209,17 @@ h3 {
 }
 
 .looking-for__tagline {
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #d4d4d4;
   clear: both;
+  color: #777;
+  font-size: 0.9em;
   margin: 0 0 60px;
   position: relative;
   text-align: center;
 }
 .looking-for__tagline span {
   background: #fff;
-  margin-left: -82px;
+  margin-left: -63px;
   padding: 0 5px;
   position: absolute;
   top: -13px;

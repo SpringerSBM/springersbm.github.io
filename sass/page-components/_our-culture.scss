@@ -45,14 +45,15 @@
 
 .our-workplace {
   margin-top:2em;
+
   .home-section__grid {
-    height:802px;
+    height:750px;
     top:266px;
     position:relative;
 
     @include respond-to(break-point, 'min-width:1024px') {
       top:374px;
-      height:1112px;
+      height:1050px;
     }
 
     img {

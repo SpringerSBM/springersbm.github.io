@@ -33,7 +33,7 @@
 }
 
 .job-vacancies__list {
-  border-top:1px solid black;
+  border-top:1px solid #d4d4d4;
   margin:0;
   padding:0;
   width:100%;
@@ -45,18 +45,18 @@
 }
 
 .job-vacancies__vacancy {
+  border-bottom:1px solid #d4d4d4;
   list-style:none;
 
   &:hover {
-    background:#fbfdfe;
+    background:#e8f4fc;
   }
 }
 
 .vacancy__role {
-  border-bottom:1px solid #555;
   display:block;
   font-size:1.2rem;
-  padding:12px 5px;
+  padding:12px 2px;
 
   strong {
     font-weight:100;
