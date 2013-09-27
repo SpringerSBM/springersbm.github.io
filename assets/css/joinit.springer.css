@@ -395,16 +395,6 @@ h3 {
   /* Webkit excludes scrollbar-width when calculating viewport width */
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
-.welcome__wrapper h1 {
-  margin-bottom: 24px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 600px) {
-  .welcome__wrapper h1 {
-    /* MQ Tablet portrait */
-    margin-bottom: 0;
-  }
-}
 @media screen and (min-width: 600px) {
   .welcome__wrapper {
     /* MQ Tablet portrait */
@@ -450,8 +440,16 @@ h3 {
 }
 
 .welcome__heading {
-  margin: 0;
+  margin: 0 0 24px;
   max-width: 100%;
+  line-height: 1.05em;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media screen and (min-width: 600px) {
+  .welcome__heading {
+    /* MQ Tablet portrait */
+    margin-bottom: 0;
+  }
 }
 
 .welcome__subheading {
@@ -510,7 +508,7 @@ h3 {
 }
 
 .board__headline {
-  font-size: 6.25em;
+  font-size: 7.25em;
   line-height: 0.9;
   /* Webkit excludes scrollbar-width when calculating viewport width */
   -webkit-box-sizing: border-box;
@@ -568,37 +566,6 @@ h3 {
   width: 100%;
 }
 
-.welcome__start-link,
-.board__next-link {
-  background: #fff;
-  background: rgba(255, 255, 255, 0.75);
-  color: #333;
-  margin-left: -30px;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  text-align: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
-  line-height: 60px;
-}
-
-.board__next-link {
-  display: none;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-}
-@media screen and (min-width: 769px) {
-  .board__next-link {
-    /* MQ Tablet landscape */
-    display: block;
-  }
-}
-
-.welcome__start-link {
-  background: #fefefe;
-}
-
 .home-section--our-products {
   overflow: hidden;
   width: 100%;
@@ -651,6 +618,9 @@ h3 {
     min-height: 460px;
   }
 }
+.our-products__product.product--smartbooks {
+  margin-top: 45px;
+}
 
 .product__product-image {
   -webkit-box-sizing: border-box;
@@ -661,10 +631,12 @@ h3 {
   -o-transition: width 0.25s ease-in-out;
   transition: width 0.25s ease-in-out;
   padding: 0 27px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+.product--springerlink .product__product-image {
   width: 104%;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-  /* Webkit excludes scrollbar-width when calculating viewport width */
-  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media screen and (min-width: 600px) {
   .product__product-image {

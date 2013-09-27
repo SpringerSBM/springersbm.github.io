@@ -40,13 +40,20 @@
   @include respond-to(tablet-portrait) {
     min-height:460px;
   }
+
+  &.product--smartbooks {
+    margin-top:45px;
+  }
 }
 
 .product__product-image {
   @include box-sizing(border-box);
   @include transition(width .25s ease-in-out);
   padding:0 27px;
-  width:104%;
+
+  .product--springerlink & {
+    width:104%;
+  }
 
   @include respond-to(tablet-portrait) {
     padding:0;
