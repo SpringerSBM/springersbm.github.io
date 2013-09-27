@@ -44,14 +44,17 @@
     height: 1px;
     display: block;
     margin-top: 24px;
-  }
 
-  @include respond-to(tablet-portrait) {
-    &:after {
+    @include respond-to(tablet-portrait) {
       margin-right:auto;
       margin-left:auto;
     }
+
+    @include respond-to(break-point, 'min-width:1016px') {
+      margin-left:0;
+    }
   }
+
 
 }
 

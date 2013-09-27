@@ -59,7 +59,6 @@
     .roles & {
       float:right;
     }
-
   }
 }
 
@@ -70,29 +69,30 @@
   .roles & {
     float:left;
 
-    ul {
-      margin-left: -23px;
-    }
-
     span {
-      font-weight: 100;
-      font-family: arial;
-      font-size: 12px;
-      vertical-align: 2px;
+      font-weight:100;
+      font-family:Arial, sans-serif;
+      font-size:12px;
+      vertical-align:2px;
     }
-
   }
-
-
-
 }
 
 .main-header__nav-list {
   margin:0;
   padding:0;
   height:44px;
+
+  .roles & {
+    margin-left:-14px;
+  }
+
   @include respond-to(tablet-portrait) {
     height:66px;
+
+    .roles & {
+      margin-left:-24px;
+    }
   }
 
   li {
@@ -112,6 +112,15 @@
 
     &:last-child {
       margin-right:-11px;
+
+      .roles & {
+        margin-right:0;
+      }
+    }
+
+    .roles & {
+      width:auto;
+      font-size:0.75em;
     }
 
     @include respond-to(tablet-portrait) {
@@ -130,6 +139,10 @@
 
       &:last-child {
         margin-right:0;
+      }
+
+      .roles & {
+        font-size:1em;
       }
     }
 

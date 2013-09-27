@@ -4,7 +4,7 @@
 
   img {
     @extend .centeredNoScroll;
-    border:10px solid #fbfdfe;
+    border:10px solid #e8f4fc;
   } 
 
   @include respond-to(break-point, 'min-width:1016px') {
@@ -31,6 +31,7 @@
       height: 652px;
     }
   }
+
   .our-culture__heading{
     &:after {
       content: " ";
@@ -60,6 +61,7 @@
       border-top:0 none;
     }
   }
+
   .our-workplace__heading{
     &:after {
       content: " ";

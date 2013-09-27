@@ -23,6 +23,7 @@
   }
 
   p {
+    float:left;
     margin:0;
   }
 }
@@ -32,16 +33,6 @@
   max-width:980px;
 }
 
-.footer__name-of-site {
-  float:left;
-}
-
 .footer__copyright-legal {
   clear:left;
-  float:left;
-}
-
-.footer__colophon {
-  float:right;
-  display:none;
 }
