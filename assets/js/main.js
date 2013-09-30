@@ -11,8 +11,22 @@
 				return this.noParallax()?0.5:0.4;
 			},
 			isTouch:(('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)),
+			isIe:$("html").is(".ie9, .lt-ie9"),
+			ieVer:(function(){
+				var $html=$("html"),
+					ver=null;
+
+				for(var x=7;x<10;x++){
+					if($html.is(".ie" + x)){
+						ver=x;
+						break;
+					}
+				}
+
+				return ver;
+			})(),
 			noParallax:function(){
-				return settings.isMobile()||settings.isTouch;
+				return settings.isMobile()||settings.isTouch|| settings.isIe;
 			}
 		};
 
@@ -98,7 +112,9 @@
 		setResponsiveImages();
 
 		// setting the imageFlipper widget
-		$(".imageFlipper").imageFlipper();
+    	if(!settings.ieVer || settings.ieVer>8){
+    		$(".imageFlipper").imageFlipper();
+    	}		
 		
 		//triggering the resize event handler
 		$w.resize();

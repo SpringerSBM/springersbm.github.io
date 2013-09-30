@@ -16,36 +16,40 @@
 	    		columns	: 9,
 	        }, options);
 
-    var people = [];
-    people.push("Jim, software engineer.");
-    people.push("Aditya, ux designer.");
-    people.push("Pat, technical principal.");
-    people.push("Rob, front-end developer.");
-    people.push("Chris, software engineer.");
-    people.push("Shalini, quality analyst.");
-    people.push("Uthman, quality analyst.");
-    people.push("Dan, software engineer.");
-    people.push("Ben, agile coach.");
-    people.push("Cris, software engineer.");
-    people.push("Rizwan, software engineer.");
-    people.push("Stephen, business analyst.");
-    people.push("Reshma, all round great person.");
-    people.push("Brian, product owner.");
-    people.push("Ai, software engineer.");
-    people.push("Ross, technical architect.");
-    people.push("Hector, platform engineer.");
-    people.push("Paulo, ux designer.");
-    people.push("John, software engineer.");
-    people.push("Mike, technical architect.");
-    people.push("Kristen, business analyst.");
-    people.push("Charles, quality analyst.");
-    people.push("Todd, front-end developer.");
-    people.push("Anjalie, business analyst.");
-    people.push("Andrew, ui designer.");
-    people.push("Simon, platform engineer.");
-    people.push("Rob, software engineer.");
+    var people = [
+    	"Jim, software engineer.",
+    	"Aditya, ux designer.",
+    	"Pat, technical principal.",
+    	"Rob, front-end developer.",
+    	"Chris, software engineer.",
+    	"Shalini, quality analyst.",
+    	"Uthman, quality analyst.",
+    	"Dan, software engineer.",
+    	"Ben, agile coach.",
+    	"Cris, software engineer.",
+    	"Rizwan, software engineer.",
+    	"Stephen, business analyst.",
+    	"Reshma, all round great person.",
+    	"Brian, product owner.",
+    	"Ai, software engineer.",
+    	"Ross, technical architect.",
+    	"Hector, platform engineer.",
+    	"Paulo, ux designer.",
+    	"John, software engineer.",
+    	"Mike, technical architect.",
+    	"Kristen, business analyst.",
+    	"Charles, quality analyst.",
+    	"Todd, front-end developer.",
+    	"Anjalie, business analyst.",
+    	"Andrew, ui designer.",
+    	"Simon, platform engineer.",
+    	"Rob, software engineer."
+    ];
+
+
 
     return this.each(function(){
+
 	    // Store the object
 	    var $this = $(this),
 
