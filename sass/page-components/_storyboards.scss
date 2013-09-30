@@ -91,7 +91,8 @@ $pageWidth:1440px;
     filter:blur(2px);
   }
 
-  @include respond-to(break-point, 'min-width:1440px') {
+  // Using 1500px to avoid border showing on MBP 15" screen
+  @include respond-to(break-point, 'min-width:1500px') {
     margin:auto;
   }
 
