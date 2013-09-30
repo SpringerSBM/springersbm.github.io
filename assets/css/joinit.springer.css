@@ -505,7 +505,7 @@ h3 {
     filter: blur(2px);
   }
 }
-@media all and (min-width: 1500px) {
+@media all and (min-width: 1440px) {
   .storyboards__board {
     /* MQ Break point */
     margin: auto;

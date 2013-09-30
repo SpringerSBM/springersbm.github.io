@@ -1,13 +1,19 @@
 {% include header_roles.html bodyclass="roles" %}
 
-<header class="role-section">
-    <h1 class="home-section__heading"><span>{{page.role}}</span></h1>
+<header>
+	<section class="logo-section">
+		<img src="../../assets/imgs/logo-print.jpg" class="logoPrint" alt="Springer" />
+		<p class="welcome__tagline">Springer is a world-class international scientific publisher.</p>
+	</section>
+	<section class="role-section">
+    	<h1 class="home-section__heading"><span>{{page.role}}</span></h1>
+	</section>
 </header>
 
 <div class="job-wrapper">
     <address class="role__subheading"><em>{{page.location}}</em></address>
     <time class="role__subheading"><em>{{page.length}}</em></time>
-	<aside class="job-vacancy">
+	<article class="job-vacancy">
 		<section class="job-global">
 			<h2>
 				Hello. We’re Springer IT.
@@ -48,7 +54,7 @@
 			</p>	
 			<p>This role is based in our office in {{page.office}}.</p>
 		</section>	
-	</aside>		
+	</article>		
 	<section class="sidebar">
 		<div class="apply-now">
 			<a class="btn" href={{page.jobvite}}>Apply for this role</a>

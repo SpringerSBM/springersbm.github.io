@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  font-family: "times new roman" , georgia;
+  font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
   font-size: 10pt;
   line-height: 1em;
 }
@@ -28,7 +28,8 @@ a strong {
 }
 
 a[href]:after {
-  color: #ccc;
+  color: #cccccc !important;
+  font-size: 8pt;
   content: " (" attr(href) ") ";
   display: inline;
   text-decoration: none;
@@ -46,7 +47,18 @@ a.noLink:after {
 }
 
 h1, h2, h3, h4 {
-  font-family: sans-serif, arial;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+
+.logo-section,
+.logo-section .welcome__tagline,
+.logoPrint {
+  display: block;
+}
+
+.logoPrint {
+  height: 20pt;
 }
 
 .wrapper,
@@ -69,6 +81,12 @@ li {
   margin-bottom: 5px;
 }
 
+.welcome__tagline {
+  font-size: 8pt;
+  color: #ddd;
+  margin-top: 5px;
+}
+
 .welcome__wrapper {
   padding-bottom: 10px;
 }
@@ -81,8 +99,6 @@ li {
 }
 .welcome__wrapper .logoPrint {
   margin-top: 30px;
-  display: block;
-  height: 20pt;
 }
 
 .storyboards__wrapper {
@@ -101,6 +117,7 @@ li {
 
 .home-section--our-products {
   page-break-after: always;
+  position: relative;
 }
 .home-section--our-products .home-section__heading {
   display: none;
@@ -113,8 +130,11 @@ li {
 }
 .home-section--our-products .product__product-image {
   float: left;
-  width: 40%;
+  width: 35%;
   margin-right: 30px;
+}
+.home-section--our-products .product__product-image img {
+  width: 100%;
 }
 .home-section--our-products .product__product-description {
   overflow: hidden;
@@ -124,7 +144,7 @@ li {
   line-height: 16pt;
 }
 .home-section--our-products .product-description__tags span {
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #e8f4fc;
 }
 
 .our-workplace {
@@ -146,19 +166,90 @@ li {
   padding: 20px 0px 7px 0px;
   text-align: center;
   border-bottom: 1px solid #ccc;
+  font-size: 14pt;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+.looking-for__contact-info a {
+  color: #0176c3;
+}
+.looking-for__contact-info a:after {
+  content: "";
 }
 
 .home-section--job-vacancies .home-section__heading {
   display: none;
 }
+.home-section--job-vacancies .job-vacancies__vacancy a strong {
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 11em;
+}
+.home-section--job-vacancies .job-vacancies__vacancy a:after {
+  content: " (http://joinit.springer.com" attr(href) ") ";
+}
 
 .footer__wrapper {
-  font-size: 10pt;
+  font-size: 8pt;
   text-align: center;
+  color: #ddd;
 }
 .footer__wrapper p {
   margin: 0px;
 }
 .footer__wrapper .footer__copyright-legal a {
   display: none;
+}
+
+.roles {
+  /* QR Code */
+}
+.roles .job-wrapper {
+  line-height: 1.2em;
+}
+.roles .job-wrapper .role__subheading a:after,
+.roles .job-wrapper .apply-now,
+.roles .job-wrapper .linkedin {
+  display: none;
+}
+.roles .job-wrapper .job-description {
+  page-break-after: always;
+}
+.roles .job-wrapper .sidebar {
+  page-break-inside: avoid;
+  overflow: hidden;
+}
+.roles .job-wrapper .sidebar div {
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 15px;
+}
+.roles .job-wrapper .sidebar a:after {
+  display: none;
+}
+.roles .footer__wrapper {
+  margin-top: 20px;
+}
+.roles .home-section__heading {
+  position: relative;
+}
+.roles .QRcode {
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  text-align: right;
+}
+.roles .QRcode img {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+}
+.roles .QRcode span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #ddd;
 }

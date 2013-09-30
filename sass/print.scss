@@ -11,7 +11,7 @@
 	}
 
 	body{
-		font-family: "times new roman" , georgia;
+		font-family:Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
 		font-size: 10pt;
 		line-height: 1em;
 	}
@@ -28,7 +28,8 @@
 	}
 
 	a[href]:after {
-	  color:#ccc;
+	  color:#ccc!important;
+	  font-size: 8pt;
 	  content:" (" attr(href) ") ";
 	  display:inline;
 	  text-decoration: none;
@@ -46,9 +47,22 @@
 
 
 	h1,h2,h3,h4{
-		font-family: sans-serif, arial;
-		// color:#aaa!important;
+		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 200;
 	}
+
+	// Springer logo and sub-heading
+	.logo-section,
+	.logo-section .welcome__tagline,
+	.logoPrint{
+	  display: block;
+	}
+
+	.logoPrint{
+		height: 20pt;
+	}
+
+
 
 	.wrapper,
 	.welcome__wrapper{
@@ -71,6 +85,12 @@
 		margin-bottom: 5px;
 	}
 
+	.welcome__tagline{
+		font-size: 8pt;
+		color:#ddd;
+		margin-top: 5px;
+	}
+
 	.welcome__wrapper{
 		padding-bottom: 10px;
 		h1{
@@ -80,11 +100,10 @@
 		h2{
 			font-size: 24pt!important;
 		}
+
 	
 		.logoPrint{
 			margin-top: 30px;
-			display: block;
-			height: 20pt;
 		}			
 	}
 
@@ -107,6 +126,7 @@
 
 	.home-section--our-products{		
 		page-break-after: always;
+		position: relative;
 
 
 		.home-section__heading{
@@ -123,8 +143,11 @@
 
 		.product__product-image{
 			float: left;
-			width:40%;
+			width:35%;
 			margin-right: 30px;
+			img{
+				width: 100%;
+			}
 		}
 
 		.product__product-description{
@@ -135,7 +158,7 @@
 		.product-description__tags{
 			line-height: 16pt;
 			span{
-				border-bottom: 2px solid #ccc;
+				border-bottom: 2px solid #e8f4fc;
 			}
 		}
 		
@@ -161,17 +184,43 @@
 		padding:20px 0px 7px 0px;
 		text-align: center;
 		border-bottom:1px solid #ccc;
+		font-size: 14pt;
+		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 200;
+
+		a{
+			color:#0176c3;
+
+			&:after{
+				content:""
+			}
+		}
 	}
 
 	.home-section--job-vacancies{
 		.home-section__heading{
 			display: none;
 		}
+
+		.job-vacancies__vacancy{
+			a{
+				strong{
+					text-decoration: none;
+					margin-right: 10px;
+					display: inline-block;
+					min-width: 11em;
+				}
+				&:after{
+					content:" (http://joinit.springer.com" attr(href) ") ";
+				}
+			}
+		}
 	}
 
 	.footer__wrapper{
-		font-size: 10pt;
+		font-size: 8pt;
 		text-align: center;
+		color: #ddd;
 
 		p{
 			margin:0px;
@@ -181,3 +230,67 @@
 			display: none;
 		}
 	}
+
+
+// role page
+.roles{
+	.job-wrapper{
+		line-height: 1.2em;
+
+		.role__subheading a:after,
+		.apply-now,
+		.linkedin{
+			display: none;
+		}
+
+		.job-description{
+			page-break-after: always;
+		}
+
+		.sidebar{
+			page-break-inside: avoid;
+			overflow: hidden;
+			div{
+				float: left;
+				box-sizing: border-box;
+				width: 50%;
+				padding: 15px;
+			}
+			a:after{
+				display: none;
+			}
+		}
+	}
+
+	.footer__wrapper{
+		margin-top: 20px;
+	}
+
+	.home-section__heading{
+		position: relative;
+	}
+
+	/* QR Code */
+	.QRcode{
+		display: block;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		text-align: right;
+		img{
+			display: inline-block;
+			width: 75px;
+			height: 75px;
+		}
+		span{
+			display: block;
+			font-size: 8px;
+			letter-spacing: 1px;
+			color: #ddd;
+		}
+		
+	}	
+
+
+	
+}

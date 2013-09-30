@@ -391,3 +391,16 @@ a {
 a:active, a:focus, a:hover {
   text-decoration: none;
 }
+
+.logo-section,
+.logoPrint {
+  display: none;
+}
+
+.logo-section .welcome__tagline {
+  display: none;
+}
+
+.QRcode {
+  display: none;
+}

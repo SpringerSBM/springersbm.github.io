@@ -23,6 +23,21 @@
 		//JS check!
 		$("html").removeClass("no-js");
 
+		// generating the QRcode markup
+		var QRdiv=$("<div/>")
+			.addClass("QRcode")
+
+			$("<img/>")
+				.attr({src:"https://chart.googleapis.com/chart?cht=qr&chs=75x75&chl=" + location.href})
+				.appendTo(QRdiv)
+
+			$("<span/>")
+				.text(location.href)
+				.appendTo(QRdiv)
+		// adding it to the Role page
+		QRdiv.appendTo($(".roles .home-section__heading"))
+
+
 		var parFx=$(".storyboards__wrapper"),
 			parFxPos=parFx.position(),
 			panels=parFx.children(".storyboards__board"),
