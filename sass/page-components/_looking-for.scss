@@ -121,13 +121,14 @@
   overflow:auto;
 
   @include respond-to(tablet-portrait) {
-    margin-top:2em;
+    margin:2em 0 0 -15px;
+    width:520px;
   }
 
   @include respond-to(break-point, 'min-width:1016px') {
     clear:both;
     margin:4em auto 0;
-    max-width:620px;
+    width:650px;
   }
 }
 
@@ -142,9 +143,9 @@
 
   span {
     background:#fff;
-    margin-left:-63px;
+    margin-left:-75px;
     padding:0 5px;
-    position:absolute; top:-13px; left:50%;
+    position:absolute; top:-11px; left:50%;
   }
 }
 
@@ -153,8 +154,13 @@
   margin:20px 2% 20px 0;
   width:32%;
 
+  @include respond-to(tablet-portrait) {
+    margin-right:24px;
+    width:157px;
+  }
+
   @include respond-to(break-point, 'min-width:1016px') {
-    width:196px;
+    width:198px;
   }
 
   &:last-of-type {
