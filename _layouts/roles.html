@@ -32,17 +32,11 @@
 			<h2>
 				{{page.lead-in-who}}<span>...</span>
 			</h2>
-			<ul>{% for job-who in page.job-whos %}
-		  		<li>{{ job-who.spec }}</li>
-		  		{% endfor %}
-			</ul>
+			<ul>{% for job-who in page.job-whos %}<li><span>{{ job-who.spec }}</span></li>{% endfor %}</ul>
 			<h2>
 				{{page.lead-in-what}}<span>...</span>
 			</h2>
-			<ul>{% for job-what in page.job-whats %}
-		  		<li><span>{{ job-what.spec }}</span></li>
-		  		{% endfor %}
-			</ul>
+			<ul>{% for job-what in page.job-whats %}<li><span>{{ job-what.spec }}</span></li>{% endfor %}</ul>
 		</section>	
 		<section class="job-global">
 			<h2>Working here</h2>
