@@ -8,7 +8,7 @@
 				return cacheObj.$w.innerWidth()<=settings.mobileBreakPoint;
 			},
 			imageRatio:function(){
-				return this.noParallax()?0.5:0.4;
+				return this.noParallax()?0.4:0.4;
 			},
 			isTouch:(('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)),
 			isIe:$("html").is(".ie9, .lt-ie9"),
@@ -26,6 +26,7 @@
 				return ver;
 			})(),
 			noParallax:function(){
+				return true;
 				return settings.isMobile()||settings.isTouch|| settings.isIe;
 			}
 		};
@@ -88,13 +89,17 @@
 
 			setImageRatio();
 			setActivePanel();
-			setBGposition();
+			if(!settings.noParallax()){
+				setBGposition();
+			}
 
 
 		});
 		$w.on("scroll", function(){
 			setActivePanel();
-			setBGposition();
+			if(!settings.noParallax()){
+				setBGposition();
+			}
 		})
 
 		// down-arrow click handler
@@ -124,9 +129,9 @@
 	function setActivePanel(){
 
 		// enabling the text animation only on desktops
-		if(settings.noParallax()){
-			return false;
-		}
+		// if(settings.noParallax()){
+		// 	return false;
+		// }
 
 		var WscrollTop=cacheObj.$w.scrollTop(),
 			windowHeight=cacheObj.$w.innerHeight(),
@@ -141,12 +146,6 @@
 
 	function setBGposition(){
 
-		//enabling the parallax effect only on desktops
-		if(settings.noParallax()){
-			//repositioning the images 
-			cacheObj.panels.find("img").css({top:"0px"});
-			return false;
-		}
 		var windowHeight=cacheObj.$w.innerHeight(),
 			WscrollTop=cacheObj.$w.scrollTop(),
 			pageHeight=$("html").innerHeight();
@@ -191,7 +190,8 @@
 	
     function setResponsiveImages() {
     	// ignoring retina on smaller devices (including iPad3!)
-    	var ignoreRetina=settings.isMobile();
+    	// var ignoreRetina=settings.isMobile();
+    	var ignoreRetina=true;
 
 		// storyboard images
 		responsiveImages.noscriptHack(
@@ -201,7 +201,11 @@
         		"_tablet":1024, 
         		"_widescreen":99999
         	},
-        	setBGposition,
+        	function(){
+        		if(!settings.noParallax()){
+        			setBGposition()
+        		}
+        	},
         	ignoreRetina
 		);
 

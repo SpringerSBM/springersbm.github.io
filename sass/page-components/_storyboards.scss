@@ -98,8 +98,7 @@ $pageWidth:1440px;
 
 
   &.active,
-  .no-js &,
-  .noParallax & {
+  .no-js &{
     opacity:1;
     z-index:2;
 
@@ -117,7 +116,7 @@ $pageWidth:1440px;
 
 .board__headline {
   @include box-sizing(border-box);
-  @include transition(all 0.5s ease-out 0.2s);
+  @include transition(all 0.5s ease-out 0.4s);
   font-size:8em;
   line-height:0.9;
   color:#fff;
@@ -144,11 +143,6 @@ $pageWidth:1440px;
 
   @include respond-to(break-point, 'min-width:1016px') {
     left:0;
-  }
-
-  .noParallax & {
-    bottom:0.75em;
-    opacity:1;
   }
 
   .active & {
