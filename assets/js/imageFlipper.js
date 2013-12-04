@@ -22,7 +22,7 @@
     	"Pat, technical principal.",
     	"Rob, front-end developer.",
     	"Chris, software engineer.",
-    	"Shalini, quality analyst.",
+    	"Hilverd, software engineer.",
     	"Uthman, quality analyst.",
     	"Dan, software engineer.",
     	"Ben, agile coach.",
@@ -78,7 +78,7 @@
 	    		c=0;
 
 	    	while(x<settings.rows*settings.columns){
-	    		var li=$("<li/>")
+	    		var li=$("<li title='"+people[x]+"'/>")
 	    				.css({
 	    					width:tileWidth,
 	    					height:tileHeight
@@ -91,7 +91,7 @@
 	    				})
 	    				.appendTo(ul),
 
-	    			div=$("<div title='"+people[x]+"'/>").appendTo(li),
+	    			div=$("<div/>").appendTo(li),
 	    			fSpan=$("<span class='front'/>")
 	    					.css({
 	    						backgroundImage:"url(" + cssPrefix + frontImgUrl + ")",

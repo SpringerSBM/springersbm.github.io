@@ -27,7 +27,7 @@
 			})(),
 			noParallax:function(){
 				return true;
-				return settings.isMobile()||settings.isTouch|| settings.isIe;
+				// return settings.isMobile()||settings.isTouch|| settings.isIe;
 			}
 		};
 
