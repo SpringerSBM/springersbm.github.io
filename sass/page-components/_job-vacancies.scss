@@ -67,6 +67,18 @@
   }
 }
 
+.cross-link {
+  &:hover {
+    background:transparent;
+  }
+
+  & > span {
+    display:block;
+    font-size:0.9rem;
+    padding:16px 0;
+  }
+}
+
 .vacancy__role {
   display:block;
   font-size:1.2rem;
