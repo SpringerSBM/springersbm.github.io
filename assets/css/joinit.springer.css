@@ -1073,6 +1073,13 @@ h3 {
   text-decoration: none;
   line-height: 1.6rem;
 }
+.vacancy__location div {
+  line-height: normal;
+  text-align: right;
+}
+.vacancy__location div:first-child {
+  margin-top: -5px;
+}
 
 .job-vacancies__content {
   max-width: 480px;
