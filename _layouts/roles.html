@@ -5,15 +5,27 @@
 		<img src="../../assets/imgs/logo-print.png" class="logoPrint" alt="Springer" />
 		<p class="welcome__tagline">Springer is a world-class international scientific publisher.</p>
 	</section>
-	<section class="role-section">
-    	<h1 class="home-section__heading"><span>{{page.role}}</span></h1>
-	</section>
+    <section class="role-section">
+        <h1 class="home-section__heading"><span>{{page.role}}</span></h1>
+    </section>
 </header>
 
 <div class="job-wrapper">
     <address class="role__subheading"><em>{{page.location}}</em></address>
     <time class="role__subheading"><em>{{page.length}}</em></time>
 	<article class="job-vacancy">
+        {% if page.job_status == "closed" %}    
+        <section style='color: red' class="job-global">
+            <h2>
+                Sorry, this positon is closed.
+            </h2>
+            <p>
+                Thank you for visiting us, but this position is not longer available. But feel free to check out <a href="/#join-our-team">other open positions!</a>
+            </p>
+        </section>
+        {% endif %}
+
+
 		<section class="job-global">
 			<h2>
 				Hello. We’re SpringerIT.
@@ -45,19 +57,23 @@
 		</section>	
 	</article>		
 	<section class="sidebar">
+        {% if page.job_status != "closed" %}    
 		<div class="apply-now">
 			<a class="btn" href={{page.jobvite}}>Apply for this role</a>
 		</div>
+        {% endif %}
 		<div class="linkedin">
 			Find us on
 			<a href="http://www.linkedin.com/company/7051?trk=tyah&trkInfo=tas%3Aspringer" target="_blank">Linkedin</a>
 		</div>
+        {% if page.job_status != "closed" %}    
 		<div>
 			<h3>Benefits</h3>
 			<p>
 				Springer offers a competitive salary and benefits package including 25 days holiday plus bank holidays, contributory pension scheme, life assurance, discounted gym membership, cycle to work scheme, childcare vouchers and an employee support programme.
 			</p>	
 		</div>
+        {% endif %}
 		<div>
 			<h3>Information</h3>
 			<p>
