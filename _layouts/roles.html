@@ -57,23 +57,23 @@
 		</section>	
 	</article>		
 	<section class="sidebar">
-        {% if page.job_status != "closed" %}    
+		{% if page.job_status != "closed" %}    
 		<div class="apply-now">
 			<a class="btn" href={{page.jobvite}}>Apply for this role</a>
 		</div>
-        {% endif %}
+		{% endif %}
 		<div class="linkedin">
 			Find us on
 			<a href="http://www.linkedin.com/company/7051?trk=tyah&trkInfo=tas%3Aspringer" target="_blank">Linkedin</a>
 		</div>
-        {% if page.job_status != "closed" %}    
-		<div>
-			<h3>Benefits</h3>
-			<p>
-				Springer offers a competitive salary and benefits package including 25 days holiday plus bank holidays, contributory pension scheme, life assurance, discounted gym membership, cycle to work scheme, childcare vouchers and an employee support programme.
-			</p>	
-		</div>
-        {% endif %}
+		{% if page.job_status != "closed" %}
+			{% if page.benefits_uk == nil or page.benefits_uk == true %}
+				{% include benefits.uk.html %}
+			{% endif %}
+			{% if page.benefits_de == true %}
+				{% include benefits.de.html %}
+			{% endif %}
+		{% endif %}
 		<div>
 			<h3>Information</h3>
 			<p>
