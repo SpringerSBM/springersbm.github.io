@@ -240,6 +240,7 @@ h3 {
     width: 141px;
   }
 }
+
 .roles .main-header__logo a {
   float: right;
 }
@@ -1202,7 +1203,7 @@ h3 {
   .looking-for__role-list {
     /* MQ Break point */
     float: left;
-    margin-bottom: 4.5em;
+    margin-bottom: 2.5em;
     max-width: 490px;
   }
 }
@@ -1330,6 +1331,11 @@ h3 {
 .looking-for__photo p {
   margin-top: 0.5em;
   text-align: center;
+}
+
+.know-more {
+  margin-bottom: 2.5em;
+  clear: both;
 }
 
 .job-wrapper {
@@ -1602,7 +1608,7 @@ h3 {
     bottom: 1em !important;
     opacity: 1 !important;
     font-size: 30px !important;
-    color: #666666 !important;
+    color: #666 !important;
     -webkit-transition: all 0s linear 0s !important;
     -moz-transition: all 0s linear 0s !important;
     -o-transition: all 0s linear 0s !important;

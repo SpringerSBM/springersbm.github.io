@@ -72,7 +72,7 @@
 
   @include respond-to(break-point, 'min-width:1016px') {
     float:left;
-    margin-bottom:4.5em;
+    margin-bottom:2.5em;
     max-width:490px;
   }
 
@@ -175,4 +175,9 @@
     margin-top:0.5em;
     text-align:center;
   }
+}
+
+.know-more {
+  margin-bottom: 2.5em;
+  clear: both;
 }
