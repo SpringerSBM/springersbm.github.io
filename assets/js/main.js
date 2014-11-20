@@ -38,6 +38,9 @@
 		//JS check!
 		$("html").removeClass("no-js");
 
+		// render job feed
+		renderJobviteFeed();
+
 		// generating the QRcode markup
 		var QRdiv=$("<div/>")
 			.addClass("QRcode")
@@ -229,6 +232,39 @@
         	}
 		);
 
+    }
+
+    function renderJobviteFeed() {
+      $.ajax({
+        url: "http://hire.jobvite.com/CompanyJobs/Xml.aspx?c=q8w9Vfws",
+          dataType: "xml",     
+          success: function (xml, status) {
+            var json = $.xml2json(xml);
+
+            if(typeof json == "object" && json.hasOwnProperty("job")) {
+
+              for(var i = 0; i < json.job.length; i++) {
+
+                if(json.job[i].hasOwnProperty("category") && json.job[i].category == "Information Technology") {
+
+              var job = json.job[i];
+              var location = job.location.replace(/United Kingdom/gi,'UK');
+              var el = '<li class="job-vacancies__vacancy"><a class="vacancy__role" href="' + job.detail_url + '"><strong>';
+              el += job.title.split("-")[0].trim() + '</strong> <span class="vacancy__location">' + location + '</span></a></li>';
+              $(el).insertBefore(".job-vacancies__vacancy.cross-link");
+
+                } else {
+
+                    // debug
+                    // console.log(status);
+
+                }         
+
+              }
+
+            }
+          }
+      })
     }
 
 })();
