@@ -1,24 +1,17 @@
 .imageFlipper{
-  background:#222;
+  background: transparent;
   @extend .centeredNoScroll;
   border:10px solid #e8f4fc;
   border-top:0 none;
   list-style-type: none;
   padding:0px;
-  top:158px;
+  top:0;
   width:1440px;
 
   .mobile &{
     width:1024px;
     margin-left: -522px;
-    top:158px;
-  }
-
-  @include respond-to(break-point, 'min-width:1024px') {
-    top:218px;
-  }  
-
-
+  } 
 
   li {
     // height:222px;

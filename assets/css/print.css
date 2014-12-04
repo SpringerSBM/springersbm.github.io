@@ -2,7 +2,6 @@
 @page {
   margin: 1cm 0cm 1cm 0.5cm;
 }
-
 html, body {
   background: white;
   color: #444;
@@ -28,7 +27,7 @@ a strong {
 }
 
 a[href]:after {
-  color: #cccccc !important;
+  color: #ccc !important;
   font-size: 8pt;
   content: " (" attr(href) ") ";
   display: inline;
@@ -107,7 +106,7 @@ li {
   height: auto !important;
 }
 .storyboards__wrapper .board__headline {
-  color: #cccccc !important;
+  color: #ccc !important;
 }
 .storyboards__wrapper img,
 .storyboards__wrapper a {

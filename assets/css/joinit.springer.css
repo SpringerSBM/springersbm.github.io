@@ -824,17 +824,24 @@ h3 {
   }
 }
 .home-section--our-people .home-section__grid {
-  height: 834px;
+  height: 690px;
   /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 @media all and (min-width: 1016px) {
   .home-section--our-people .home-section__grid {
     /* MQ Break point */
-    height: 893px;
+    height: 680px;
   }
 }
 .mobile .home-section--our-people .home-section__grid {
   height: 642px;
+  /* Webkit excludes scrollbar-width when calculating viewport width */
+}
+@media all and (max-width: 480px) {
+  .mobile .home-section--our-people .home-section__grid {
+    /* MQ Break point */
+    height: 480px;
+  }
 }
 .home-section--our-people .team-panorama {
   border: 10px solid #e8f4fc;
@@ -1474,25 +1481,17 @@ h3 {
 }
 
 .imageFlipper {
-  background: #222;
+  background: transparent;
   border: 10px solid #e8f4fc;
   border-top: 0 none;
   list-style-type: none;
   padding: 0px;
-  top: 158px;
+  top: 0;
   width: 1440px;
-  /* Webkit excludes scrollbar-width when calculating viewport width */
 }
 .mobile .imageFlipper {
   width: 1024px;
   margin-left: -522px;
-  top: 158px;
-}
-@media all and (min-width: 1024px) {
-  .imageFlipper {
-    /* MQ Break point */
-    top: 218px;
-  }
 }
 .imageFlipper li {
   position: relative;
