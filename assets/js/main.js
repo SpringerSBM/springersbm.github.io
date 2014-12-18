@@ -237,8 +237,8 @@
     function renderJobviteFeed() {
       $.ajax({
         url: "http://hire.jobvite.com/CompanyJobs/Xml.aspx?c=q8w9Vfws",
-          dataType: "xml",     
-          success: function (xml, status) {
+        dataType: "xml",     
+        success: function (xml, status) {
             var json = $.xml2json(xml);
 
             if(typeof json == "object" && json.hasOwnProperty("job")) {
@@ -247,25 +247,26 @@
 
                 if(json.job[i].hasOwnProperty("category") && json.job[i].category == "Information Technology") {
 
-              var job = json.job[i];
-              var location = job.location.replace(/United Kingdom/gi,'UK');
-              var el = '<li class="job-vacancies__vacancy"><a class="vacancy__role" href="' + job.detail_url + '"><strong>';
-              el += job.title.split("-")[0].trim() + '</strong> <span class="vacancy__location">' + location + '</span></a></li>';
-              $(el).insertBefore(".job-vacancies__vacancy.cross-link");
+	              var job = json.job[i];
+	              var location = job.location.replace(/United Kingdom/gi,'UK');
+	              var el = '<li class="job-vacancies__vacancy"><a class="vacancy__role" href="' + job.detail_url + '"><strong>';
+	              el += job.title.split("-")[0].trim() + '</strong> <span class="vacancy__location">' + location + '</span></a></li>';
+	              $(el).insertBefore(".job-vacancies__vacancy.cross-link");
 
-                } else {
-
-                    // debug
-                    // console.log(status);
-
-                }         
+                }     
 
               }
 
             }
-          }
-      })
+        },
+        error: function(xhr, error) {
+        	    var jobviteSearchResults = "http://search.jobvite.com/web/modules/layout/companyDetails.htm?cId=q8w9Vfws&jId=oWXHZfwj&cl=http://hire.jobvite.com/Logo/2341_Springer.png&cn=Springer-Verlag%20UK";
+                var el = '<li class="job-vacancies__vacancy"><a class="vacancy__role" href="' + jobviteSearchResults + '"><strong>View current vacancies</strong></a></li>';
+                $(el).insertBefore(".job-vacancies__vacancy.cross-link");
+            }
+          });
     }
+   
 
 })();
 
