@@ -233,11 +233,14 @@
 		);
 
     }
+    
+    //  http://hire.jobvite.com/CompanyJobs/Xml.aspx?c=q8w9Vfws
 
     function renderJobviteFeed() {
       $.ajax({
-        url: "http://hire.jobvite.com/CompanyJobs/Xml.aspx?c=q8w9Vfws",
-        dataType: "xml",     
+        url: "http://feed.jobvite.com/CompanyJobs/Xml.aspx?c=q8w9Vfws&cs=9QCaVfwh",
+        dataType: "xml",   
+        crossDomain: true,   
         success: function (xml, status) {
             var json = $.xml2json(xml);
 
@@ -260,7 +263,7 @@
             }
         },
         error: function(xhr, error) {
-        	    var jobviteSearchResults = "http://search.jobvite.com/web/modules/layout/companyDetails.htm?cId=q8w9Vfws&jId=oWXHZfwj&cl=http://hire.jobvite.com/Logo/2341_Springer.png&cn=Springer-Verlag%20UK";
+        	    var jobviteSearchResults = "http://feed.jobvite.com/CompanyJobs/Careers.aspx?c=q8w9Vfws&cs=9QCaVfwh";
                 var el = '<li class="job-vacancies__vacancy"><a class="vacancy__role" href="' + jobviteSearchResults + '"><strong>View current vacancies</strong></a></li>';
                 $(el).insertBefore(".job-vacancies__vacancy.cross-link");
             }
