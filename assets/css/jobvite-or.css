@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* GLOBAL ELEMENTS */
+html {
+  color: #555;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.3;
+}
+
+h1, h2, h3, html, body {
+  font-family: "myriad-pro",sans-serif;
+}
+
+a {
+	color #0176c3;
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/* JOB LISTING */
+.joblist {
+  border-top: 1px solid #d4d4d4;
+  margin: 0;
+  padding: 0;
+}
+
+.joblist li {
+  border-bottom: 1px solid #d4d4d4;
+  list-style: none;
+}
+
+.joblist li a {
+  display: block;
+  font-size: 1rem;
+  padding: 12px 2px;
+}
+
+.joblocation,
+p,
+h2 {
+	display: none;
+}
