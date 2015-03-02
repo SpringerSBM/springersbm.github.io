@@ -263,7 +263,7 @@
             }
         },
         error: function(xhr, error) {
-        	    var jobviteSearchResults = "http://feed.jobvite.com/CompanyJobs/Careers.aspx?c=q8w9Vfws&cs=9QCaVfwh";
+        	    var jobviteSearchResults = "http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=q8w9Vfws&cs=9QCaVfwh";
                 var el = '<li class="job-vacancies__vacancy"><a class="vacancy__role" href="' + jobviteSearchResults + '"><strong>View current vacancies</strong></a></li>';
                 $(el).insertBefore(".job-vacancies__vacancy.cross-link");
             }
