@@ -39,7 +39,7 @@
 		$("html").removeClass("no-js");
 
 		// render job feed
-		renderJobviteFeed();
+		// renderJobviteFeed();
 
 		// generating the QRcode markup
 		var QRdiv=$("<div/>")
